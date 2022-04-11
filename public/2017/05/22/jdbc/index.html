@@ -1,0 +1,1977 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="JDBC, 谦谦君子">
+    <meta name="description" content="JDBCJDBC 是连接数据库和 Java 程序的桥梁，通过 JDBC API 可以方便地实现对各种主流数据库的操作。本节将重点讲解 JDBC 的内容。
+数据库数据库简而言之可视为电子化的文件柜——存储电子文件的处所，用户可以对文件中的数据">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>JDBC | 谦谦君子</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <link rel="stylesheet" type="text/css" href="/css/dark.css">
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="谦谦君子" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">谦谦君子</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">谦谦君子</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+
+<main id="main_wrap">
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">JDBC</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 137px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2017-05-22
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h2><p>JDBC 是连接数据库和 Java 程序的桥梁，通过 JDBC API 可以方便地实现对各种主流数据库的操作。本节将重点讲解 JDBC 的内容。</p>
+<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>数据库简而言之可视为电子化的文件柜——存储电子文件的处所，用户可以对文件中的数据运行新增、截取、更新、删除等操作。</p>
+<p>所谓“数据库”系以一定方式储存在一起、能予多个用户共享、具有尽可能小的冗余度、与应用程序彼此独立的数据集合。一个数据库由多个表空间（Tablespace）构成。</p>
+<h3 id="常见的关系型数据库有以下几种："><a href="#常见的关系型数据库有以下几种：" class="headerlink" title="常见的关系型数据库有以下几种："></a>常见的关系型数据库有以下几种：</h3><ul>
+<li>MySQL</li>
+<li>MariaDB</li>
+<li>Percona Server</li>
+<li>PostgreSQL</li>
+<li>Microsoft Access</li>
+<li>Microsoft SQL Server</li>
+<li>Google Fusion Tables</li>
+<li>FileMaker</li>
+<li>Oracle 数据库</li>
+<li>Sybase</li>
+<li>dBASE</li>
+<li>Clipper</li>
+<li>FoxPro</li>
+<li>foshub</li>
+</ul>
+<h2 id="非关系型数据库（NoSql）"><a href="#非关系型数据库（NoSql）" class="headerlink" title="非关系型数据库（NoSql）"></a>非关系型数据库（NoSql）</h2><h3 id="常见非关系数据库："><a href="#常见非关系数据库：" class="headerlink" title="常见非关系数据库："></a>常见非关系数据库：</h3><ul>
+<li>Redis</li>
+<li>BigTable</li>
+<li>Cassandra</li>
+<li>MongoDB</li>
+<li>CouchDB</li>
+</ul>
+<h2 id="SQL-简介"><a href="#SQL-简介" class="headerlink" title="SQL 简介"></a>SQL 简介</h2><p>结构化查询语言(Structured Query Language)简称 SQL(发音：/ˈes kjuː ˈel/ “S-Q-L”)，是一种特殊目的的编程语言，是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统；同时也是数据库脚本文件的扩展名。 结构化查询语言是高级的非过程化编程语言，允许用户在高层数据结构上工作。它不要求用户指定对数据的存放方法，也不需要用户了解具体的数据存放方式，所以具有完全不同底层结构的不同数据库系统, 可以使用相同的结构化查询语言作为数据输入与管理的接口。结构化查询语言语句可以嵌套，这使它具有极大的灵活性和强大的功能。</p>
+<h2 id="SQL-语法"><a href="#SQL-语法" class="headerlink" title="SQL 语法"></a>SQL 语法</h2><p>对于数据库的操作我们肯定是需要结构化查询语句 SQL</p>
+<p>这里我们就回顾一下 SQL 语句，但不会做过多的详细介绍，如果需要更系统的学习，请参照我们的 MySQL 基础课程。</p>
+<p>创建数据库</p>
+<p>CREATE DATABASE 语句用于创建一个新的数据库。语法是：</p>
+<pre><code>SQL&gt; CREATE DATABASE DATABASE_NAME;
+</code></pre>
+<p>例子，创建一个名为 EXAMPLE 数据库：</p>
+<pre><code>SQL&gt; CREATE DATABASE EXAMPLE;
+</code></pre>
+<p>删除数据库</p>
+<p>使用 DROP DATABASE 语句用于删除现有的数据库。语法是：</p>
+<pre><code>SQL&gt; DROP DATABASE DATABASE_NAME;
+</code></pre>
+<p>注意：要创建或删除，应该有数据库服务器上管理员权限。请注意，删除数据库将损失所有存储在数据库中的数据。</p>
+<p>例子，删除我们刚刚建好的数据库：</p>
+<pre><code>SQL&gt; DROP DATABASE EXAMPLE;
+</code></pre>
+<p>创建表</p>
+<p>CREATE TABLE 语句用于创建一个新表。语法是：</p>
+<pre><code>SQL&gt; CREATE TABLE table_name
+(
+  column_name column_data_type,
+  column_name column_data_type,
+  column_name column_data_type
+  ...
+);
+</code></pre>
+<p>例子，下面的 SQL 语句创建一个有四个属性的 Students 表：</p>
+<pre><code>SQL&gt; CREATE TABLE Students
+(
+  id INT NOT NULL,
+  age INT NOT NULL,
+  name VARCHAR(255),
+  major VARCHAR(255),
+  PRIMARY KEY ( id )
+);
+</code></pre>
+<p>删除表</p>
+<p>DROP TABLE 语句用于删除现有的表。语法是：</p>
+<pre><code>SQL&gt; DROP TABLE table_name;
+</code></pre>
+<p>例子，下面的 SQL 语句删除一个名为 Students 表：</p>
+<pre><code>SQL&gt; DROP TABLE Students;
+</code></pre>
+<p>插入数据</p>
+<p>语法 INSERT 如下，其中 column1, column2 ，依此类推的属性值：</p>
+<pre><code>SQL&gt; INSERT INTO table_name VALUES (column1, column2, ...);
+</code></pre>
+<p>例子，下面的 INSERT 语句中插入先前创建的 Students 表：</p>
+<pre><code>SQL&gt; INSERT INTO Students VALUES (1, 18, 'Mumu', 'Java');
+</code></pre>
+<p>查询数据</p>
+<p>SELECT 语句用于从数据库中检索数据。该语法的 SELECT 是：</p>
+<pre><code>SQL&gt; SELECT column_name, column_name, ...
+ FROM table_name
+ WHERE conditions;
+</code></pre>
+<p>WHERE 子句可以使用比较操作符例如 =, !=, &lt;, &gt;, &lt;=, &gt;=,以及 BETWEEN 和 LIKE 等操作符。</p>
+<p>例子，下面的 SQL 语句从 Students 表选择 id 为1的学生，并将该学生的姓名和年龄显示出来：</p>
+<pre><code>SQL&gt; SELECT name, age 
+     FROM Students 
+     WHERE id = 1;
+</code></pre>
+<p>下面的 SQL 语句从 Students 表中查询姓名中有 om 字样的学生，并将学生的姓名和专业显示出来:</p>
+<pre><code> SQL&gt; SELECT name, major 
+      FROM Students 
+      WHERE name LIKE '%om%';
+</code></pre>
+<p>更新数据</p>
+<p>UPDATE 语句用于更新数据。UPDATE 语法为：</p>
+<pre><code>SQL&gt; UPDATE table_name
+     SET column_name = value, column_name = value, ...
+     WHERE conditions;
+</code></pre>
+<p>例子，下面的 SQL 的 UPDATE 语句表示将 ID 为1的学生的 age 改为20：</p>
+<pre><code>SQL&gt; UPDATE Students SET age=20 WHERE id=1;
+</code></pre>
+<p>删除数据</p>
+<p>DELETE 语句用来删除表中的数据。语法 DELETE 是：</p>
+<pre><code>SQL&gt; DELETE FROM table_name WHERE conditions;
+</code></pre>
+<p>例子，下面的 SQL DELETE 语句删除 ID 为1的学生的记录：</p>
+<pre><code>SQL&gt; DELETE FROM Students WHERE id=1;
+</code></pre>
+<h2 id="JDBC-1"><a href="#JDBC-1" class="headerlink" title="JDBC"></a>JDBC</h2><p>JDBC 的全称是 Java Database Connectivity，叫做 Java 数据库连接。它包括了一组与数据库交互的api，还有与数据库进行通信的驱动程序。</p>
+<p>我们要写涉及到数据库的程序，是通过 C 语言或者 C++ 语言直接访问数据库的接口，如下图所示。</p>
+<p>对于不同的数据库，我们需要知道不同数据库对外提供的系统 API，这就影响了我们程序的扩展和跨平台的实现。<br><img src="http://image.lichongbing.com/static/57c3a7e6831849ff1f701965497be53c.png" alt="wm-25.png"><br>那么有没有一种方法来对不同的数据库接口进行统一呢？当然有。我们只需要和最上层接口进行交互，剩下的部分就交给其他各层去处理，我们的任务就变的轻松简单许多。<br><img src="http://image.lichongbing.com/static/8f0a0c85f18062e3d2e246cbee8b9fa4.png" alt="wm-26.png"><br>JDBC 为数据库开发人员提供了一个标准的 API，据此可以构建更高级的工具和接口使数据库开发人员能够用纯 Java API 编写数据库应用程序。<br><img src="http://image.lichongbing.com/static/5d0d1998e7184f37b930837c271be16e.png" alt="wm-27.png"></p>
+<h2 id="JDBC-连接数据库"><a href="#JDBC-连接数据库" class="headerlink" title="JDBC 连接数据库"></a>JDBC 连接数据库</h2><p>涉及到建立一个 JDBC 连接的编程主要有四个步骤：</p>
+<p>导入 JDBC 驱动： 只有拥有了驱动程序我们才可以注册驱动程序完成连接的其他步骤。<br>注册 JDBC 驱动程序：这一步会导致 JVM 加载所需的驱动类实现到内存中，然后才可以实现 JDBC 请求。<br>数据库 URL 指定：创建具有正确格式的地址，指向到要连接的数据库。<br>创建连接对象：最后，代码调用 DriverManager 对象的 getConnection() 方法来建立实际的数据库连接。<br>接下来我们便详细讲解这四步。</p>
+<p>导入 JDBC 驱动</p>
+<p>需要下载对应数据库的 jdbc 驱动，将其导入到项目中，具体的导入方式根据个人的 IDE 确定，本节课程不使用 IDE，直接使用 javac -cp 命令导入包。</p>
+<p>注册 JDBC 驱动程序</p>
+<p>我们在使用驱动程序之前，必须注册你的驱动程序。注册驱动程序的本质就是将我们将要使用的数据库的驱动类文件动态的加载到内存中，然后才能进行数据库。比如我们使用的 Mysql 数据库。我们可以通过以下两种方式来注册我们的驱动程序。</p>
+<p>1、方法1——Class.forName()：</p>
+<p>动态加载一个类最常用的方法是使用 Java 的 Class.forName() 方法，通过使用这个方法来将数据库的驱动类动态加载到内存中，然后我们就可以使用。</p>
+<p>使用 Class.forName() 来注册 Mysql 驱动程序：</p>
+<pre><code> try {
+ Class.forName("com.mysql.jdbc.Driver");
+}
+catch(ClassNotFoundException ex) {
+ System.out.println("Error: unable to load driver class!");
+ System.exit(1);
+}
+</code></pre>
+<p>2、方法 2——DriverManager.registerDriver()：</p>
+<pre><code> Driver driver = new com.mysql.jdbc.Driver();
+ DriverManager.registerDriver(driver);
+</code></pre>
+<p>指定数据库连接 URL</p>
+<p>当加载了驱动程序，便可以使用 DriverManager.getConnection() 方法连接到数据库了。</p>
+<p>这里给出 DriverManager.getConnection() 三个重载方法：</p>
+<pre><code>getConnection(String url)
+
+getConnection(String url, Properties prop)
+
+getConnection(String url, String user, String password)
+</code></pre>
+<p>数据库的 URL 是指向数据库地址。下表列出了下来流行的 JDBC 驱动程序名和数据库的 URL。</p>
+<p><img src="http://image.lichongbing.com/static/f01cc7be067f48546ae9a5e5a1f83539.png" alt="截屏2019-12-1015.42.32.png"><br>创建连接对象</p>
+<p>下面三种形式 DriverManager.getConnection() 方法来创建一个连接对象，以 Mysql 为例。getConnection()最常用形式要求传递一个数据库 URL，用户名 username 和密码 password。</p>
+<p>1、使用数据库 URL 的用户名和密码</p>
+<pre><code>String URL = "jdbc:mysql://localhost/EXAMPLE";
+String USER = "username";
+String PASS = "password"
+Connection conn = DriverManager.getConnection(URL, USER, PASS);
+</code></pre>
+<p>2、只使用一个数据库 URL</p>
+<p>然而，在这种情况下，数据库的 URL，包括用户名和密码。</p>
+<pre><code>String URL = "jdbc:mysql://localhost/EXAMPLE?user=root&amp;password=0909";
+//Mysql URL的参数设置详细可以查阅相关资料
+Connection conn = DriverManager.getConnection(URL);
+</code></pre>
+<p>3、使用数据库的 URL 和一个 Properties 对象</p>
+<pre><code>import java.util.*;
+
+String URL = "jdbc:mysql://localhost/EXAMPLE";
+Properties pro = new Properties( );
+
+//Properties对象，保存一组关键字-值对
+pro.put( "user", "root" );
+pro.put( "password", "" );
+
+Connection conn = DriverManager.getConnection(URL, pro);
+</code></pre>
+<p>4、关闭 JDBC 连接</p>
+<pre><code>conn.close();
+</code></pre>
+<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><p>在使用数据库之前第一件事情就是创建数据库，这里我们使用 JDBC 来创建数据库。</p>
+<h2 id="编程实战"><a href="#编程实战" class="headerlink" title="编程实战"></a>编程实战</h2><p>在/home/project/目录下新建文件CreateDatabase.java。</p>
+<pre><code>import java.sql.*;
+
+public class CreateDatabase {
+   public static void main(String[] args){
+      Connection connection = null;
+      try {
+        //加载数据库驱动
+        Class.forName("com.mysql.jdbc.Driver");
+        //打开数据库连接 第一个参数为数据库地址  后面2个参数分别为数据库用户名和密码
+        connection =    DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","");
+        //创建Statement
+        Statement statement = connection.createStatement();
+        //执行sql
+        statement.execute("create database EXAMPLE");
+    } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }finally {
+        try {
+            //关闭连接
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+}
+</code></pre>
+<p>启动 mysql：</p>
+<pre><code>$ sudo service mysql start
+</code></pre>
+<p>编译运行（需要带上 mysql-connector-java-5.1.45.jar）：</p>
+<pre><code>$ wget http://labfile.oss.aliyuncs.com/courses/1230/mysql-connector-java-5.1.47.jar
+$ javac -cp mysql-connector-java-5.1.47.jar CreateDatabase.java
+$ java -cp .:mysql-connector-java-5.1.47.jar CreateDatabase
+</code></pre>
+<h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><p><img src="http://image.lichongbing.com/static/e22514256293fad0e11a98eb02058d43.png" alt="wm-28.png"><br>当连接上了数据库后，就需要通过 sql 语句对数据库进行操作。随着 Java 语言应用面的逐步拓宽,Sun 公司开发了一个标准的 SQL 数据库访问接口———JDBC API。它可以使 Java 编程人员通过一个一致的接口,访问多种关系数据库。而今天我们就来学习一下，如何利用 JDBC 的一些核心 API 与数据库进行交互。</p>
+<p>通过使用 JDBC Statement, CallableStatement 和 PreparedStatement 接口定义的方法和属性，使可以使用 SQL 或 PL/SQL 命令和从数据库接收数据。它们还定义了许多方法，帮助消除 Java 和数据库之间数据类型的差异。<br><img src="http://image.lichongbing.com/static/f7766f7b45b4d239dd1182f2d29c6417.png" alt="截屏2019-12-1015.48.13.png"></p>
+<h2 id="Statement"><a href="#Statement" class="headerlink" title="Statement"></a>Statement</h2><p>我们要使用 Statement 接口，第一步肯定是创建一个 Statement 对象了。我们需要使用 Connection 对象的 createStatement() 方法进行创建。</p>
+<pre><code>Statement stmt = null;
+try {
+stmt = conn.createStatement( );
+. . .
+}
+catch (SQLException e) {
+. . .
+}
+finally {
+. . .
+}
+</code></pre>
+<p>一旦创建了一个 Statement 对象，我们就可以用它来执行 SQL 语句了，首先我们先来看看 Statement 里面有哪些方法吧！</p>
+<p>方法    说明<br>boolean execute(String SQL)    如果 ResultSet 对象可以被检索返回布尔值 true，否则返回 false。使用这个方法来执行 SQL DDL 语句，或当需要使用真正的动态 SQL<br>int executeUpdate(String SQL)    用于执行 INSERT、UPDATE 或 DELETE 语句以及 SQLDDL（数据定义语言）语句。返回值是一个整数，指示受影响的行数（即更新计数）<br>ResultSet executeQuery(String SQL)    返回 ResultSet 对象。用于产生单个结果集的语句，例如 SELECT 语句<br>正如关闭一个 Connection 对象来释放数据库连接资源，出于同样的原因，也应该关闭 Statement 对象。</p>
+<pre><code>Statement stmt = null;
+try {
+stmt = conn.createStatement( );
+. . .
+}
+catch (SQLException e) {
+. . .
+}
+finally {
+ stmt.close();
+}
+</code></pre>
+<p>注：如果关闭了 Connection 对象首先它会关闭 Statement 对象，然而应该始终明确关闭 Statement 对象，以确保正确的清除。</p>
+<h2 id="PreparedStatement"><a href="#PreparedStatement" class="headerlink" title="PreparedStatement"></a>PreparedStatement</h2><p>PreparedStatement 接口扩展了 Statement 接口，有利于高效地执行多次使用的 SQL 语句。我们先来创建一个 PreparedStatement 对象。 Statement 为一条 SQL 语句生成执行计划。如果要执行两条 SQL 语句，会生成两个执行计划。一万个查询就生成一万个执行计划！</p>
+<pre><code>select colume from table where colume=1;
+select colume from table where colume=2;
+</code></pre>
+<p>PreparedStatement 用于使用绑定变量重用执行计划。</p>
+<pre><code>select colume from table where colume=:x;
+</code></pre>
+<p>通过 set 不同数据，只需要生成一次执行计划，并且可以重用。</p>
+<pre><code> PreparedStatement pstmt = null;
+ try {
+
+/*
+ 在JDBC中所有的参数都被代表？符号，这是已知的参数标记。在执行SQL语句之前，必须提供值的每一个参数。
+*/
+ String SQL = "Update Students SET age = ? WHERE id = ?";
+ pstmt = conn.prepareStatement(SQL);
+  . . .
+ }
+/*
+
+setXXX()方法将值绑定到参数，其中XXX表示希望绑定到输入参数值的 Java 数据类型。如果忘了提供值，将收到一个 SQLException。
+*/
+catch (SQLException e) {
+. . .
+}
+finally {
+//同理，我们需要关闭 PreparedStatement 对象
+  pstmt.close();
+}
+</code></pre>
+<p>说了这么多，我们手动操作一下吧。</p>
+<p>1、先创建数据库和相应的内容：</p>
+<pre><code>sudo service mysql start
+mysql -u root 
+create database EXAMPLE;
+use EXAMPLE
+</code></pre>
+<p><img src="http://image.lichongbing.com/static/49ed9e01c881f6ce0ecc32ab02fe0bb4.jpeg" alt="wm-6.jpeg"></p>
+<pre><code>create table Students
+(
+id int not null,
+age int not null,
+name varchar(255),
+primary key(id)
+);
+insert into Students values(1,18,'Tom'),
+(2,20,'Aby'),(4,20,'Tomson');
+</code></pre>
+<p>在/home/project/目录下创建JdbcTest.java。</p>
+<pre><code>import java.sql.*;
+
+public class JdbcTest {
+   // JDBC 驱动器的名称和数据库地址
+   static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+   static final String DB_URL = "jdbc:mysql://localhost/EXAMPLE";
+
+
+   static final String USER = "root";
+   static final String PASS = "";
+
+  public static void main(String[] args) {
+   Connection conn = null;
+   PreparedStatement stmt = null;
+   try{
+       //注册 JDBC 驱动器
+       Class.forName("com.mysql.jdbc.Driver");
+
+       //打开连接
+       System.out.println("Connecting to database...");
+       conn = DriverManager.getConnection(DB_URL,USER,PASS);
+
+       //执行查询
+       System.out.println("Creating statement...");
+       //这里我们要更改一个同学的年龄，参数待定
+       String sql = "UPDATE Students set age=? WHERE id=?";
+       stmt = conn.prepareStatement(sql);
+
+       //将值绑定到参数，参数从左至右序号为1，2...
+       stmt.setInt(1, 22);  // 绑定 age 的值(序号为1)
+       stmt.setInt(2, 1); // 绑定 ID 的值
+
+       // 更新 ID 为1的同学的年龄
+       int rows = stmt.executeUpdate();
+       System.out.println("被影响的行数 : " + rows );
+
+       // 查询所有记录，并显示.
+       sql = "SELECT id, name, age FROM Students";
+       ResultSet rs = stmt.executeQuery(sql);
+
+       //处理结果集
+       while(rs.next()){
+           //检索
+           int id  = rs.getInt("id");
+           int age = rs.getInt("age");
+           String name = rs.getString("name");
+
+
+           //显示
+           System.out.print("ID: " + id);
+           System.out.print(", Age: " + age);
+           System.out.print(", Name: " + name);
+           System.out.println();
+       }
+       //清理
+       rs.close();
+       stmt.close();
+       conn.close();
+   }catch(SQLException se){
+       se.printStackTrace();
+   }catch(Exception e){
+       e.printStackTrace();
+   }finally{
+       try{
+           if(stmt!=null)
+               stmt.close();
+       }catch(SQLException se2){
+       }
+try{
+     if(conn!=null)
+             conn.close();
+  }catch(SQLException se){
+          se.printStackTrace();
+      }
+   }
+       System.out.println("Goodbye!");
+ }
+}
+</code></pre>
+<p>编译运行：</p>
+<pre><code>$ wget http://labfile.oss.aliyuncs.com/courses/110/mysql-connector-java-5.1.47.jar   
+$ javac -cp .:mysql-connector-java-5.1.47.jar JdbcTest.java     
+$ java -cp .:mysql-connector-java-5.1.47.jar JdbcTest 
+</code></pre>
+<p>运行结果<br><img src="http://image.lichongbing.com/static/7609cd8460fc7725fae2dc706d7289af.jpeg" alt="wm-7.jpeg"></p>
+<h2 id="CallableStatement"><a href="#CallableStatement" class="headerlink" title="CallableStatement"></a>CallableStatement</h2><p>CallableStatement 对象为所有的 DBMS 提供了一种以标准形式调用存储过程的方法。存储过程储存在数据库中。对储存过程的调用是 CallableStatement 对象所含的内容。三种类型的参数有：IN，OUT 和 INOUT。PreparedStatement 对象只使用IN参数。 CallableStatement 对象可以使用所有三个<br><img src="http://image.lichongbing.com/static/44774b4278fd900888c525bb0f4c0287.png" alt="截屏2019-12-1015.58.31.png"><br>在 JDBC 中调用存储过程的语法如下所示。注意，方括号表示其间的内容是可选项；方括号本身并不是语法的组成部份。</p>
+<pre><code>{call 存储过程名[(?, ?, ...)]} 
+</code></pre>
+<p>返回结果参数的过程的语法为：</p>
+<pre><code>{? = call 存储过程名[(?, ?, ...)]} 
+</code></pre>
+<p>不带参数的存储过程的语法类似：</p>
+<pre><code>{call 存储过程名} 
+</code></pre>
+<p>CallableStatement 对象是用 Connection 方法 prepareCall 创建的。</p>
+<pre><code>CallableStatement cstmt = null;
+try {
+     String SQL = "{call getEXAMPLEName (?, ?)}";
+     cstmt = conn.prepareCall (SQL);
+     . . .
+   }
+ catch (SQLException e) {
+  . . .
+ }
+finally {
+  cstmt.close();
+}
+</code></pre>
+<p>好了，CallableStatement 接口就不再详细地讲解了，同学们可以自己查阅相关的资料，对 CallableStatement 进行深入学习。</p>
+<h2 id="JDBC-结果集"><a href="#JDBC-结果集" class="headerlink" title="JDBC 结果集"></a>JDBC 结果集</h2><p>结果集通常是通过执行查询数据库的语句生成，表示数据库查询结果的数据表。</p>
+<h2 id="ResultSet-介绍"><a href="#ResultSet-介绍" class="headerlink" title="ResultSet 介绍"></a>ResultSet 介绍</h2><p>ResultSet 对象具有指向其当前数据行的光标。最初，光标被置于第一行之前。next 方法将光标移动到下一行；因为该方法在 ResultSet 对象没有下一行时返回 false，所以可以在 while 循环中使用它来迭代结果集。光标可以方便我们对结果集进行遍历。默认的 ResultSet 对象不可更新，仅有一个向前移动的光标。因此，只能迭代它一次，并且只能按从第一行到最后一行的顺序进行。</p>
+<p>ResultSet 接口的方法可分为三类：</p>
+<ul>
+<li><p>导航方法：用于移动光标</p>
+</li>
+<li><p>获取方法：用于查看当前行的光标所指向的列中的数据</p>
+</li>
+<li><p>更新方法：用于更新当前行的列中的数据<br>JDBC 提供下列连接方法来创建所需的 ResultSet 语句：</p>
+<p>createStatement(int RSType, int RSConcurrency);</p>
+<p>prepareStatement(String SQL, int RSType, int RSConcurrency);</p>
+<p>prepareCall(String sql, int RSType, int RSConcurrency);</p>
+</li>
+</ul>
+<p>RSType 表示 ResultSet 对象的类型，RSConcurrency 是 ResultSet 常量，用于指定一个结果集是否为只读或可更新。</p>
+<p>ResultSet 的类型，如果不指定 ResultSet 类型，将自动获得一个是 TYPE_FORWARD_ONLY：<br><img src="http://image.lichongbing.com/static/e8258586432a74ebde4f2eeb7b365ec9.png" alt="截屏2019-12-1016.01.48.png"><br>如初始化一个 Statement 对象来创建一个双向、可更新的 ResultSet 对象：</p>
+<pre><code>try {
+ Statement stmt = conn.createStatement(
+                       ResultSet.TYPE_SCROLL_INSENSITIVE,
+                       ResultSet.CONCUR_UPDATABLE);
+   }
+catch(Exception ex) {
+  ....
+ }
+finally {
+  ....
+}
+</code></pre>
+<h2 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h2><p>我们在上面已经知道了，导航方法是用于移动光标的。我们先来看一看，在 ResultSet 接口中有哪些方法会涉及光标的移动。<br><img src="http://image.lichongbing.com/static/83d9a1a4b2d1dea77fa23f011369ed06.png" alt="截屏2019-12-1016.03.52.png"><br>什么也不说了，我们还是看代码吧！</p>
+<p>1、先创建数据库和相应的内容：</p>
+<pre><code>sudo service mysql start
+mysql -u root 
+create database EXAMPLE;
+use EXAMPLE
+</code></pre>
+<p><img src="http://image.lichongbing.com/static/49ed9e01c881f6ce0ecc32ab02fe0bb4.jpeg" alt="wm-8.jpeg"></p>
+<pre><code>create table Students
+(
+id int not null,
+age int not null,
+name varchar(255),
+primary key(id)
+);
+insert into Students values(1,18,'Tom'),
+(2,20,'Aby'),(4,20,'Tomson');
+</code></pre>
+<p><img src="http://image.lichongbing.com/static/b047f5a977d93e71d9c951a1ee3ab703.jpeg" alt="wm-9.jpeg"><br>在/home/project/目录下创建文件JdbcTest.java。</p>
+<pre><code>import java.sql.*;
+
+public class JdbcTest {
+// JDBC 驱动器名称 和数据库地址
+static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+//数据库的名称为 EXAMPLE
+static final String DB_URL = "jdbc:mysql://localhost/EXAMPLE";
+
+// 数据库用户和密码
+static final String USER = "root";
+static final String PASS = "";
+
+public static void main(String[] args) {
+   Connection conn = null;
+   Statement stmt = null;
+   try{
+       //注册JDBC 驱动程序
+       Class.forName("com.mysql.jdbc.Driver");
+
+       //打开连接
+       System.out.println("Connecting to database...");
+       conn = DriverManager.getConnection(DB_URL,USER,PASS);
+
+
+
+       System.out.println("Creating statement...");
+       //创建所需的ResultSet，双向，只读
+       stmt = conn.createStatement(
+                       ResultSet.TYPE_SCROLL_INSENSITIVE,
+                       ResultSet.CONCUR_READ_ONLY);
+       String sql;
+       sql = "SELECT id, name, age FROM Students";
+       ResultSet rs = stmt.executeQuery(sql);
+
+       // 将光标移到最后一行
+       System.out.println("Moving cursor to the last...");
+       rs.last();
+
+       //处理结果集
+       System.out.println("Displaying record...");
+       int id  = rs.getInt("id");
+       int age = rs.getInt("age");
+       String name = rs.getString("name");
+
+
+       //显示
+       System.out.print("ID: " + id);
+       System.out.print(", Age: " + age);
+       System.out.print(", Name: " + name);
+       System.out.println();
+
+       // 将光标移到第一行
+       System.out.println("Moving cursor to the first row...");
+       rs.first();
+
+
+       System.out.println("Displaying record...");
+       id  = rs.getInt("id");
+       age = rs.getInt("age");
+       name = rs.getString("name");
+
+
+       //显示
+       System.out.print("ID: " + id);
+       System.out.print(", Age: " + age);
+       System.out.print(", Name: " + name);
+
+       //将光标移至下一行
+       System.out.println("Moving cursor to the next row...");
+       rs.next();
+
+
+       System.out.println("Displaying record...");
+       id  = rs.getInt("id");
+       age = rs.getInt("age");
+       name = rs.getString("name");
+
+       // 显示
+       System.out.print("ID: " + id);
+       System.out.print(", Age: " + age);
+       System.out.print(", Name: " + name);
+
+       rs.close();
+       stmt.close();
+       conn.close();
+   }catch(SQLException se){
+       se.printStackTrace();
+   }catch(Exception e){
+       e.printStackTrace();
+   }finally{
+       try{
+           if(stmt!=null)
+               stmt.close();
+       }catch(SQLException se2){
+       }
+       try{
+           if(conn!=null)
+               conn.close();
+       }catch(SQLException se){
+           se.printStackTrace();
+       }
+   }
+   System.out.println("Goodbye!");
+}
+}
+</code></pre>
+<p>编译运行：</p>
+<pre><code>$ wget http://labfile.oss.aliyuncs.com/courses/110/mysql-connector-java-5.1.47.jar 
+$ javac -cp .:mysql-connector-java-5.1.47.jar JdbcTest.java     
+$ java -cp .:mysql-connector-java-5.1.47.jar JdbcTest      
+</code></pre>
+<p>运行结果：<br><img src="http://image.lichongbing.com/static/728e78e362702a87ee5fc3dc0ae27c95.jpeg" alt="wm-10.jpeg"></p>
+<h2 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h2><p><img src="http://image.lichongbing.com/static/e71e02b51945ef6eddca5dfa53ae85db.png" alt="截屏2019-12-1016.07.39.png"></p>
+<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><p><img src="http://image.lichongbing.com/static/0e9570386817df706f1136c27ce9f225.png" alt="截屏2019-12-1016.08.30.png"></p>
+<pre><code> Statement stmt = conn.createStatement(
+                       ResultSet.TYPE_SCROLL_INSENSITIVE,
+                       ResultSet.CONCUR_UPDATABLE);
+
+ String sql = "SELECT id, name, age FROM Students";
+ResultSet rs = stmt.executeQuery(sql);
+
+//结果集中插入新行
+rs.moveToInsertRow();
+rs.updateInt("id",5);
+rs.updateString("name","John");
+rs.updateInt("age",21);
+//更新数据库
+rs.insertRow();
+</code></pre>
+<h2 id="练习题：根据多种条件进行查询"><a href="#练习题：根据多种条件进行查询" class="headerlink" title="练习题：根据多种条件进行查询"></a>练习题：根据多种条件进行查询</h2><p>启动数据库</p>
+<pre><code>$ sudo service mysql start
+</code></pre>
+<p>创建一个数据库test，在数据库中创建一个数据表user，表内容如下：</p>
+<pre><code>create database test;
+use test;
+CREATE TABLE user
+(
+id int PRIMARY KEY,
+name varchar(50),
+age int,
+sex varchar(10)
+ );
+INSERT INTO `user`(`id`, `name`, `age`, `sex`) VALUES (1, 'shi', 20, '男');
+INSERT INTO `user`(`id`, `name`, `age`, `sex`) VALUES (2, 'yan', 13, '女');
+INSERT INTO `user`(`id`, `name`, `age`, `sex`) VALUES (3, 'lou', 22, '女');
+INSERT INTO `user`(`id`, `name`, `age`, `sex`) VALUES (4, 'admin', 50, '男');
+</code></pre>
+<p>在/home/project目录下创建一个文件QueryDemo.java，使用 jdbc 完成以下查询：</p>
+<ul>
+<li><p>查询 Id 为 1 的用户</p>
+</li>
+<li><p>查询年龄为 12 岁，名字为 yan 的用语</p>
+</li>
+<li><p>查询年龄大于 20 岁的用户<br>JDBC 驱动下载：</p>
+<p>$ wget <a target="_blank" rel="noopener" href="http://labfile.oss.aliyuncs.com/courses/1230/mysql-connector-java-5.1.47.jar">http://labfile.oss.aliyuncs.com/courses/1230/mysql-connector-java-5.1.47.jar</a></p>
+</li>
+</ul>
+<h2 id="参考答案"><a href="#参考答案" class="headerlink" title="参考答案"></a>参考答案</h2><p>注意：请务必先独立思考获得 PASS 之后再查看参考代码，直接拷贝代码收获不大</p>
+<pre><code>import java.sql.*;
+
+public class QueryDemo {
+
+// JDBC 驱动器的名称和数据库地址
+private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+private static final String DB_URL = "jdbc:mysql://localhost/test";
+private static final String USER = "root";
+private static final String PASS = "";
+
+public static void main(String[] args) {
+    Connection conn = null;
+    PreparedStatement stmt = null;
+    try {
+        Class.forName(JDBC_DRIVER);
+        conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+        //id为1的用户
+        String sql = "select id,name,age,sex from user where id=?";
+        stmt = conn.prepareStatement(sql);
+        stmt.setInt(1, 1);
+        ResultSet resultSet = stmt.executeQuery();
+        printRS(resultSet);
+
+        //年龄为12 名字为yan
+        stmt = conn.prepareStatement("select id,name,age,sex from user where age=? and name=?");
+        stmt.setInt(1, 12);
+        stmt.setString(2, "yan");
+        resultSet = stmt.executeQuery();
+        printRS(resultSet);
+
+        //年龄为12 名字为yan
+        stmt = conn.prepareStatement("select id,name,age,sex from user where age&gt;?");
+        stmt.setInt(1, 20);
+        resultSet = stmt.executeQuery();
+        printRS(resultSet);
+        //清理
+        resultSet.close();
+    } catch (Exception e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            if (stmt != null) {
+                stmt.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException se) {
+            se.printStackTrace();
+        }
+    }
+}
+
+private static void printRS(ResultSet resultSet) throws SQLException {
+    while (resultSet.next()) {
+        int id = resultSet.getInt("id");
+        String name = resultSet.getString("name");
+        int age = resultSet.getInt("age");
+        String sex = resultSet.getString("sex");
+        System.out.println("id:" + id + " name:" + name + " age:" + age + " sex:" + sex);
+    }
+}
+}
+</code></pre>
+<h2 id="JDBC-事务"><a href="#JDBC-事务" class="headerlink" title="JDBC 事务"></a>JDBC 事务</h2><p>我们在编写 java 程序的时候，在默认情况下，JDBC 连接是在自动提交模式下，即每个 SQL 语句都是在其完成时提交到数据库。但有时候我们为了提高程序运行的性能或者保持业务流程的完整性，以及使用了分布式事务管理方式，这个时候我们可能想关闭自动提交而自己管理和控制自己的事务。</p>
+<p>让多条 SQL 在一个事务中执行，并且保证这些语句是在同一时间共同执行的时候，我们就应该为这多条语句定义一个事务。一个事务是把单个 SQL 语句或一组 SQL 语句作为一个逻辑单元，并且如果事务中任何语句失败，则整个事务失败。</p>
+<p>如果我们要启动一个事务，而不是让 JDBC 驱动程序默认使用 auto-commit 模式支持。这个时候我们就要使用 Connection 对象的 setAutoCommit() 方法。我们传递一个布尔值 false 到 setAutoCommit() 中，就可以关闭自动提交。反之我们传入一个 true 便将其重新打开。</p>
+<p>例如:</p>
+<pre><code>Connection conn = null;
+conn = DriverManager.getConnection(URL);
+//关闭自动提交
+conn.setAutoCommit(false);
+</code></pre>
+<p>我们关闭了自动提交后，如果我们要提交数据库更改怎么办呢？这时候就要用到我们的提交和回滚了。我们要提交更改，可以调用 commit() 方法:</p>
+<pre><code>conn.commit();
+</code></pre>
+<p>尤其不要忘记，在 catch 块内添加回滚事务，表示操作出现异常，撤销事务：</p>
+<pre><code>conn.rollback();
+</code></pre>
+<h2 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h2><p>JDBC 插入数据使用的频率非常高，接下来说明如何使用 JDBC 插入数据。</p>
+<p>编程实战</p>
+<p>创建数据库(若之前已经创建了 Students 表需提前删除再操作)</p>
+<pre><code>sudo service mysql start
+mysql -u root 
+create database EXAMPLE;
+use EXAMPLE;
+create table Students
+(
+    id int not null,
+    age int not null,
+    name varchar(255),
+    primary key(id)
+);
+</code></pre>
+<p>在/home/project目录下新建一个JdbcInsertTest.java。</p>
+<pre><code>import java.sql.*;
+
+public class JdbcInsertTest {
+public static Connection connection = null;
+public static void main(String[] args) {
+    try {
+        Class.forName("com.mysql.jdbc.Driver");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/EXAMPLE", "root", "");
+        Statement statement = connection.createStatement();
+        //单条插入
+        boolean execute = statement.execute("insert into Students values (0,1,'shiyanlou')");
+        if (execute) {
+            System.out.println("插入失败");
+        }else {
+            System.out.println("单条插入成功");
+        }
+        // 批量插入  需要关闭自动提交
+        connection.setAutoCommit(false);
+        String sql = "insert into Students values (?,?,?)";
+        PreparedStatement preparedStatement = connection.prepareStatement(sql);
+        //设置插入的值
+        for (int i = 1; i &lt;= 10; i++) {
+            preparedStatement.setInt(1, i);
+            preparedStatement.setInt(2, i + 10);
+            preparedStatement.setString(3, "shiyanlou");
+            preparedStatement.addBatch();
+        }
+        //执行批量插入，使用executeBatch 方法
+        preparedStatement.executeBatch();
+        //提交到数据库
+        connection.commit();
+        System.out.println("提交批量插入完成");
+    } catch (ClassNotFoundException | SQLException e) {
+        e.printStackTrace();
+    }
+
+}
+}
+</code></pre>
+<p>编译运行：</p>
+<pre><code>$ wget http://labfile.oss.aliyuncs.com/courses/1230/mysql-connector-java-5.1.47.jar 
+$ javac -cp .:mysql-connector-java-5.1.47.jar JdbcInsertTest.java     
+$ java -cp .:mysql-connector-java-5.1.47.jar JdbcInsertTest  
+ 单条插入成功
+ 提交批量插入完成 
+</code></pre>
+<p>如果成功运行，进入数据库查看数据是否有增加</p>
+<pre><code>mysql -u root
+use EXAMPLE;
+select * from Students;
+</code></pre>
+<h2 id="练习题：插入数据"><a href="#练习题：插入数据" class="headerlink" title="练习题：插入数据"></a>练习题：插入数据</h2><p>启动数据库</p>
+<pre><code>$ sudo service mysql start
+</code></pre>
+<p>创建一个数据库test，在数据库中创建一个数据表user，表内容如下：</p>
+<pre><code>create database test;
+use test;
+CREATE TABLE user
+(
+id int PRIMARY KEY,
+name varchar(50),
+age int,
+sex varchar(10)
+);
+</code></pre>
+<p>在/home/project目录下创建一个文件InsertDemo.java，使用 jdbc 完成以下操作：</p>
+<p>将用户 id：10，name：shiyanlou，age：22，sex：男 插入到数据库<br>JDBC 驱动下载：</p>
+<pre><code>$ wget http://labfile.oss.aliyuncs.com/courses/110/mysql-connector-java-5.1.47.jar
+</code></pre>
+<h2 id="参考答案-1"><a href="#参考答案-1" class="headerlink" title="参考答案"></a>参考答案</h2><p>注意：请务必先独立思考获得 PASS 之后再查看参考代码，直接拷贝代码收获不大</p>
+<pre><code>import java.sql.*;
+
+public class InsertDemo {
+public static Connection connection = null;
+public static void main(String[] args) {
+    try {
+        Class.forName("com.mysql.jdbc.Driver");
+        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "");
+        Statement statement = connection.createStatement();
+        statement.execute("insert into user values (10,'shiyanlou',22,'男')");
+        statement.close();
+        connection.close();
+    } catch (ClassNotFoundException | SQLException e) {
+        e.printStackTrace();
+    }finally {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+}
+</code></pre>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本节主要讲解 Java 如何通过 JDBC 对数据库链接以及操作，主要包含以下知识点：</p>
+<ul>
+<li>SQL 简介</li>
+<li>JDBC</li>
+<li>创建数据库</li>
+<li>数据库操作</li>
+<li>JDBC 结果集</li>
+<li>插入数据</li>
+</ul>
+<p>请大家务必手动完成代码并运行对比结果，才能更好的理解掌握 JDBC。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">lichongbing</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.lichongbing.com/2017/05/22/jdbc/">https://www.lichongbing.com/2017/05/22/jdbc/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">lichongbing</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2017/06/10/fan-she/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="反射">
+                        
+                        <span class="card-title">反射</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2017-06-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lichongbing
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2017/05/19/duo-xian-cheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="多线程">
+                        
+                        <span class="card-title">多线程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2017-05-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lichongbing
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src=""></script>
+<script>
+    $.getScript("/libs/tocbot/tocbot.min.js",function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    })
+</script>
+
+    
+
+</main>
+
+
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+</main>
+
+<footer class="page-footer bg-color">
+    
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2022</span>
+            
+            <a href="/about" target="_blank">lichongbing</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+                <span id="icp"><img src="/medias/icp.png"
+                                    style="vertical-align: text-bottom;"/>
+                <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">蜀ICP备18037498号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lichongbing" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:873610008@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=873610008" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 873610008" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/lichongbing" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/lichongbing" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+<!-- 深色模式按钮 -->
+<a onclick="switchNightMode()" id="sma" title="模式切换">
+    <i class="fa fa-moon" id="nightMode" aria-hidden="true"></i>
+</a>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+<script type="text/javascript">
+    $.getScript("https://files.islu.cn/static/pjax/pjax.min.js",loadPjax)
+    function loadPjax(){
+        var pjax = new Pjax({
+            selectors: [
+                "head title",
+                'head meta[name="keywords"]',
+                'head meta[name="description"]',
+                "main#main_wrap",
+                "#rightside"
+            ],
+            cache: true,
+            cacheBust: false
+        });
+    }
+
+    // 开始 PJAX 执行的函数
+    document.addEventListener('pjax:send', function () {
+    });
+    // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+    document.addEventListener('pjax:complete', function () {
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+    });
+
+    // Pjax请求错误时，跳转到404页面
+    document.addEventListener('pjax:error', (err) => {
+        if (err.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+</script>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+
+
+
+
+<!-- 雪花特效 -->
+
+
+<!-- 鼠标星星特效 -->
+
+
+
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+    <script src="/libs/others/TencentCaptcha.js"></script>
+    <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button"
+            hidden></button>
+
+
+<!-- Baidu Analytics -->
+
+<!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+    <script src="/libs/others/clicklove.js" async="async"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+<!--腾讯兔小巢-->
+
+
+
+
+
+
+
+
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+
+
+</body>
+
+</html>

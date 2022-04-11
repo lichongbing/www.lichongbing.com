@@ -1,0 +1,1433 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="solr参考指南（使用Solr管理用户界面）, 谦谦君子">
+    <meta name="description" content="使用Solr管理用户界面本章节讨论 Solr 管理用户界面（“管理 UI”）。
+Solr 的管理用户界面的概述解释了用户界面的基本特征，什么是初始管理 UI 页面，以及如何在接口上配置。另外，还有一些页面描述了管理界面的每个界面：
+
+  获">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>solr参考指南（使用Solr管理用户界面） | 谦谦君子</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <link rel="stylesheet" type="text/css" href="/css/dark.css">
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="谦谦君子" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">谦谦君子</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">谦谦君子</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+
+<main id="main_wrap">
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">solr参考指南（使用Solr管理用户界面）</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 137px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-12-25
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="使用Solr管理用户界面"><a href="#使用Solr管理用户界面" class="headerlink" title="使用Solr管理用户界面"></a>使用Solr管理用户界面</h1><p>本章节讨论 Solr 管理用户界面（“管理 UI”）。</p>
+<p>Solr 的管理用户界面的概述解释了用户界面的基本特征，什么是初始管理 UI 页面，以及如何在接口上配置。另外，还有一些页面描述了管理界面的每个界面：</p>
+<ul>
+<li>  获取帮助：向您展示如何获取有关 UI 的更多信息。</li>
+<li>  记录：显示由此 Solr 节点记录的最新消息，并提供了一种更改特定类的日志记录级别的方法。</li>
+<li>  Cloud 屏幕：以 SolrCloud 模式运行时，Cloud 屏幕显示有关节点的信息。</li>
+<li>  集合/核心管理员解释如何获取有关每个核心的管理信息。</li>
+<li>  Java Properties：显示有关每个核心的 Java 信息。</li>
+<li>  线程转储：让您可以查看有关每个线程的详细信息以及状态信息。</li>
+<li>特定于集合的工具：是解释每个集合可用的其他屏幕的部分。<ul>
+<li>  分析（Analysis）- 让您分析在特定字段中找到的数据。</li>
+<li>  导入（Dataimport）- 显示有关数据导入处理程序的当前状态的信息。</li>
+<li>  文档（Documents）- 提供了一个简单的表单，允许您直接从浏览器执行各种 Solr 索引命令。</li>
+<li>  文件（Files）- 显示当前的核心配置文件，如 solrconfig.xml。</li>
+<li>  查询（Query&nbsp;）- 让您提交关于核心的各种元素的结构化查询。</li>
+<li>  流（Stream）- 允许您提交流表达式并查看结果和解析解释。</li>
+<li>  架构浏览器（Schema Browser）- 在浏览器窗口中显示架构数据。</li>
+</ul>
+</li>
+<li>特定于核心的工具：是说明每个指定核心可用的额外屏幕的部分。<ul>
+<li>  Ping&nbsp;- 让你 ping 一个已命名的核心，并确定核心是否处于活动状态。</li>
+<li>  插件/统计（Plugins/Stats）- 显示插件和其他已安装的组件的统计信息。</li>
+<li>  复制（Replication）- 显示核心的当前复制状态，并允许您启用/禁用复制。</li>
+<li>  段信息（Segments Info）- 提供底层 Lucene 索引段的可视化。</li>
+</ul>
+</li>
+</ul>
+<h1 id="Solr管理界面概述"><a href="#Solr管理界面概述" class="headerlink" title="Solr管理界面概述"></a>Solr管理界面概述</h1><p>Solr 具有一个 Web 界面，它使 Solr 管理员和程序员可以轻松查看 Solr 配置的详细信息、运行查询和分析文档字段，以便微调（&nbsp;fine-tune）Solr 配置并访问联机文档和其他帮助。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171108/1510129363520877.png" alt="Solr管理界面"></p>
+<p>访问 URL&nbsp;<a target="_blank" rel="noopener" href="http://hostname:8983/solr/">http://hostname:8983/solr/</a> 将显示 Solr 主仪表板，它分为两部分。</p>
+<p>屏幕的左侧是 Solr 徽标下的菜单，它通过 UI 的屏幕提供导航。第一组链接用于系统级别的信息和配置，并提供对&nbsp;日志记录、集合/核心管理和 Java 属性等的访问。在这个信息的末尾至少有一个下拉列表为这个实例配置了 Solr 核心。在 SolrCloud 节点上，附加的下拉列表显示了此群集中的所有集合。单击集合或核心名称将显示指定集合或核心的二级信息菜单，如模式浏览器、配置文件、插件和统计信息以及对索引数据执行查询的功能。</p>
+<p>屏幕的中心显示所选选项的详细信息。这可能包括选项的子导航或所请求的数据的文本或图形表示。有关更多详细信息，请参阅本指南中有关每个屏幕的部分。</p>
+<p>在封面之下，Solr 管理用户界面重新使用相同的 HTTP APIs，它可供所有客户访问与 Solr 相关的数据来驱动一个外部接口。</p>
+<pre><code>Tip：上面给出的 Solr 管理用户界面的路径是：http://hostname:port/solr，它重定向到当前版本中的路径：http://hostname:port/solr/#/。还支持方便的重定向，因此只需访问管理界面：http://hostname:port/ 也将重定向到：http://hostname:port/solr/#/。
+</code></pre>
+<h1 id="从Solr管理界面获取帮助"><a href="#从Solr管理界面获取帮助" class="headerlink" title="从Solr管理界面获取帮助"></a>从Solr管理界面获取帮助</h1><p>在 Solr 的用户管理界面（Admin UI）中每个屏幕的底部是都一组链接，您可以通过使用这些链接来获取有关配置和使用 Solr 获得更多的帮助。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510198861759066.png" alt="Solr管理界面帮助图标"></p>
+<p>Solr 用户管理界面的帮助图标包含以下链接：</p>
+<table>
+<thead>
+<tr>
+<th>链接</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文档</td>
+<td>该链接能够导航到在&nbsp;<a target="_blank" rel="noopener" href="https://lucene.apache.org/solr/">https://lucene.apache.org/solr/</a>&nbsp;上托管的 Apache Solr 文档。</td>
+</tr>
+<tr>
+<td>问题跟踪器</td>
+<td>该链接能够导航到 Apache Solr 项目的 JIRA 问题跟踪服务器。该服务器位于：<a target="_blank" rel="noopener" href="https://issues.apache.org/jira/browse/SOLR">https://issues.apache.org/jira/browse/SOLR</a>。</td>
+</tr>
+<tr>
+<td>IRC 频道</td>
+<td>该链接能够导航到 Solr 的&nbsp;<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC</a>&nbsp;实时聊天室：<a target="_blank" rel="noopener" href="http://webchat.freenode.net/?channels=#solr%E3%80%82">http://webchat.freenode.net/?channels=#solr。</a></td>
+</tr>
+<tr>
+<td>社区论坛</td>
+<td>该链接能够导航到 Apache Wiki 页面，该页面提供了有关如何参与 Solr 用户社区邮件列表的更多信息：<a target="_blank" rel="noopener" href="https://wiki.apache.org/solr/UsingMailingLists%E3%80%82">https://wiki.apache.org/solr/UsingMailingLists。</a></td>
+</tr>
+<tr>
+<td>Solr 查询语法</td>
+<td>该链接能够导航到本“参考指南”中的查询语法和分析部分。</td>
+</tr>
+</tbody></table>
+<p>这些链接不能在不编辑 server/solr/solr-webapp 目录中（包含在管理界面）的 index.html 的情况下进行修改。</p>
+<h1 id="Solr日志记录"><a href="#Solr日志记录" class="headerlink" title="Solr日志记录"></a>Solr日志记录</h1><p>在日志记录页面显示此 Solr 节点记录的最近消息。</p>
+<p>当您单击 “日志记录” 的链接时，将显示一个类似于下面的页面：</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510199647643943.png" alt="Solr日志记录页面"></p>
+<p>在上述的 Solr 日志记录界面中，包含了由客户端发送的错误文档导致的错误示例。</p>
+<p>虽然本示例仅显示一个核心的记录消息，但如果您在单个实例中有多个核心，则它们将分别列出每个核心的级别。</p>
+<h2 id="Solr-选择记录级别"><a href="#Solr-选择记录级别" class="headerlink" title="Solr 选择记录级别"></a>Solr 选择记录级别<a target="_blank" rel="noopener" href="http://lucene.apache.org/solr/guide/7_0/logging.html#selecting-a-logging-level"></a></h2><p>当您选择左侧的 “级别” 链接时，您会看到您的实例的类路径和类名的层次结构。以黄色突出显示的行表示该类具有日志记录功能。点击突出显示的行，将出现一个菜单，允许您更改该类的日志级别。粗体中的字符表示该类不会受根级别更改的影响。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510199852203024.png" alt="Solr日志记录级别选择"></p>
+<p>有关各种日志记录级别的说明，请参阅配置日志记录。</p>
+<h1 id="Cloud界面"><a href="#Cloud界面" class="headerlink" title="Cloud界面"></a>Cloud界面</h1><p>在 SolrCloud 模式下运行时，“Cloud” 选项将会出现在 Logging 和 Collections / Core Admin之间的管理界面。</p>
+<p>此 “Cloud” 界面提供了有关集群中每个集合和节点的状态信息，以及对存储在 ZooKeeper 中的低级别数据的访问。</p>
+<pre><code>Tip：Cloud 界面只有在使用 SolrCloud 时才是可见的： “Cloud” 菜单选项仅在以 SolrCloud 模式运行的 Solr 实例上可用。Solr 的单节点或主/从复制实例不会显示此选项
+</code></pre>
+<p>点击左侧导航栏中的 Cloud 选项，会出现一个小的子菜单，其中有 “Tree”、“Graph”、“Graph（Radial）” 和 “Dump” 选项。默认视图（“Graph”）显示每个集合的图形、组成这些集合的分片以及每个分片的每个副本的地址。</p>
+<p>此示例显示使用 bin/solr -e cloud -noprompt 示例命令创建的非常简单的双节点群集。除了2个碎片、2个副本 “gettingstarted” 集合之外，还有一个额外的 “films” 集合，由单个碎片/副本组成：</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510207216932368.png" alt="Cloud界面"></p>
+<p>“Graph（Radial）” 选项为每个节点提供了不同的可视视图。使用相同的示例集群，径向图形视图如下所示：</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510207242386832.png" alt="Cloud界面"></p>
+<p>“Tree” 选项显示了 ZooKeeper 中数据的目录结构，包括关于 live_nodes 和 overseer 状态的集群信息，以及 state.json、当前分片前导集和所使用的配置文件等的集合特定信息。在这个例子中，我们看到为 “films” 集合定义的 state.json 文件：</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510207268447263.png" alt="Cloud界面"></p>
+<p>最后的选项是 “Dump”，它返回一个包含所有节点、它们的内容和子节点（递归）的 JSON 文档。这可以用来导出 Solr 保存在 ZooKeeper 中的所有数据的快照，并且可以帮助调试 SolrCloud 问题。</p>
+<h1 id="Java属性界面"><a href="#Java属性界面" class="headerlink" title="Java属性界面"></a>Java属性界面</h1><p>“Java 属性”屏幕可以轻松访问最高性能的 Solr 系统中最重要的组件之一。使用 Java 属性屏幕，您可以看到运行 Solr 的 JVM 的所有属性，包括类路径、文件编码、JVM内存设置、操作系统等等。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510209150240927.png" alt="Java属性界面"></p>
+<h1 id="Solr线程转储"><a href="#Solr线程转储" class="headerlink" title="Solr线程转储"></a>Solr线程转储</h1><p>Solr 的线程转储界面允许您检查服务器上当前活动的线程。</p>
+<p>它将列出每个线程，并在适用的情况下访问堆栈跟踪（stacktraces）。在该线程界面中，左边的图标表示线程的状态：例如，绿色圆圈中带有绿色复选标记的线程处于 “RUNNABLE（可运行）” 状态。在线程名称的右侧，向下箭头表示您可以展开以查看该线程的堆栈跟踪。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510209648816880.png" alt="Solr线程列表"></p>
+<p>当您将光标移到线程名称上时，一个框将浮动在该线程的状态名称上。线程状态可以是：</p>
+<p>状态</p>
+<p>含义</p>
+<p>NEW</p>
+<p>尚未开始的线程</p>
+<p>RUNNABLE</p>
+<p>在 Java 虚拟机中执行的线程</p>
+<p>BLOCKED</p>
+<p>被阻塞的线程正在等待显示器锁定</p>
+<p>WAITING</p>
+<p>无限期等待另一个线程执行特定操作的线程</p>
+<p>TIMED_WAITING</p>
+<p>正在等待另一个线程执行一个由指定的等待时间完成的操作的线程</p>
+<p>TERMINATED</p>
+<p>已退出的线程</p>
+<p>当你点击一个可以扩展的线程时，你会看到堆栈跟踪，如下面的示例所示：</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510210006390799.png" alt="Solr检查线程"></p>
+<p>您还可以选中 “显示所有 Stacktraces（Show all Stacktraces）” 按钮以自动启用所有线程的扩展。</p>
+<h1 id="Solr特定于集合的工具"><a href="#Solr特定于集合的工具" class="headerlink" title="Solr特定于集合的工具"></a>Solr特定于集合的工具</h1><p>在 Solr 的左侧导航栏中，您将看到一个名为“集合选择器”的下拉菜单，可用于访问集合特定的管理界面。</p>
+<p>只有使用 SolrCloud 时才可见：“集合选择器”（Collection Selector）下拉菜单仅适用于以 SolrCloud 模式运行的 Solr 实例。Solr 的单节点或主/从复制实例将不会显示此菜单，而是在&nbsp;Core Selector（核心选择器）下拉菜单中提供本节中介绍的 Collection 专用 UI 页面。</p>
+<p>单击“集合选择器”下拉菜单将显示 Solr 集群中的集合列表，其中包含可用于按名称查找特定集合的搜索框。当您从下拉列表中选择一个集合时，该页面的主要显示将显示关于该集合的一些基本元数据，而在左侧导航栏中将显示一个二级菜单项，其中包含指向其他集合特定管理屏幕的链接。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510210833916471.png" alt="Solr集合界面"></p>
+<p>下面列出了特定于集合的 UI 界面，并链接到该指南的部分以了解更多信息：</p>
+<ul>
+<li>  <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/solr_doc/solr_doc-tc482fwu.html">分析界面</a> - 让您分析在特定字段中发现的数据。</li>
+<li>  Dataimport&nbsp;- 向您显示有关数据导入处理程序当前状态的信息。</li>
+<li>  <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/solr_doc/solr_doc-mco12fwz.html">文档界面</a> - 提供了一个简单的表单，允许您直接从浏览器执行各种 Solr 索引命令。</li>
+<li>  文件&nbsp;- 显示当前的核心配置文件，如 solrconfig.xml。</li>
+<li>  <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/solr_doc/solr_doc-kcas2fx9.html">查询界面</a> - 让您提交关于核心的各种元素的结构化查询。</li>
+<li>  流&nbsp;- 允许您提交流表达式并查看结果和解析解释。</li>
+<li>  模式浏览器&nbsp;- 在浏览器窗口中显示模式数据。<h1 id="Solr分析界面"><a href="#Solr分析界面" class="headerlink" title="Solr分析界面"></a>Solr分析界面</h1>通过 Solr 的“分析”界面，您可以根据模式中的字段、字段类型和动态字段配置来检查数据的处理方式。您可以分析在索引期间或在查询处理过程中如何处理内容，以及如何单独或同时查看结果。理想情况下，您需要一致地处理内容，并且此屏幕允许您验证字段类型或字段分析链中的设置。</li>
+</ul>
+<p>在屏幕顶部的一个或两个框中输入内容，然后选择用于分析的字段或字段类型定义。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510211496986072.png" alt="analysis_normal"></p>
+<p>如果单击 “详细输出” 复选框，则您会看到更多信息，其中包括有关输入转换的更多详细信息（例如：转换为小写字母，带额外字符等），其中包括每个阶段的原始字节、类型和详细的位置信息。显示的信息将根据字段或字段类型的设置而变化。该过程的每个步骤都显示在一个单独的部分中，包含了应用在步骤中的标记器或过滤器的缩写。悬停或单击缩写，您将看到标记器或过滤器的名称和路径。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510211793153083.png" alt="analysis_verbose"></p>
+<p>在上面的示例截图中，将几个转换应用于输入“Running is a sport”。“is” 和 “a” 这两个词已经被删除，“running” 这个词已更改为其基本形式 “run”。这是因为我们在这个场景中使用了字段类型 text_en，它被配置为删除停止单词（通常不提供大量上下文的小单词）和 “stem” 条件（如果可能的话）以找到更多可能的匹配（这是特别的有助于复数形式的单词）。如果单击“分析字段名称/字段类型（Analyze Fieldname/Field Type）”下拉菜单旁边的问号，将会打开 “模式浏览器” 窗口，显示指定字段的设置。</p>
+<p>“理解分析器（&nbsp;Understanding Analyzers）”，“标记器（Tokenizers）” 和 “过滤器（Filters）”章节详细描述了每个选项的内容以及它如何转换您的数据以及“运行您的分析程序（&nbsp;Running Your Analyzer&nbsp;）”部分有特定的示例来使用分析界面。</p>
+<h1 id="Solr文档界面"><a href="#Solr文档界面" class="headerlink" title="Solr文档界面"></a>Solr文档界面</h1><p>文档界面提供了一个简单的表单，允许您直接从浏览器以各种格式执行各种 Solr 索引命令。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510212466883330.png" alt="Solr文档界面"></p>
+<p>Solr 文档界面允许您：</p>
+<ul>
+<li>  以 JSON、CSV 或 XML 格式复制文档并将其提交给索引；</li>
+<li>  上传文件（使用 JSON、CSV 或 XML 格式）</li>
+<li>  通过选择字段和字段值来构建文档</li>
+</ul>
+<p>还有一些其他的方法来加载数据，您可以参考下列章节：</p>
+<ul>
+<li><p>  使用索引处理程序上传数据</p>
+</li>
+<li><p>  使用 Apache Tika 上传 Solr Cell 数据</p>
+</li>
+</ul>
+<p>第一步是定义 RequestHandler 以使用（aka，qt）。默认情况下 /update 会被定义。例如，要使用 Solr Cell，请将请求处理程序更改为 /update/extract。</p>
+<p>然后选择“文档类型”来定义要加载的文档的类型。其余参数将根据所选的文件类型而改变。</p>
+<h2 id="JSON-文档"><a href="#JSON-文档" class="headerlink" title="JSON 文档"></a>JSON 文档<a target="_blank" rel="noopener" href="http://lucene.apache.org/solr/guide/7_0/documents-screen.html#json-documents"></a></h2><p>使用 JSON 文档类型时，其功能与在命令行上使用 requestHandler 类似。不是将文档放在 curl 命令中，而是将其输入到 “文档” 输入框中。文档结构仍应采用适当的 JSON 格式。</p>
+<p>然后，您可以选择何时将文档添加到索引（Commit Within）中，以及是否应该用具有相同 ID 的传入文档覆盖现有文档（如果不是 true，则传入文档将被丢弃）。</p>
+<p>这个选项只会添加或覆盖文件到索引中，对于其他更新任务，请参阅 Solr 命令选项。</p>
+<h2 id="CSV-文档"><a href="#CSV-文档" class="headerlink" title="CSV 文档"></a>CSV 文档</h2><p>使用 CSV 文档类型时，其功能与在命令行上使用 requestHandler 类似。不是将文档放在 curl 命令中，而是将其输入到 “文档” 输入框中。文档结构仍然应该是正确的 CSV 格式：带有列分隔符和一行文档。</p>
+<p>然后，您可以选择何时将文档添加到索引（Commit Within）中，以及是否应该用具有相同 ID 的传入文档覆盖现有文档（如果不是 true，则传入文档将被丢弃）。</p>
+<h2 id="文档生成器"><a href="#文档生成器" class="headerlink" title="文档生成器"></a>文档生成器<a target="_blank" rel="noopener" href="http://lucene.apache.org/solr/guide/7_0/documents-screen.html#document-builder"></a></h2><p>文档生成器提供了一个类似于向导的界面，用于输入文档的字段。</p>
+<h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><p>文件上传选项允许选择一个准备好的文件并将其上传。如果仅将 /update 选项用于请求处理程序，则您将被限制为 XML、CSV 和 JSON。</p>
+<p>但是，要使用 ExtractingRequestHandler（又名 Solr Cell），您可以将 Request-Handler 修改为 /update/extract。您必须在您的 solrconfig.xml 文件中定义您所需的默认值。您还应该添加 &amp;literal.id，是其显示在“提取需求处理程序参数（Extracting Req. Handler Params）”字段中，以便选择的文件具有唯一的 ID。</p>
+<p>然后，您可以选择何时将文档添加到索引（Commit Within）中，以及是否应该用具有相同 ID 的传入文档覆盖现有文档（如果不是 true，则传入文档将被丢弃）。</p>
+<h2 id="Solr-命令"><a href="#Solr-命令" class="headerlink" title="Solr 命令"></a>Solr 命令<a target="_blank" rel="noopener" href="http://lucene.apache.org/solr/guide/7_0/documents-screen.html#solr-command"></a></h2><p>Solr 命令选项允许您使用 XML 或 JSON 对文档执行特定的操作，例如定义要添加或删除的文档，只更新文档的某些字段，或提交和优化索引上的命令。</p>
+<p>这些文档的结构应该像 /update 在命令行中使用一样。</p>
+<h2 id="XML-文档"><a href="#XML-文档" class="headerlink" title="XML 文档"></a>XML 文档<a target="_blank" rel="noopener" href="http://lucene.apache.org/solr/guide/7_0/documents-screen.html#xml-documents"></a></h2><p>使用 XML 文档类型时，其功能与在命令行上使用 requestHandler 类似。不是将文档放在 curl 命令中，而是将其输入到 “文档” 输入框中。文档结构仍应采用适当的 Solr XML 格式，每个文档由 <doc> 标签分隔，并且每个字段被定义。</doc></p>
+<p>然后，您可以选择何时将文档添加到索引（Commit Within）中，以及是否应该用具有相同 ID 的传入文档覆盖现有文档（如果不是 true，则传入文档将被丢弃）。</p>
+<p>这个选项只会添加或覆盖文件到索引；对于其他更新任务，请参阅 Solr 命令选项。</p>
+<h1 id="Solr查询界面"><a href="#Solr查询界面" class="headerlink" title="Solr查询界面"></a>Solr查询界面</h1><p>您可以使用查询界面将搜索查询提交给 Solr 集合并分析结果。</p>
+<p>在下面截图中的例子中，查询已经被提交，并且界面显示了作为 JSON 形式发送到浏览器的查询结果。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510214747366399.png" alt="Solr查询的JSON结果"></p>
+<p>在这个例子中，genre:Fantasy 的查询被发送到 “films” 集合。表单中的所有其他选项都使用了默认值，下表中对此进行了简要介绍，本指南的后面部分将对此进行详细介绍。</p>
+<p>该响应显示在窗体的右侧。对 Solr 的请求只是简单的 HTTP 请求，而提交的查询在结果的上方以浅色显示；如果您点击它，它将打开一个新的浏览器窗口，只有这个请求和响应（没有 Solr 管理界面的其余部分）。其余的响应以 JSON 格式显示，这是默认的输出格式。</p>
+<p>响应至少有两个部分，但可能还有其他几个部分，具体取决于所选的选项。它的两个部分始终是 responseHeader 和 response。responseHeader 包括搜索状态（status），处理时间（QTime）和参数（params 即用于处理查询）。</p>
+<p>response（响应）与查询匹配的文档，在 doc 小节中。字段返回取决于查询的参数（以及所使用的请求处理程序的默认值）。结果的数量也包括在本节中。</p>
+<p>此屏幕允许您尝试使用不同的查询选项，并检查文档的索引方式。表单上可用的查询参数是大多数用户想要获得的一些基本选项，但是还有几十个可用的参数可以简单地添加到基本请求中（如果在浏览器中打开的话）。以下参数可用：</p>
+<p>Request-handler（qt）：指定请求的查询处理程序。如果未指定查询处理程序，则 Solr 会使用标准查询处理程序处理响应。</p>
+<p>q：查询事件。请参阅搜索此参数的说明。</p>
+<p>FQ：筛选器查询。有关此参数的更多信息，请参阅常见查询参数。</p>
+<p>sort：根据响应的分数或其他指定的特性，按升序或降序对查询进行响应排序。</p>
+<p>start，rows：<code>start</code>是从哪个文档返回的查询结果的偏移量。默认值是 0，这意味着查询应返回从第一个匹配的文档开始的结果。该字段接受与搜索中描述的开始查询参数相同的语法。<code>rows</code>是要返回的行数。</p>
+<p>FL：定义要为每个文档返回的字段。您可以通过用逗号或空格分隔列出您想要返回的存储字段、函数和 doc 转换器。</p>
+<p>wt：指定用于格式化查询响应的响应书写器。如果未指定，则默认为 JSON。</p>
+<p>indent：单击此按钮以请求响应编写器使用缩进使响应更具可读性。</p>
+<p>debugQuery：点击这个按钮来增加带有调试信息的查询响应，包括返回的每个文档的“解释信息”。这个调试信息旨在让管理员或程序员理解。</p>
+<p>dismax：单击此按钮启用 Dismax 查询解析器。有关更多信息，请参阅 DisMax Query Parser。</p>
+<p>edismax：单击此按钮可启用扩展查询解析器。有关更多信息，请参阅扩展 DisMax 查询解析器。</p>
+<p>HL：点击此按钮可以在查询响应中启用突出显示。请参阅突出显示了解更多信息。</p>
+<p>facet：启用 facet，将搜索结果的排列方式设置为基于索引项的类别。有关详细信息，请参阅 facet。</p>
+<p>spatial：点击以启用在空间或地理空间搜索中使用的位置数据。请参阅空间搜索以获取更多信息。</p>
+<p>spellcheck：点击此按钮启用拼写检查程序，它根据其他类似的术语提供了内联查询建议。请参阅拼写检查以获取更多信息。</p>
+<h1 id="Solr管理界面：架构浏览器"><a href="#Solr管理界面：架构浏览器" class="headerlink" title="Solr管理界面：架构浏览器"></a>Solr管理界面：架构浏览器</h1><p>使用 Solr 架构浏览器界面，您可以在浏览器窗口中查看架构数据。</p>
+<p>如果您从分析界面访问了此窗口，则它将打开到特定字段、动态字段规则或字段类型。如果未选择任何选项，请使用下拉菜单选择字段或字段类型。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171110/1510292678810840.png" alt="Solr架构浏览器界面"></p>
+<p>架构浏览器界面提供了有关 Schema 中每个特定字段和字段类型的大量有用信息，并提供了使用 Schema API（如果已启用）添加字段或字段类型的快速 UI&nbsp;。在上面的例子中，我们选择了这个 cat 字段。在主视图窗口的左侧，我们看到字段名称，它被复制到_text_（由于copyField规则），并使用 strings 字段类型。单击这些字段或字段类型名称之一，您可以看到相应的定义。</p>
+<p>在主视图的右侧部分，我们看到 cat 字段定义的具体属性- 通过字段类型显式或隐式地定义，以及填充此字段的文档数量。然后我们看到用于索引和查询处理的分析器。点击其中任何一个的左侧的图标，您将看到所使用的标记化器和/或过滤器的定义。这些过程的输出是在<a target="_blank" rel="noopener" href="https://www.w3cschool.cn/solr_doc/solr_doc-tc482fwu.html">分析界面</a>上测试特定字段的内容处理方式时所看到的信息。</p>
+<p>在分析器信息下是一个按钮，您可以使用它来加载术语信息。单击该按钮将显示该字段的示例分片中的前 N 个项，以及显示具有各种频率的项的数量的直方图。点击一个术语，你将被带到<a target="_blank" rel="noopener" href="https://www.w3cschool.cn/solr_doc/solr_doc-kcas2fx9.html">查询界面</a>查看该字段中该术语的查询结果。如果要始终查看某个字段的术语信息，请选择“&nbsp;自动加载”，并且在字段有术语时将始终显示。直方图显示了字段中具有给定频率的项的数量。</p>
+<h1 id="Solr界面管理：流界面"><a href="#Solr界面管理：流界面" class="headerlink" title="Solr界面管理：流界面"></a>Solr界面管理：流界面</h1><p>Solr 流界面允许您输入流式表达式并查看结果。它与查询屏幕非常相似，不同的是输入框位于顶部，所有选项必须在表达式中声明。</p>
+<p>该界面会将所有内容插入到流式表达式本身，因此您不需要输入带有主机名、端口、集合等的完整 URI。只需在<code>expr=</code>&nbsp;part 之后输入表达式，URL 就会根据需要动态构建。</p>
+<p>在输入框下，执行按钮将运行表达式。“with explanation” 选项将显示已执行的流式表达的各个部分。在此之下，将显示流式结果。也可以在浏览器中查看输出的 URL。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171111/1510381514593380.png" alt="Solr管理界面"></p>
+<h1 id="Solr核心专用工具"><a href="#Solr核心专用工具" class="headerlink" title="Solr核心专用工具"></a>Solr核心专用工具</h1><p>Solr 特定于核心的工具是一组 UI 界面，允许您查看核心级别的信息。</p>
+<p>在左侧的导航栏中，您将看到一个名为“核心选择器（Core Selector）”的下拉菜单。单击该菜单将显示此 Solr 节点上托管的 Solr 核心列表，其中包含可用于按名称查找特定核心的搜索框。</p>
+<p>当您从下拉列表中选择一个核心时，页面的主要显示将显示关于核心的一些基本元数据，而在左侧导航栏中将出现一个二级菜单，其中包含指向其他核心特定管理屏幕的链接。</p>
+<p>您还可以定义一个名为 admin-extra.html 的配置文件，其中包含您希望在此主界面的 “Admin Extra” 部分中显示的链接或其他信息。</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510216957612427.png" alt="Solr核心界面概览"></p>
+<p>下面列出了特定于核心的 UI 界面，并提供了指向本指南部分的链接以了解更多内容：</p>
+<ul>
+<li><p>  <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/solr_doc/solr_doc-l6u92fxe.html">Ping</a>&nbsp;- 让您 ping 一个已命名的核心，并确定核心是否处于活动状态。</p>
+</li>
+<li><p>  插件/统计（Plugins/Stats）&nbsp;- 显示插件和其他已安装组件的统计信息。</p>
+</li>
+<li><p>  复制（Replication）&nbsp;- 显示核心的当前复制状态，并允许您启用/禁用复制。</p>
+</li>
+<li><p>  段信息（Segments Info）&nbsp;- 提供底层 Lucene 索引段的可视化。</p>
+</li>
+</ul>
+<p>如果您正在运行 Solr 的单个节点实例，则通常在每个集合基础上显示的其他 UI 界面也将被列出：</p>
+<ul>
+<li><p>  分析（Analysis）&nbsp;- 让您分析在特定字段中找到的数据。</p>
+</li>
+<li><p>  导入（Dataimport）&nbsp;- 显示有关数据导入处理程序的当前状态的信息。</p>
+</li>
+<li><p>  文档（Documents）&nbsp;- 提供了一个简单的表单，允许您直接从浏览器执行各种 Solr 索引命令。</p>
+</li>
+<li><p>  文件（Files）&nbsp;- 显示当前的核心配置文件，如：solrconfig.xml。</p>
+</li>
+<li><p>  查询（Query）&nbsp;- 让您提交关于核心的各种元素的结构化查询。</p>
+</li>
+<li><p>  流（Stream）&nbsp;- 允许您提交流表达式并查看结果和解析解释。</p>
+</li>
+<li><p>  模式浏览器（Schema&nbsp;Browser）&nbsp;- 在浏览器窗口中显示架构数据。</p>
+<h1 id="使用Ping请求"><a href="#使用Ping请求" class="headerlink" title="使用Ping请求"></a>使用Ping请求</h1><p>在核心名称下选择 Ping 会发出一个 ping 请求来检查核心是否启动并响应请求。</p>
+</li>
+</ul>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171109/1510217589638867.png" alt="Solr核心下拉菜单中的Ping选项"></p>
+<p>由 Ping 执行的搜索是使用请求参数 API 进行配置的。请参阅 Implicit RequestHandlers，以了解用于 /admin/ping 端点的参数集。</p>
+<p>Ping 选项不打开页面，但是在点击集合名称时显示的核心概览页面上可以看到请求的状态。请求的时间长度显示在 Ping 选项旁边，以毫秒为单位。</p>
+<h2 id="API-示例"><a href="#API-示例" class="headerlink" title="API 示例"></a>API 示例<a target="_blank" rel="noopener" href="http://lucene.apache.org/solr/guide/7_0/ping.html#api-examples"></a></h2><p>虽然在 UI 界面上可以很容易地看到 ping 响应时间，但是当由远程监视工具执行时，底层 ping 命令会更加有用：</p>
+<p>输入如下：</p>
+<pre><code>http://localhost:8983/solr/&lt;core-name&gt;/admin/ping
+</code></pre>
+<p>这个命令将 ping 一个响应的核心名称。</p>
+<p>输入如下：</p>
+<pre><code>http://localhost:8983/solr/&lt;collection-name&gt;/admin/ping?distrib=true
+</code></pre>
+<p>此命令将为响应 ping 给定集合名称的所有副本。</p>
+<p>示例输出：</p>
+<pre><code>&lt;response&gt;
+   &lt;lst name="responseHeader"&gt;
+      &lt;int name="status"&gt;0&lt;/int&gt;
+      &lt;int name="QTime"&gt;13&lt;/int&gt;
+      &lt;lst name="params"&gt;
+         &lt;str name="q"&gt;{!lucene}*:*&lt;/str&gt;
+         &lt;str name="distrib"&gt;false&lt;/str&gt;
+         &lt;str name="df"&gt;_text_&lt;/str&gt;
+         &lt;str name="rows"&gt;10&lt;/str&gt;
+         &lt;str name="echoParams"&gt;all&lt;/str&gt;
+      &lt;/lst&gt;
+   &lt;/lst&gt;
+   &lt;str name="status"&gt;OK&lt;/str&gt;
+&lt;/response&gt;
+</code></pre>
+<p>这两个 API 调用都有相同的输出。status=OK 表示节点正在响应。</p>
+<p>SolrJ 示例：</p>
+<pre><code>SolrPing ping = new SolrPing();
+ping.getParams().add("distrib", "true"); //To make it a distributed request against a collection
+rsp = ping.process(solrClient, collectionName);
+int status = rsp.getStatus();
+</code></pre>
+<h1 id="Solr管理界面：插件和统计"><a href="#Solr管理界面：插件和统计" class="headerlink" title="Solr管理界面：插件和统计"></a>Solr管理界面：插件和统计</h1><p>Solr 插件界面显示有关每个 Solr 内核中运行的各种插件的状态和性能的信息和统计信息。您可以找到有关 Solr 高速缓存的性能，Solr 搜索者的状态以及请求处理程序和搜索组件配置的信息。</p>
+<p>在右侧选择一个感兴趣的区域，然后通过单击窗口中央部分出现的名称来深入了解更多细节。在这个例子中，我们选择了从核心区域查看搜索数据：</p>
+<p><img src="https://atts.w3cschool.cn/attachments/image/20171110/1510293579311950.png" alt="Solr管理界面"></p>
+<p>该显示是在页面加载时拍摄的快照。您可以通过选择 “观察更改” 或 “刷新值” 来获取更新的状态。观察这些更改将突出显示已更改的区域，而刷新值将使用更新的信息重新加载页面。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">lichongbing</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.lichongbing.com/2019/12/25/solr-can-kao-zhi-nan-shi-yong-solr-guan-li-yong-hu-jie-mian/">https://www.lichongbing.com/2019/12/25/solr-can-kao-zhi-nan-shi-yong-solr-guan-li-yong-hu-jie-mian/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">lichongbing</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/12/26/solr-huan-jing-da-jian-yu-ce-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="solr环境搭建与测试">
+                        
+                        <span class="card-title">solr环境搭建与测试</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lichongbing
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/25/solr-can-kao-zhi-nan-ru-men/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="solr参考指南（入门）">
+                        
+                        <span class="card-title">solr参考指南（入门）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lichongbing
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src=""></script>
+<script>
+    $.getScript("/libs/tocbot/tocbot.min.js",function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    })
+</script>
+
+    
+
+</main>
+
+
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+</main>
+
+<footer class="page-footer bg-color">
+    
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2018-2022</span>
+            
+            <a href="/about" target="_blank">lichongbing</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+                <span id="icp"><img src="/medias/icp.png"
+                                    style="vertical-align: text-bottom;"/>
+                <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">蜀ICP备18037498号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lichongbing" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:873610008@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=873610008" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 873610008" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/lichongbing" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/lichongbing" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+<!-- 深色模式按钮 -->
+<a onclick="switchNightMode()" id="sma" title="模式切换">
+    <i class="fa fa-moon" id="nightMode" aria-hidden="true"></i>
+</a>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+<script type="text/javascript">
+    $.getScript("https://files.islu.cn/static/pjax/pjax.min.js",loadPjax)
+    function loadPjax(){
+        var pjax = new Pjax({
+            selectors: [
+                "head title",
+                'head meta[name="keywords"]',
+                'head meta[name="description"]',
+                "main#main_wrap",
+                "#rightside"
+            ],
+            cache: true,
+            cacheBust: false
+        });
+    }
+
+    // 开始 PJAX 执行的函数
+    document.addEventListener('pjax:send', function () {
+    });
+    // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+    document.addEventListener('pjax:complete', function () {
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+    });
+
+    // Pjax请求错误时，跳转到404页面
+    document.addEventListener('pjax:error', (err) => {
+        if (err.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+</script>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+
+
+
+
+<!-- 雪花特效 -->
+
+
+<!-- 鼠标星星特效 -->
+
+
+
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+    <script src="/libs/others/TencentCaptcha.js"></script>
+    <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button"
+            hidden></button>
+
+
+<!-- Baidu Analytics -->
+
+<!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+    <script src="/libs/others/clicklove.js" async="async"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+<!--腾讯兔小巢-->
+
+
+
+
+
+
+
+
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+
+
+</body>
+
+</html>
