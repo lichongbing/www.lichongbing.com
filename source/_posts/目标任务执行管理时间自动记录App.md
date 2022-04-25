@@ -98,7 +98,7 @@ summary: 这是一款制定目标，分解目标为任务，用标签分类，�
 
 
  ## 体验公测地址
- 
+
  >下面是我使用的拍照
 
  ![IMG_4490](http://image.lichongbing.com/IMG_4490.JPG)
@@ -106,6 +106,7 @@ summary: 这是一款制定目标，分解目标为任务，用标签分类，�
  ![IMG_4489](http://image.lichongbing.com/IMG_4489.JPG)
 
  ![IMG_4488](http://image.lichongbing.com/IMG_4488.JPG)
+ >特别说明，照片中我用到nfc贴纸，用亚克力透明盒相框，我一天做事分四类学习，总结，工作，休息，用到沙漏计时休息5分钟，工作学习的时长根据自身精力来决定，累了就打卡休息。期间可以喝水，上厕所。
 
  >[公测地址](https://testflight.apple.com/join/F8hVrLzs),系统版本ios14以上。有什么好的意见给我发电子邮件，我会改进软件，提升用户体验。
 
