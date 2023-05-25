@@ -1,0 +1,47 @@
+<%# 主体结构 %>
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<head>
+    <%# head %>
+    <%- partial('_global/head') %>
+
+</head>
+<body>
+<%# 页面主体 %>
+<div id="body_wrap">
+    <%# 加载动画 %>
+    <%- partial('_global/loading') %>
+    <%# 页面头部 %>
+    <%- partial('_global/header') %>
+    <%# 页面导航栏 %>
+    <%- partial('_global/nav') %>
+    <%# 主页面入口 %>
+    <main id="main_wrap">
+        <div class="runtime"></div>
+        <div id="islu" class="main container">
+            <div class="card  card-content">
+                <%# pjax加载部分 %>
+                <%- body %>
+            </div>
+        </div>
+    </main>
+    <%# 关闭所有弹幕 %>
+    <div id="mask" onclick="close_all()"></div>
+    <%# 右侧功能键(含回到顶部) %>
+    <%- partial('_global/rightside') %>
+    <%# 页面底部 %>
+    <%- partial('_global/footer') %>
+</div>
+<%# 页面所需资源 %>
+<div id="resource">
+    <%- partial('_global/config') %>
+    <script src="<%- theme.CDN.main_js %>"></script>
+    <%- partial('_partial/third_party/pjax') %>
+    <%- partial('_partial/third_party/aplayer') %>
+    <%- partial('_global/search') %>
+    <%- partial('_partial/third_party/analytics') %>
+    <%- partial('_global/script') %>
+</div>
+</body>
+
+</html>

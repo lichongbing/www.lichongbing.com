@@ -1,7 +1,9 @@
 ---
 title: ubuntu-server-18.04 设置开机启动dhcp自动配置内部网络IP脚本
+abbrlink: 32345
 date: 2019-12-06 22:09:34
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 systemd 默认读取 /etc/systemd/system 下的配置文件，该目录下的文件会链接/lib/systemd/system/下的文件。执行 ls /lib/systemd/system 你可以看到有很多启动脚本，其中就有我们需要的 rc.local.service
 打开脚本内容

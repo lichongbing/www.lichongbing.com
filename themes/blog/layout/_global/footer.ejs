@@ -1,0 +1,105 @@
+<%
+var icp_enable = theme.footer.icp.enable  // 是否开启ICP
+var icp_icon = theme.footer.icp.icon // ICP图标
+var icp_url = theme.footer.icp.url // ICP地址
+var icp_text = theme.footer.icp.text // ICP备案号
+var custom_text = theme.footer.custom_text || config.subtitle // 自定义内容
+%>
+<footer id="footer">
+    <hr>
+    <div class="container clearfix">
+            <span class="left">&copy;
+                <span id="year"></span>
+                <i class="fas fa-fan"></i>
+                <a href="<%- url_for('/about') %>" rel="noopener noreferrer">
+                    <%= config.author %>
+                </a>
+                <% if(icp_enable){ %>
+                    <img class="icp" src="<%= icp_icon %>" loading="lazy" alt="ICP">
+                    <a id="icp" href="<%= icp_url %>" target="_blank" rel="noopener noreferrer">
+                        <%= icp_text %>
+                    </a>
+                <% } %>
+                <% if (theme.footer.time.enable) { %>
+                    <span id="sitetime">载入运行时间...</span>
+                    <script type="text/javascript">
+                        function siteTime() {
+                            var seconds = 1000;
+                            var minutes = seconds * 60;
+                            var hours = minutes * 60;
+                            var days = hours * 24;
+                            var years = days * 365;
+                            var today = new Date();
+                            var startYear = "<%- theme.footer.time.year %>";
+                            var startMonth = "<%- theme.footer.time.month %>";
+                            var startDate = "<%- theme.footer.time.date %>";
+                            var startHour = "<%- theme.footer.time.hour %>";
+                            var startMinute = "<%- theme.footer.time.minute %>";
+                            var startSecond = "<%- theme.footer.time.second %>";
+                            var todayYear = today.getFullYear();
+                            var todayMonth = today.getMonth() + 1;
+                            var todayDate = today.getDate();
+                            var todayHour = today.getHours();
+                            var todayMinute = today.getMinutes();
+                            var todaySecond = today.getSeconds();
+                            var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                            var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                            var diff = t2 - t1;
+                            var diffYears = Math.floor(diff / years);
+                            var diffDays = Math.floor((diff / days) - diffYears * 365);
+                            var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                            var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                                minutes);
+                            var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                                diffMinutes * minutes) / seconds);
+
+                            $id("year").innerHTML = startYear + " - " + todayYear;
+                            $id("sitetime").innerHTML = "已运行 " + diffYears + " 年 " + diffDays +
+                                " 天 " + diffHours + " 时 " + diffMinutes + " 分 " + diffSeconds + " 秒";
+                            $id("runTime").innerHTML = "运行" + diffYears + "年" + diffDays +
+                                "天" + diffHours + "时" + diffMinutes + "分" + diffSeconds + "秒";
+                        }
+
+                        setInterval(siteTime, 1000);
+                    </script>
+                <% } %>
+            </span>
+        <span class="right">
+            站点总字数：<%= totalcount(site) %> 总访问量：<span id="busuanzi_value_site_pv">N</span> 次
+        </span>
+    </div>
+    <div class="footer-fav">
+        <div class="container">
+            <div class="fl site-info">
+                <h2>
+                    <a href="<%- url_for('/about') %>" rel="noopener noreferrer"><%= config.author %></a>
+                </h2>
+                <div class="site-p">
+                    <p><%= config.author %>【<%= config.subtitle %>】</p>
+                    <p>风风雨雨<span id="runTime"></span></p>
+                </div>
+            </div>
+            <div class="fr site-fav">
+                <img loading="lazy" class="linkslogo" style="width: 76px;" src="https://image.lichongbing.com/detail/myssl.png"
+                     alt="MySSL安全签章"
+                     onclick="window.open('https://myssl.com/seal/detail?domain=islu.cn','MySSL安全签章','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')">
+                <br>
+                <img loading="lazy" class="linkslogo" style="width: 92px;" src="https://image.lichongbing.com/detail/logo2.png"
+                     alt="又拍云"
+                     onclick="location.href='https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral;'">
+            </div>
+            <div class="site-girl">
+                <div class="girl fl">
+                    <i class="thumb"></i>
+                </div>
+                <div class="girl-info hide_md">
+                    <p>浮生若梦，何者是实。</p>
+                    <p>何者是空，何去何从。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<% if(theme.scrollbar.footer){ %>
+    <details class="progress-bar"></details>
+<% } %>

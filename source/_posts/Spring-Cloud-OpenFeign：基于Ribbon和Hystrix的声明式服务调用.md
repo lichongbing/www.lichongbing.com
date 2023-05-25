@@ -1,7 +1,9 @@
 ---
 title: Spring Cloud OpenFeign：基于Ribbon和Hystrix的声明式服务调用
+abbrlink: 11780
 date: 2019-12-24 23:44:30
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 
 # Spring Cloud OpenFeign：基于Ribbon和Hystrix的声明式服务调用

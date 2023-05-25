@@ -1,0 +1,101 @@
+<%# 网站首页%>
+<style type="text/css">
+    <% if (theme.header_animation){%>
+        header {
+            height: 100vh;
+        }
+        header #scroll-down{
+            display: unset;
+        }
+    <%}%>
+
+    #body_wrap .main {
+        margin-top: 0 !important;
+    }
+
+    #body_wrap .container .card-content {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+</style>
+<% if (theme.notice.style1 || theme.notice.style2) { %>
+    <%- partial('_partial/notice') %>
+<% } %>
+<div id="post_list">
+    <% page.posts.each(function (post) { %>
+        <% var title = post.title === "" ? __('post.title') : post.title %>
+        <div class="post_item">
+            <% if(post.top) { %>
+                <div class="post-top">
+                    <div>置顶</div>
+                </div>
+            <% } %>
+            <a href="<%- url_for(post.path) %>" title="<%- title %>">
+                <div class="card-image">
+                    <div class="box-content">
+                        <div class="post_title">
+                            <%- title %>
+                        </div>
+                        <h3 title="<%- title %>">阅读全文</h3>
+                    </div>
+                    <% if (post.img) { %>
+                        <div class="cover_wrap">
+                            <img  class="cover" src="<%- post.img %>" loading="lazy" alt="<%- title %>">
+                            <div class="title-V">
+                                <%- title %>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </a>
+            <div class="post_description">
+                <%
+                    var length = theme.index_description.length
+                    var description = ''
+                    if (post.summary) {
+                        description = post.summary
+                    } else {
+                        description = strip_html(post.content)
+                        description = description.substring(0, length)
+                    }
+                %>
+                <%- description %>
+            </div>
+            <div class="post_meta_wrap">
+                <div class="post_meta">
+                <span class="post_meta_date">
+                    <i class="far fa-calendar-alt"></i>
+                    <span><%- __('post.created') %>  </span>
+                    <span>
+                        <%= post.date.format('YYYY-MM-DD') %>
+                    </span>
+                </span>
+                    <% if(post.categories.length != 0){ %>
+                        <span class="post_categorie">
+                            <i class="fas fa-bookmark fa-fw"></i>
+                            <% post.categories.forEach(function(categories, i){ %>
+                                <a href="<%= url_for(categories.path) %>"><%- categories.name %></a>
+                                <% if(post.categories.length - 1 > i){ %>
+                                    <i class="fas fa-angle-right"></i>
+                                <% } %>
+                            <% }) %>
+                        </span>
+                    <% } %>
+                </div>
+
+                <% if(post.tags.length != 0){ %>
+                    <% post.tags.forEach(function(tag, i){ %>
+                        <span class="post_tag">
+                            <i class="fa fa-tag"></i>
+                            <a href="<%= url_for(tag.path) %>">
+                                <%- tag.name %>
+                            </a>
+                        </span>
+                    <% }) %>
+                <% } %>
+            </div>
+        </div>
+    <% }) %>
+</div>
+<%- partial('_global/pagination') %>

@@ -1,0 +1,452 @@
+// 文章
+#post_list
+  text-align center
+
+// 文章头信息
+.post_info
+  text-align: center
+  padding: 20px 0
+
+  .post_title
+    padding-bottom: 4px;
+  .post_meta
+    font-size .6rem
+  .post_meta > div
+    padding: 2px 0
+
+// 文章信息
+.post_content
+  line-height: 1.8;
+  padding-bottom: 50px;
+
+  img
+    margin: 0 auto .8rem;
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+
+  ul, ol
+    padding-inline-start: 30px;
+
+// 目录
+#toc
+  background: var(--main_bg)
+  position: fixed;
+  left: -250px;
+  top: 0;
+  z-index: 992;
+  width: 250px;
+  height: 100%;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  transition: all .5s;
+
+  .toc_title
+    text-align: center;
+    padding: 30px;
+
+    div
+      font-size: 14px
+      font-weight: bold;
+
+  .progress
+    width: 100%;
+    height: 10px;
+    background: #ededed;
+    border-radius: 10px;
+
+  .toc_list
+    overflow: hidden auto;
+    height: 90%;
+
+    li
+      list-style: none;
+      line-height: 30px;
+
+      .toc-child
+        padding-left: 1rem;
+
+  .toc, .toc_list > li
+    padding: 0;
+    margin-left: 20px;
+
+// 打开目录
+.open_toc
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+
+// 目录滚动条
+#progress
+  width 60%
+  height 10px
+  background #ededed
+  border-radius 10px
+
+progress::-webkit-progress-bar
+  background #ededed
+  border-radius 8px
+
+progress::-webkit-progress-value
+  background var(--main)
+  border-radius 8px
+
+/*版权框*/
+if hexo-config('copyright.enable')
+  .post_copyright
+    margin: 20px 0;
+    position relative
+    padding .5rem .8rem
+    -webkit-transition box-shadow .3s ease-in-out
+    -moz-transition box-shadow .3s ease-in-out
+    -o-transition box-shadow .3s ease-in-out
+    -ms-transition box-shadow .3s ease-in-out
+    transition box-shadow .3s ease-in-out
+    box-shadow 0 0px 2px 0px rgba(0, 0, 0, .4)
+    border-radius 10px
+    border-left 3px solid var(--main)
+    border-right 3px solid var(--main)
+
+    div
+      line-height 28px
+      word-break: break-all
+
+    .post_copyright_icon:before
+      position absolute
+      top .1rem
+      right .6rem
+      color var(--main)
+      content '\f1f9'
+      font-size 1rem
+      display inline-block
+      font-weight 600
+      font-style normal
+      font-variant normal
+      font-family 'Font Awesome 5 Free'
+      text-rendering auto
+      -webkit-font-smoothing antialiased
+
+    .post_copyright_meta
+      color var(--main)
+      font-weight 700
+
+// 文章标签
+.post_tag
+  display inline-block
+  text-align center
+  margin 5px 0 0 10px
+  background-color #000
+  border-radius 4px
+  padding 2px 6px
+  color #FFF
+
+  a
+    color #FFF
+
+// 内部图片二维码
+.ewm
+  width 200px
+  height 200px
+
+// 打赏
+if hexo-config('reward.enable')
+  .post_reward
+    position relative
+    margin-top 4rem
+    width 100%
+    text-align center
+    margin-top 10px
+
+    .reward_button
+      display inline-block
+      cursor pointer
+      -webkit-transition all .4s
+      -moz-transition all .4s
+      -o-transition all .4s
+      -ms-transition all .4s
+      transition all .4s
+      width: 56px;
+      height: 56px;
+      line-height: 56px;
+      font-size: 20px;
+      color: #fff;
+      background: var(--main);
+      border-radius: 50%;
+      transition: .4s ease-in-out;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
+
+      .reward_main
+        position absolute
+        bottom 60px
+        left 0
+        z-index 100
+        display none
+        padding 0 0 15px
+        width 100%
+
+    .reward_button:hover
+      .reward_main
+        -webkit-animation donate_effcet .3s .1s ease both
+        -moz-animation donate_effcet .3s .1s ease both
+        -o-animation donate_effcet .3s .1s ease both
+        -ms-animation donate_effcet .3s .1s ease both
+        animation donate_effcet .3s .1s ease both
+
+#panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000
+}
+
+#panel .panel_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  -webkit-perspective: 600px;
+  perspective: 600px;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  will-change: transform;
+  -webkit-animation: dropDown .9s ease-out 0s 1 normal forwards running;
+  animation: dropDown .9s ease-out 0s 1 normal forwards running
+}
+
+#panel .wrapper {
+  width: 100vw;
+  height: 100vh;
+  will-change: transform;
+  -webkit-animation: dropWave 3s ease-out 0s 1 normal forwards running;
+  animation: dropWave 3s ease-out 0s 1 normal forwards running
+}
+
+#panel .long-line,
+#panel .short-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 600px;
+  height: calc(50% - 180px);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
+#panel .long-line div,
+#panel .short-line div {
+  position: absolute;
+  width: 2px;
+  height: 150%;
+  background-color: #5d3523
+}
+
+#panel .short-line div {
+  bottom: 0
+}
+
+#panel .short-line div:first-child {
+  left: 55px
+}
+
+#panel .short-line div:nth-child(2) {
+  right: 55px
+}
+
+#panel .long-line div {
+  bottom: -25px
+}
+
+#panel .long-line div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -4px;
+  bottom: -4px;
+  width: 10px;
+  height: 10px;
+  background-color: #5d3523;
+  border-radius: 50%
+}
+
+#panel .long-line div:first-child {
+  left: 25px
+}
+
+#panel .long-line div:nth-child(2) {
+  right: 25px
+}
+
+#panel .main_box {
+  pointer-events: all;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  text-align: center;
+  border-radius: 12px;
+  -webkit-box-shadow: rgba(0, 0, 0, .2) 0 0 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+#panel .main_box .header {
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid #5d3523;
+  background-color: #fbf4f1
+}
+
+#panel .main_box .header .inner {
+  margin: 0 auto;
+  width: 85%;
+  font-size: 20px;
+  line-height: 50px;
+  color: #5d3523;
+  letter-spacing: 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+#panel .main_box .body {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background-color: #fff
+}
+
+#panel .main_box .body .swiper-wrapper {
+  width: 600px;
+  overflow: hidden
+}
+
+#panel .main_box .body .swiper-wrapper ul {
+  list-style: none
+}
+
+#panel .main_box .body .swiper-wrapper .swiper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0
+}
+
+#panel .main_box .body .swiper-wrapper .swiper .swiper_li {
+  width: 50%
+}
+
+
+#panel .main_box .body .swiper-wrapper .swiper .swiper_li img {
+  width: 100%;
+}
+
+#panel .main_box .body .swiper-wrapper .animate {
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out
+}
+
+#panel .main_box .footer {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: 50px;
+  border-radius: 0 0 12px 12px;
+  border-top: 1px solid #5d3523;
+  background-color: #fbf4f1
+}
+
+#panel .main_box .footer div {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  color: #f5f5f5;
+  line-height: 48px;
+  letter-spacing: 2px;
+  overflow: hidden;
+  border-style: none;
+  border-radius: 30px;
+  background-color: #d68fe9;
+  -webkit-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
+  -webkit-transition: all .5s cubic-bezier(.86, -.02, .08, 1.02) 0s;
+  transition: all .5s cubic-bezier(.86, -.02, .08, 1.02) 0s
+}
+
+#panel .main_box .footer div,
+#panel .main_box .footer div:hover {
+  -webkit-box-shadow: #d68fe9 0 0 10px;
+  box-shadow: 0 0 10px #d68fe9
+}
+
+#panel .main_box .footer div:hover:before {
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
+}
+
+#panel .main_box .footer div:after,
+#panel .main_box .footer div:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px
+}
+
+#panel .main_box .footer div:before {
+  background-color: #b854d4;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all .5s cubic-bezier(.86, -.02, .08, 1.02) 0s;
+  transition: all .5s cubic-bezier(.86, -.02, .08, 1.02) 0s
+}
+
+#panel .main_box .footer div:after {
+  content: attr(data-title);
+  color: #fff;
+  letter-spacing: 1px
+}
+
+
+// 上下一篇文章
+.pagination
+  .page_pre
+    float: left;
+    line-height: 2em;
+    letter-spacing: .2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+  .page_next
+    float: right;
+    line-height: 2em;
+    letter-spacing: .2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+

@@ -1,7 +1,9 @@
 ---
 title: CP的三次握手与四次挥手理解及面试题（很全面）
+abbrlink: 45798
 date: 2019-12-11 09:54:37
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 本文经过借鉴书籍资料、他人博客总结出的知识点，欢迎提问
 ![20180717201939345.jpeg](http://image.lichongbing.com/static/21cec9d61122a391c311c49b8049af17.jpeg)

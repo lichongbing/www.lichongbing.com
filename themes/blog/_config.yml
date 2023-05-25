@@ -1,0 +1,356 @@
+# 导航栏菜单
+menu:
+  首页: /
+  #  归档:
+  #    - 标签 || /tags
+  #    - 分类 || /categories
+  #    - 日历 || /archives
+  标签: /tags
+  分类: /categories
+  归档: /archives
+  统计: /count
+  关于: /about
+  留言: /contact
+  链接:
+    - 友情链接 || /friends
+    - 工作经历 || /journal
+favicon: https://images.islu.cn/闲花手札.jpg
+
+page_count: 15 # 首页展示文章数
+
+darkmode: # 深色模式
+  enable: true # 是否开启
+  starDark: true # 流星背景
+  setTime: 0||0 # 定时开启深色模式 晚||早
+
+pjax: true # pjax
+
+tags: true # 文章内是否显示标签
+
+header_animation: true # 首页动画
+
+loading: true # 加载动画
+
+notice: # 首页公告
+  style1: true # 是否显示
+  style2: false
+
+# 位置滚动提示条
+scrollbar:
+  footer: true # 底部位置提示条
+  aside: true # 侧边位置提示条
+
+# 主题颜色
+theme_color:
+  main: '#2d78ad' # 主色
+  fan: '#00c4b6' # 小风车
+  body_a: '#00c4b6' # 全局a标签颜色
+  title: '#ff7242' # 博主昵称
+
+# 自动截取
+index_description:
+  line: 1 # 显示多少行后出现省略号(...)
+  length: 20 # 截取多少字
+
+# Whether to display the musics.
+# 是否在首页显示音乐.
+music:
+  enable: false
+  autoHide: false   # hide automaticaly
+  server: tencent #require	music platform: netease, tencent, kugou, xiami, baidu
+  type: playlist    #require song, playlist, album, search, artist
+  id: 7865349211 #require	song id / playlist id / album id / search keyword
+  fixed: true      # 开启吸底模式
+  autoplay: true   # 是否自动播放
+  theme: '#42b983'
+  loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
+  order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
+  preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
+  volume: 0.7        # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  listFolded: false  # 列表默认折叠
+
+# 图片懒加载
+lazyload:
+  enable: true
+  loadimg: https://image.lichongbing.com/static/js/load.gif
+
+# Whether to display the title of the recommended posts
+# 是否显示推荐文章的标题
+recommend:
+  enable: true
+  showTitle: true
+  useConfig: false # 是否使用配置文件, 在 _data/recommends.json 下配置推荐文章, false则会走主题配置的 top 属性
+
+# 需安装插件: npm install hexo-generator-search --save
+search:
+  enable: false # 是否启用搜索
+  path: /search.xml
+  field: post
+  source: https://image.lichongbing.com/js/search.js
+
+# 代码块高亮主题
+highlight_theme: mac # default / darker / pale night / light / ocean / mac / mac light
+code_block_expand: # 是否开启代码块折叠
+  enable: true
+  height: 400 # 代码块高度超过400折叠 单位px
+  scrollTop: 200 # 展开后,再次(手动点击)点击折叠滚动到代码块开始的距离 单位px
+
+# profile in about _page, including avatars, career, and personal introductions.
+# 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
+message:
+  avatar: https://images.islu.cn/avatar.jpg # 头像
+  career: 🎓 Java全栈工程师 # 职业
+  introduction: 🔔 迷茫的原因往往只有一个，那就是在本该拼命去努力的年纪，想得太多，做得太少。 # 介绍
+  mySkills: # 技能
+    enable: true
+  myGallery: # 相册
+    enable: false
+
+# 文章版权
+copyright:
+  enable: true
+  author: lichongbing
+  mail: 873610008@qq.com
+  licenses: CC BY-NC-SA 4.0||https://creativecommons.org/licenses/by-nc-sa/4.0/ ## 文中||为分隔符，左侧为描述，右侧为版权许可
+  description: 本博客所有文章除特别声明外，均采用||许可协议。转载请注明来自
+  title: 谦谦君子
+
+## 打赏
+reward:
+  enable: false
+  name: 软妹币丢置处
+  left:
+    name: wechat
+    img: https://image.lichongbing.com/reward/wechat.png
+  right:
+    name: alipay
+    img: https://image.lichongbing.com/reward/alipay.png
+
+
+# 评论
+## 注意大小写
+comments: valine # discuss / twikoo / waline / valine
+
+# mongodb+srv://ialoe:luhuijun123@index.uxhgs.mongodb.net/index?retryWrites=true&w=majority
+# mongodb://ialoe:<password>@cluster0-shard-00-00.b8zh3.mongodb.net:27017,cluster0-shard-00-01.b8zh3.mongodb.net:27017,cluster0-shard-00-02.b8zh3.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-rnry28-shard-0&authSource=admin&retryWrites=true&w=majority
+# Discuss
+## https://discuss.js.org
+discuss:
+  source: https://cdn.jsdelivr.net/npm/discuss/dist/Discuss.js
+  master: 博主
+  placeholder: 🤣一起来玩，留下你的足迹吧 ~
+  serverURLs: https://www.lichongbing.com:6870
+  path: location.pathname
+  stick: 置顶
+  visitStat: true
+  emotMaps: {
+    OwO: {
+      type: 'text', items: {
+        '喵星人': '( =•ω•= )m',
+        'hi': 'Hi~ o(*￣▽￣*)ブ',
+        '啊啊': 'w(ﾟДﾟ)w',
+        '擦眼泪': ' (ノへ￣、)',
+        '不屑': ' (￣_,￣ )',
+        '好耶': 'ヽ(✿ﾟ▽ﾟ)ノ',
+        '棒': ' (๑•̀ㅂ•́)و✧',
+        '抽': '(￣ε(#￣)☆╰╮o(￣皿￣///)',
+        '亲': '（づ￣3￣）づ╭❤～',
+        '汗': 'Σ( ° △ °|||)︴',
+        '笨': '(～￣(OO)￣)ブ',
+        '擦': '凸(艹皿艹 )',
+        '啵啵': '(* ￣3)(ε￣ *)',
+        '挖鼻屎': '(*￣rǒ￣)',
+        '嗷': '┗|｀O′|┛ 嗷~~',
+        '飞': '︿(￣︶￣)︿',
+        '好滴': '(u‿ฺu✿ฺ)',
+        '啦啦': '♪(^∇^*)',
+        '拍桌': 'o(*≧▽≦)ツ┏━┓',
+        '惊喜': '╰(*°▽°*)╯',
+        '嘟嘴': '（○｀ 3′○）',
+        '愣住': '(°ー°〃)',
+        '哼哼': 'o(￣ヘ￣o＃)',
+        '崩溃': 'o(≧口≦)o',
+        '不是我': 'ㄟ( ▔, ▔ )ㄏ',
+        '呃呃呃': '(⊙﹏⊙)',
+        '切': '(ˉ▽￣～) 切~~',
+        '拜拜': 'ヾ(￣▽￣)Bye~Bye~',
+        '斜眼': '( ﹁ ﹁ ) ~→',
+        '美味': 'Ψ(￣∀￣)Ψ',
+        '闪': '',
+        '✧(≖ ◡ ≖✿)': '',
+        '淡定': '',
+        '━(￣ー￣*|||━━': '',
+        '太可怕了': 'ヽ(*。>Д<)o゜'
+      }
+    },
+  }
+
+# valine
+## https://valine.js.org/
+valine:
+  enable: true
+  appId: tbuq3EDzfQcqA1Tfre173EKh-gzGzoHsz
+  appKey: MavVepz0aWA7kfjXPBsC0WNl
+  notify: true
+  verify: true
+  visitor: true
+  avatar: 'robohash' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  pageSize: 10
+  placeholder: '🤣一起来玩，留下你的足迹吧~(记得点击验证哦)。\n🚀昵称使用QQ号可以自动补全邮箱和显示头像昵称等信息呢\n💣请文明评论哦禁止恶意评论' # Comment Box placeholder
+  count: true
+  enableQQ: true
+  recordIP: true
+  meta: [ 'nick', 'mail', 'link' ] # 评论者相关属性
+  requiredFields: [ 'nick','mail' ]
+  guest_info: [ 'nick', 'mail', 'link' ]
+  master:
+    - d382f6b2d7751e5dde9b286d535b977a  # md5加密后的博主邮箱
+    - e6ce4bae9ffac66529ad2694b98f66d3  # md5加密后的博主邮箱
+  metaPlaceholder: # 输入框的背景文字
+    nick: 昵称/QQ号(必填)
+    mail: 邮箱(必填)
+    link: 网址(https://)
+  lang: zh-CN
+  tagMeta: # The String Array of Words to show Flag.[Just Only xCss Style mode]
+    - 博主
+    - 小伙伴
+    - 访客
+  friends: # The MD5 String Array of friends Email to show friends Flag.[Just Only xCss Style mode]
+    - 2d723b084472eb5c3854616804b4851c # 云梦 ╮不浅
+    - 68c4c9e1b9a3d34317dc6faefe2ea00e # 阿蓝
+    - ddf016c0f5a3318ea1fc0d20c8ac4429 # 不染轻裳
+    - 07f6f5a77acec1cf2848d45da1ace3b7 # 郭祥迎
+    - b2ccb12acd9586af59f588e6eda3168c # 果子酱
+    - d08a0457f664702197dd127bb9a17c2c # itsNekoDeng
+    - b52ddf21729e2963a42d5d526808099f # Tajang
+    - 5d15e6cd01332d9462562de7eb277133 # Mx
+    - aa1a0ae323a0ca99dfb391f9e0ca8565 # Xpand
+    - 5e067bcec10c1eca5b744f982156d672 # zhangYHui’s Blog
+    - ac99dc93552427fae0a076d22f6a4ce9 # Huanzの小窝
+    - 06beff69a2db452d873d6020d1924886 # 51xcode
+    - 190004b0922ac4fcd1489fa0aa34663d # 左羽
+
+# waline
+## https://waline.js.org
+waline:
+  source: //cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
+  serverURL: https://waline.vercel.app/ # 服务端地址
+  placeholder: 快来评论吧!! #评论框占位符
+  avatar: '' # gravatar style https://valine.js.org/#/avatar
+  meta: [ 'nick','mail','friends' ] # 评论者相关属性
+  pageSize: 5 # comment list _page size
+  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
+  requiredFields: [ 'nick','mail','friends' ] # 评论人必填项
+  emojiCDN:    # emoji CDN
+  emojiMaps:  # 自定义表情包
+  option: # 自定义添加 https://waline.js.org/client/basic.html
+
+# twikoo
+## https://twikoo.js.org/
+twikoo:
+  source: https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js
+  envId: xxxxxxxx # 你的环境id
+  region: ap-shanghai # 环境地域，ap-shanghai / ap-guangzhou
+  path: window.location.pathname  # 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+  option:
+
+## 说说
+
+# Artitalk
+## https://artitalk.js.org/settings.html
+artitalk:
+  enable: false # 是否开启
+  source: https://cdn.jsdelivr.net/npm/artitalk
+  title: Artitalk # 标题
+  path: artitalk/index.html # 路径
+  appid: WhOxxxxxxxxxxxxxMMI #  LeanCloud appId
+  appkey: M9Pxxxxxxxxxxxxxxx3Kvs # LeanCloud appKey
+  serverURL: # 如果你是国内版 LeanCloud 用户，此项必填
+  lang:  # 语言设置 默认中文 zh / en / es
+  atEmoji: # 自定义表情包
+  option:
+
+# HPP_talk
+## https://hexoplusplus.js.org/
+hpp_talk:
+  enable: false # 是否开启
+  source_css: https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus@9bf1085/talk.css
+  source_js: https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus@9bf1085/talk_user.js
+  title: HPP_talk # 标题
+  path: hpp_talk/index.html # 路径
+  domain: blog.lete114.workers.dev # 您的HexoPlusPlus域名
+  limit: 10 # 单次获取的最多条数
+  start: 0 # 从第几条开始
+  option:
+
+# 404页面
+error404:
+  enable: true
+
+# 403页面
+error403:
+  enable: true
+
+# 页脚
+footer:
+  icp:
+    enable: true
+    text: 蜀ICP备18037498号
+    icon: https://image.lichongbing.com/static/js/icp.png
+    url: https://beian.miit.gov.cn/
+  socialLink:
+    enable: true
+    github: https://github.com/lichongbing
+    email: true # 默认为版权邮箱
+    facebook: # https://www.facebook.com/xxx
+    twitter: # https://twitter.com/xxx
+    qq: # 180353980
+    weibo: # https://weibo.com/xxx
+    zhihu: # https://www.zhihu.com/xxx
+    rss: false # true、false
+    sitemap: true
+    upy: true
+  # Website start time.
+  # 站点运行开始时间.
+  time:
+    enable: true
+    year: 2017 # 年份
+    month: 10 # 月份
+    date: 29 # 日期
+    hour: 00 # 小时
+    minute: 00 # 分钟
+    second: 00 # 秒
+
+# 统计(分析)
+analytics:
+  baidu: # f1685af4772eacc3fcd03ceb5c762abe
+  google: # G-XW51H71DB1
+
+# 设置字体
+font:
+  # 全局字体
+  html: Architects Daughter,cursive
+  # 代码块字体
+  code: 'Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif'
+
+# 主题的css与js引入
+## 无特殊要求请勿更改
+CDN:
+  # my resource
+  main_css: /css/main.css
+  other_css: /css/other.css
+  main_js: /js/main.js
+  utlis: /js/utlis.js
+  pjax: https://image.lichongbing.com/static/js/pjax.min.js
+  # fancybox
+  fancybox_js: https://image.lichongbing.com/static/js/fancybox.umd.js
+  fancybox_css: https://image.lichongbing.com/static/js/fancybox.css
+  # 分享
+  share_css: https://image.lichongbing.com/static/js/share.min.css
+  share_js: https://image.lichongbing.com/static/js/share.min.js
+  # fontawesome
+  fontawesome: https://image.lichongbing.com/static/fontawesome/css/all.min.css
+  # yml转json
+  js_yaml: https://image.lichongbing.com/static/js/js-yaml.min.js
+  # math
+  mathjax: https://image.lichongbing.com/static/js/mathjax.js

@@ -1,7 +1,9 @@
 ---
 title: 在Ubuntu 18.04系统中启用SSH登录的方法
+abbrlink: 52597
 date: 2019-12-04 17:23:44
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 Secure Shell（SSH）是Linux系统管理中的经常要用到的一种远程访问技术。在Ubuntu 18.04系统仓库中，已经收录了同为开源的OpenSSH，我们可以用它来为系统开启SSH访问功能。
 

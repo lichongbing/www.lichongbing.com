@@ -1,7 +1,9 @@
 ---
 title: Ubuntu环境下挂载新硬盘
+abbrlink: 59154
 date: 2019-12-03 17:57:40
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 **一、硬盘分区 | Hard disk add new partition**
 

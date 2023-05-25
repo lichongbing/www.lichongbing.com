@@ -1,7 +1,9 @@
 ---
 title: mac 定时去执行某shell脚本
+abbrlink: 16119
 date: 2019-12-16 09:24:37
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 ## 方法一
 进入根目录

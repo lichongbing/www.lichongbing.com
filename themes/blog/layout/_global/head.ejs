@@ -1,0 +1,50 @@
+<%
+var title = config.title
+if (page.title) title = page.title + ' | ' + config.title
+// 关键字
+var keywords
+if (page.keywords) keywords = Array.isArray(page.keywords) ? (page.keywords).join(',') : page.keywords // 文章关键字
+else if (page.tags) keywords = page.tags.data.map((tag) => {
+    return tag.name
+}).join(',') // 文章标签
+else keywords = Array.isArray(config.keywords) ? (config.keywords).join(',') : config.keywords // 网站关键字
+// 描述
+var description
+if (is_home()) description = config.description
+else if (page.description) description = page.description
+else {
+    let content = strip_html(page.content)
+    content = content.substring(0, content.indexOf(1))
+    description = content.replace(/[\n]|[\r\n]/g, "")
+}
+// url
+var url = config.url + url_for(path)
+%>
+
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<title><%- title %></title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="<%= theme.favicon %>" rel="shortcut icon">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="renderer" content="webkit|ie-stand|ie-comp">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="<%= config.author %> ">
+<meta name="copyright" content="<%= config.author %>">
+<meta name="keywords" content="<%= keywords %>">
+<meta name="description" content="<%= description %>"/>
+<meta property="site_name" content="<%= config.title %> "/>
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%= url %>">
+<meta property="og:title" content="<%= title %>"/>
+<meta property="og:site_name" content="<%= config.title %>"/>
+<meta property="og:description" content="<%= description %>"/>
+<meta property="og:locale" content="<%= config.language %>">
+<meta property="article:author" content="<%= config.author %> ">
+<link rel="stylesheet" href="<%= theme.CDN.main_css %>">
+<link rel="stylesheet" href="<%= theme.CDN.fontawesome %>" media="defer" onload="this.media='all'">
+<link rel="stylesheet" href="<%= theme.CDN.other_css %>" media="defer" onload="this.media='all'">
+<link rel="stylesheet" href="https://image.lichongbing.com/aplayer/APlayer.min.css" media="defer" onload="this.media='all'">
+<script type="application/javascript" src="/js/utlis.js"></script>

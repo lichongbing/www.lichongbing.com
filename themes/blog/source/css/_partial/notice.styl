@@ -1,0 +1,169 @@
+/*公告样式*/
+if hexo-config('notice.style1')
+  .notices
+    border-radius 10px
+    box-shadow 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.5)
+    margin 0.5rem auto 1rem
+    background-image url("https://image.lichongbing.com/detail/star.svg")
+    -webkit-transition -webkit-box-shadow 0.25s
+    transition box-shadow 0.25s, -webkit-box-shadow 0.25s
+
+    .textsst
+      padding 20px
+      font-size 1.2rem
+
+      center
+        img
+          width 25px
+          height 25px
+
+      .gzh
+        color #078
+        font-size 1.08rem
+        display inline-block
+
+        img
+          display none
+
+        &:hover
+          img
+            display block
+
+      .sweep_code
+        position absolute
+        right -12px
+        bottom 24px
+
+      .wxgzh
+        position relative
+        top 0 !important
+
+  @media only screen and (max-width: 1200px)
+    .notice
+      .notices
+        .textsst
+          .sweep_code
+            display none !important
+
+if hexo-config('notice.style2')
+  .main-group
+    position relative
+    max-width 1125px
+    width 90%
+    min-height 27em
+    border 0.8em solid #fff
+    background-color rgb(120, 140, 200)
+    overflow hidden
+    border-radius 1.5em
+    display flex
+    align-items center
+    margin 15px auto
+
+    .one-page-group
+      position absolute
+      width 60%
+      left 0
+      margin 0 5em 0 8em
+      transition 1s
+      z-index 1
+
+      & > a
+        font-weight 900
+        font-size 2em
+
+      h3
+        font-size 1.4em
+        transition .5s 1s
+        opacity 0
+        color rgb(30, 210, 200)
+        margin-top 0
+
+      p
+        transition .5s 1s
+        color #fff
+        top 2em
+        display block
+        font-size 15.5px
+
+        a
+          color mediumvioletred
+
+    &:hover
+      .two-page-group
+        div
+          transition .5s calc(var(--i) * .1s)
+          transform rotateZ(220deg) translate(-32em, 40em)
+
+      .one-page-group
+        transition 1s .5s
+        left calc(100% - 60% - 10em)
+
+        h3
+          transition 1s .5s
+          opacity 1
+          margin-top 1em
+
+        p
+          transition 1s .5s
+          margin-top 1em
+
+      .img-group
+        transition 1s 1.3s
+        opacity 1
+
+    .two-page-group
+      position absolute
+      right -14em
+      top -5.5em
+
+      .item
+        &:nth-child(2)
+          background rgb(240, 190, 230)
+
+      .item-other
+        left -32em
+        top -10em
+        width 5em
+        background-color rgb(90, 220, 150)
+
+    .two-page-group .item, .two-page-group .item-other
+      position absolute
+      right calc(var(--i) * 7em)
+      width calc(var(--w) * 2.2em)
+      height 27em
+      overflow hidden
+      border-radius 100px
+      transform rotateZ(220deg) translate(0, 0)
+      background rgb(240, 220, 150)
+      transition .5s .5s
+
+    .img-group
+      width 14em
+      height 14em
+      background url('https://image.lichongbing.com/detail/gzh.jpg')
+      background-size cover
+      margin 0 3em
+      opacity 0
+      transition .5s
+
+    @media screen and (max-width: 850px)
+      .main-group
+        .one-page-group
+          display flex
+          flex-direction column
+          text-align center
+          justify-content center
+          width 100%
+          height 100%
+          margin 0
+          padding 0 2em
+          box-sizing border-box
+          background rgba(0, 0, 0, .6)
+
+        &:hover
+          .one-page-group
+            transition 1s .5s
+            left 0
+
+      .img-group
+        display none

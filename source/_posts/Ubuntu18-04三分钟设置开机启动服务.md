@@ -1,7 +1,9 @@
 ---
 title: Ubuntu18.04三分钟设置开机启动服务
+abbrlink: 34848
 date: 2019-12-03 21:08:57
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 本文链接：https://blog.csdn.net/idiot_qi/article/details/86527052
 之前没接触过ubuntu，设置开机启动服务找了n多例子，都达到想要实现的效果，后来才发现是入了坑

@@ -1,0 +1,59 @@
+<% var option = theme.valine.option ? JSON.stringify(theme.valine.option) : false %>
+<div id="vcomments" class="center">
+    <button id="readMore" class="custom-btn" onclick="LoadValine()">点击加载评论</button>
+    <div id="comment"></div>
+</div>
+<script type="text/javascript">
+    function LoadValine() {
+        getScript("https://image.lichongbing.com/Valine.min.js", function () {
+            getScript("https://image.lichongbing.com/js/activate-input.js", function () {
+                let metaPlaceholder = <%- JSON.stringify(theme.valine.metaPlaceholder) %> ;
+                let initData = {
+                    el: '#vcomments',
+                    path: window.location.pathname,
+                    appId: '<%- theme.valine.appId %>',
+                    appKey: '<%- theme.valine.appKey %>',
+                    notify: '<%- theme.valine.notify %>' === 'true',
+                    verify: '<%- theme.valine.verify %>' === 'true',
+                    visitor: '<%- theme.valine.visitor %>' === 'true',
+                    avatar: '<%- theme.valine.avatar %>',
+                    pageSize: '<%- theme.valine.pageSize %>',
+                    lang: '<%- theme.valine.lang %>',
+                    placeholder: '<%= theme.valine.placeholder %>',
+                    meta: '<%- theme.valine.meta %>'.split(","),
+                    recordIP: '<%- theme.valine.recordIP %>' === 'true',
+                    enableQQ: '<%- theme.valine.enableQQ %>',
+                    boolean: true,
+                    requiredFields: <%- '["' + theme.valine.master.join('", "') + '"]' %>,
+                    master: <%- '["' + theme.valine.master.join('", "') + '"]' %>,
+                    friends: <%- '["' + theme.valine.friends.join('", "') + '"]' %>,
+                    tagMeta: <%- '["' + theme.valine.tagMeta.join('", "') + '"]' %>,
+                    metaPlaceholder: metaPlaceholder
+                }
+                var option = <%- option %>;
+                if (option) {
+                    initData = Object.assign(initData, option)
+                }
+                new Valine(initData)
+
+                $id("roboter").addEventListener('click', function () {
+                    let robot_check_text = $id("robot-check-text")
+                    robot_check_text.innerHTML = '·&nbsp;&nbsp;&nbsp;&nbsp;验证成功'
+                    $id("robotxian").style.backgroundColor = "#26a69a"
+                    $id("robotimg").src = 'https://image.lichongbing.com/detail/robot.png'
+                    robot_check_text.style.color = "#26a69a"
+                })
+                let robot_check = $query(".robot-check")
+                let vsubmit = $query(".vsubmit")
+                if (!robot_check.checked) {
+                    vsubmit.disabled = true
+                    vsubmit.title = "评论前勾选机器人验证按钮"
+                }
+                robot_check.addEventListener('click', function () {
+                    vsubmit.disabled = false
+                    vsubmit.title = "欢迎畅所欲言"
+                });
+            });
+        });
+    }
+</script>

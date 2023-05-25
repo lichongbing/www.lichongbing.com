@@ -1,0 +1,14 @@
+<% if(theme.comments && page.comments){ %>
+    <div class="comment_head" id="comment">
+        <hr>
+        <% if(theme.comments == "discuss"){ %>
+            <div id="discuss"></div>
+    <% } else if(theme.comments == "valine"){ %>
+            <%- partial('valine') %>
+        <% }else if(theme.comments == "waline"){ %>
+            <%- partial('waline') %>
+        <% }else if(theme.comments == "twikoo"){ %>
+            <%- partial('twikoo') %>
+        <% } %>
+    </div>
+<% } %>

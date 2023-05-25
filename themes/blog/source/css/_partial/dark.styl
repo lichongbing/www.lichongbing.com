@@ -1,0 +1,47 @@
+:root
+    --main: convert(hexo-config('theme_color.main'))
+    --body_bg: #eaeaea
+    --text_color: #333
+    --main_bg: #fff
+    --navbar_bg: rgba(255,255,255,0.7)
+    --post_title: rgba(52,50,50,0.7)
+    --link_bg: #f8f9fa
+    --code_bg: $highlight-background
+    --code_wrap_bg: $code_block
+    --blockquote_color: #6a737d
+    --window_bg: linear-gradient(90deg, #addfff, #fff9e8)
+    --table_bg: none
+    --valine_bg: url("https://image.lichongbing.com/detail/hongmiaosi.gif")
+    --love_color: #3c4858
+    --filter: none
+    --box_bg: url("https://image.lichongbing.com/detail/star.svg")
+if hexo-config('darkmode')
+    html[theme="dark"]
+        --body_bg: #333841
+        --text_color: rgba(255,255,255,0.6)
+        --main_bg: #282c34
+        --navbar_bg: rgba(52,50,50,0.7)
+        --post_title: rgba(255,255,255,0.9)
+        --link_bg: #333841
+        --code_bg: #333841
+        --code_wrap_bg: #444851
+        --blockquote_color: rgba(255,255,255,0.6)
+        --window_bg: rgba(157, 172, 185, .6)
+        --table_bg: #282c34
+        --valine_bg: url("https://image.lichongbing.com/detail/simiao.gif")
+        --love_color: #faebd7
+        --filter: invert(1)
+        --box_bg: url("https://image.lichongbing.com/detail/star.svg")
+
+body.dark img, body.dark strong {
+    filter: brightness(.7);
+}
+// 深色模式: 跟随系统
+    // @media (prefers-color-scheme: dark)
+    //     :root
+    //         --body_bg: #333841
+    //         --text_color: rgba(255,255,255,0.6)
+    //         --main_bg: #282c34
+    //         --navbar_bg: #282c34
+    //         --post_title: rgba(255,255,255,0.9)
+    //         --link_bg: #333841

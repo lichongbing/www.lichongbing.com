@@ -1,7 +1,9 @@
 ---
 title: 一文搞懂TCP与UDP的区别
+abbrlink: 22814
 date: 2019-12-11 10:07:43
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 摘要：计算机网络基础
 ![1105508-20190322093746970-682324622.jpg](https://image.lichongbing.com/static/dde44b3adf2705384be3c854c3e02a13.jpg)

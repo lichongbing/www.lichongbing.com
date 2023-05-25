@@ -1,7 +1,9 @@
 ---
 title: '安装sysv-rc-conf时，报了如下的错： E: Unable to locate package sysv-rc-conf'
+abbrlink: 60839
 date: 2019-12-06 11:37:56
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 这里我使用的是ubuntu-18.04.1版本，当我安装sysv-rc-conf时，报了如下的错：
 E: Unable to locate package sysv-rc-conf（无法定位sysv-rc-conf包）

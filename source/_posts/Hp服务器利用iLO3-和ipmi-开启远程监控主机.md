@@ -1,7 +1,9 @@
 ---
 title: Hp服务器利用iLO3 和ipmi 开启远程监控主机
+abbrlink: 54151
 date: 2019-12-05 12:22:26
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 1） 首先，需要用一条网线连接iLO 网口和路由器，链接方式有两种：共享和专用，如下图。
 ![337661-20160524162913709-411927696.png](http://image.lichongbing.com/static/3dbc81b99c539bfe71dac6a93ef13271.png)

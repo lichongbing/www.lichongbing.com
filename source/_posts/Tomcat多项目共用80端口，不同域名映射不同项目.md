@@ -1,7 +1,9 @@
 ---
 title: Tomcat多项目共用80端口，不同域名映射不同项目
+abbrlink: 32006
 date: 2019-12-03 15:23:10
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 #tomcat多项目共用80端口，不同域名映射不同项目
 准备工作：

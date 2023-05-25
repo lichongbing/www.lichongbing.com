@@ -1,0 +1,82 @@
+<%# 关于页面信息详情 %>
+<% if (site.data && site.data.information) { %>
+    <% var information = site.data.information; %>
+    <div class="page">
+        <div id="profile">
+            <div class="avatar">
+                <img src="<%- url_for(theme.message.avatar) %>" alt="<%- config.author %>">
+            </div>
+            <div class="title"><%- config.author %></div>
+            <div class="career"><%- theme.message.career %></div>
+            <div class="introduction" data-aos="fade-up"><%= theme.message.introduction %></div>
+        </div>
+        <div id="mySkills">
+            <p class="message_title">🔧 我的技能</p>
+            <%
+                var mySkills = information.mySkills;
+                var topSkillArr = [];
+            %>
+            <% if (mySkills) { %>
+            <style type="text/css">
+                .photo{
+                    padding: 0;
+                }
+            </style>
+                <% Object.keys(mySkills).forEach(function(skill) { %>
+                    <% topSkillArr.push(skill); %>
+                    <div class="skillbar">
+                        <div class="skillbar-title"
+                             style="background: <%- mySkills[skill].background %>; width: <%- mySkills[skill].percent %>">
+                            <span><%- mySkills[skill].skill %></span>
+                        </div>
+                        <div class="skill-bar-percent"><%- mySkills[skill].percent %></div>
+                    </div>
+                <% }); %>
+            <% } %>
+        </div>
+        <div id="items">
+            <% var items = information.myItems %>
+            <p class="message_title"> 🎁 我的项目</p>
+            <ul class="content">
+                <% for (var i = 0, len = items.length; i < len; i++) { %>
+                    <% var item = items[i]; %>
+                    <li>
+                        <div class="info">
+                            <a href="<%- url_for(item.url) %>" target="_blank" rel="noreferrer noopener"
+                               class="items-container">
+                                <div class="items">
+                                    <img src="<%- url_for(item.img) %>" alt="<%= item.name %>">
+                                </div>
+                            </a>
+                            <div>
+                                <h3><%= item.name %></h3>
+                                <p>作者：<%= item.author %></p>
+                                <p>完成进度：<%= item.plan %></p>
+                                <p>
+                                    <span>推荐指数：</span>
+                                    <% for(var j = 0; j < item.star; j++) { %>
+                                        <i class="fa fa-star"></i>
+                                    <% } %>
+                                </p>
+                                <p>演示网址：<a href="<%- url_for(item.demo) %>" target="_blank" rel="noreferrer noopener">🚪传送门</a>
+                                </p>
+                            </div>
+                        </div>
+                        <p class="description"><%= item.description %></p>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div id="myGallery">
+            <p class="message_title">📷 相册</p>
+            <% var gallery = information.myGallery; %>
+            <% if (gallery) { %>
+                <% Object.keys(gallery).forEach(function(photo) { %>
+                    <div class="photo">
+                        <img src="<%- url_for(gallery[photo]) %>" data-img="<%- url_for(gallery[photo]) %>" class="responsive-img">
+                    </div>
+                <% }); %>
+            <% } %>
+        </div>
+    </div>
+<% } %>

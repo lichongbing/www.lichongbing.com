@@ -1,7 +1,9 @@
 ---
 title: '最新ubuntu搭建公网个人邮件服务器(基于postfix，dovecot,mysql)'
+abbrlink: 64490
 date: 2019-12-18 13:34:15
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 # 最新ubuntu搭建公网个人邮件服务器(基于postfix，dovecot,mysql)
 ## 前言

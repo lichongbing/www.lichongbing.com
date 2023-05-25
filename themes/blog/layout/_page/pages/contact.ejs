@@ -1,0 +1,43 @@
+<div class="page_title">
+    📢&nbsp;流言蜚语
+</div>
+<div class="swbk">
+    <div class="label" style="color:red">
+        <span>欢迎大佬们来到小站~</span>
+    </div>
+
+    <div class="poem-wrap">
+        <div class="poem-border poem-left"></div>
+        <div class="poem-border poem-right"></div>
+        <h1>热评</h1>
+        <p id="poem">忘掉生日，忘掉青涩的诗，忘掉他不厌其烦夜夜追逐他影子。</p>
+        <p id="info"> ——邱意 · 《 菱形月亮 》</p>
+    </div>
+    <section class="envlope-wrapper">
+        <div id="envelope" class="close">
+            <div class="front flap"></div>
+            <div class="front pocket"></div>
+            <div class="letter">
+                <div class="words line1">闲花</div>
+                <div class="words line2">浮生若梦，何者是实。</div>
+                <div class="words line3">何者是空，何去何从。</div>
+                <div class="words line4"></div>
+            </div>
+            <div class="hearts">
+                <div class="heart a1"></div>
+                <div class="heart a2"></div>
+                <div class="heart a3"></div>
+            </div>
+        </div>
+    </section>
+    <script data-pjax type="text/javascript">
+        $id("envelope").onmousemove = function () {
+            envelope.classList.remove("close")
+            envelope.classList.add("open")
+        }
+        $id("envelope").onmouseout = function () {
+            envelope.classList.remove("open")
+            envelope.classList.add("close")
+        }
+    </script>
+</div>

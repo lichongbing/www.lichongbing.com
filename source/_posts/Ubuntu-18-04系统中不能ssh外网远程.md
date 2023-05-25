@@ -1,7 +1,9 @@
 ---
 title: Ubuntu 18.04系统中不能ssh外网远程
+abbrlink: 24976
 date: 2019-12-15 22:28:51
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 
 ## 前言

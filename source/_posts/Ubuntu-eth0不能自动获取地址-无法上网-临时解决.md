@@ -1,7 +1,9 @@
 ---
 title: Ubuntu eth0不能自动获取地址 无法上网 临时解决
+abbrlink: 6390
 date: 2019-12-03 19:46:14
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 `ifconfig之后显示eth0，但是没有显示静态IP地址，即无inet、地址、广播、掩码。`
 解决办法临时

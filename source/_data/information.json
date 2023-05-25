@@ -1,0 +1,287 @@
+{
+  "myItems": [
+    {
+      "name": "一号店首页",
+      "author": "闲花手札",
+      "img": "https://ialoe.gitee.io/yihaodian/img/1.png",
+      "plan": "已完成",
+      "star": 3,
+      "url": "https://gitee.com/ialoe/yihaodian",
+      "demo": "https://ialoe.gitee.io/yihaodian",
+      "description": "仿照一号店首页使用HTML5+CSS3技术完成页面(未使用JavaScript)"
+    },
+    {
+      "name": "hexo-themes-matery-pro",
+      "author": "闲花手札",
+      "img": "https://images.islu.cn/闲花手札.jpg",
+      "plan": "已完成",
+      "star": 5,
+      "url": "https://github.com/ialoe/hexo-themes-islu",
+      "demo": "https://blog.islu.cn",
+      "description": "基于闪烁之狐大佬的matery主题进行魔改的hexo主题"
+    }
+  ],
+  "mySkills": [
+    {
+      "skill": "Java",
+      "background": "linear-gradient(to right, #FF0066 0%, #FF00CC 100%)",
+      "percent": "75%"
+    },
+    {
+      "skill": "JavaScript",
+      "background": "linear-gradient(to right, #2196F3 0%, #42A5F5 100%)",
+      "percent": "80%"
+    },
+    {
+      "skill": "HTML5",
+      "background": "linear-gradient(to right, #FF0066 0%, #FF00CC 100%)",
+      "percent": "75%"
+    },
+    {
+      "skill": "CSS",
+      "background": "linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)",
+      "percent": "55%"
+    },
+    {
+      "skill": "SQL",
+      "background": "linear-gradient(to right, #4CAF50 0%, #81C784 100%)",
+      "percent": "60%"
+    },
+    {
+      "skill": "程序设计",
+      "background": "linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)",
+      "percent": "65%"
+    }
+  ],
+  "friends": [
+    {
+      "avatar": "https://images.islu.cn/avatar.jpg",
+      "name": "闲花手札",
+      "description": "一名追求技术喜欢安静的程序猿",
+      "url": "https://www.islu.cn/"
+    },
+    {
+      "avatar": "https://www.eternitywith.xyz/medias/avatar.jpg",
+      "name": "百念成诗",
+      "description": "世界以痛吻我，要我报之以歌",
+      "url": "https://www.eternitywith.xyz/"
+    },
+    {
+      "avatar": "https://cdn.jsdelivr.net/gh/small-rose/small-rose.github.io@master/medias/avatar.jpg",
+      "name": "Small-Rose",
+      "description": "JAVA WEB | 道虽迩，不行不至；事虽小，不为不成。",
+      "url": "https://notes.zhangxiaocai.cn/"
+    },
+    {
+      "avatar": "https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg",
+      "name": "優萌初華",
+      "description": "琉璃的医学 & 编程笔记",
+      "url": "https://shoka.lostyu.me/"
+    },
+    {
+      "avatar": "https://cdn.jsdelivr.net/gh/xiaopengand/xiaopengand.github.io/medias/avatar.jpg",
+      "name": "Xpand",
+      "description": "月亮很亮,亮也没用",
+      "url": "https://www.qwas.top"
+    },
+    {
+      "avatar": "https://hesifan.top/medias/avatar.jpg",
+      "name": "凡尘纪",
+      "description": "念念不忘 必有回响",
+      "url": "https://hesifan.top"
+    },
+    {
+      "avatar": "https://mingxin142.gitee.io/images/logo.png",
+      "name": "Mx",
+      "description": "一个分享知识和快乐的地方！",
+      "url": "https://www.wwru.cn"
+    },
+    {
+      "avatar": "https://nekodeng.gitee.io/medias/avatar.jpg",
+      "name": "itsNekoDeng",
+      "description": "十万伏特皮卡丘，梦想是世界和平，想要发光发热",
+      "url": "https://dyfa.top"
+    },
+    {
+      "avatar": "https://cdn.jsdelivr.net/gh/Tajang-ctf/blog_images/avatar.jpg",
+      "name": "Tajang",
+      "description": "专注于网络安全与CTF",
+      "url": "https://www.ctfking.com"
+    },
+    {
+      "avatar": "https://cdn2.sublimerui.top/2021/01/03/5db7a51e823a6.ico",
+      "name": "果子酱",
+      "description": "业精于勤，荒于嬉；行成于思，毁于随",
+      "url": "https://blog.moej.cn"
+    },
+    {
+      "avatar": "https://ying626.top/img/headPortrait.jpg",
+      "name": "郭祥迎Blog",
+      "description": "热爱生活，热爱交友",
+      "url": "https://ying626.top"
+    },
+    {
+      "avatar": "https://zfe.space/images/headimage.png",
+      "name": "小冰博客",
+      "description": "做个有梦想的人！",
+      "url": "https://zfe.space"
+    },
+    {
+      "avatar": "https://blog.adworld.top/photo/zhade2.jpg",
+      "name": "云梦 ╮不浅",
+      "description": "梦，开始的地方",
+      "url": "https://blog.adworld.top/"
+    },
+    {
+      "avatar": "https://q1.qlogo.cn/g?b=qq&nk=2085886325&s=640",
+      "name": "不冷博客",
+      "description": "听喜欢的歌，做喜欢的事",
+      "url": "https://www.buleng.xyz"
+    },
+    {
+      "avatar": "https://cdn.jsdelivr.net/gh/Khighness/cdn/avatar/Khighness.jpg",
+      "name": "Khighness",
+      "description": "炒菜K殿下",
+      "url": "https://www.parak.top"
+    },
+    {
+      "avatar": "https://huanz.top/images/logo.webp",
+      "name": "Huanzの小窝",
+      "description": "那是一小块凝固的时间，时间上有美丽的条纹，摸起来像浅海的泥一样柔软",
+      "url": "https://huanz.top"
+    },
+    {
+      "avatar": "https://ali2.a.yximgs.com/uhead/AB/2021/04/24/00/BMjAyMTA0MjQwMDI5NTVfNjc3MjIxNTBfMl9oZDkzMl82NDM=_s.jpg",
+      "name": "51xcode",
+      "description": "51学代码，一个专注于自学代码，分享编程技术的小站",
+      "url": "https://www.51xcode.com"
+    },
+    {
+      "avatar": "https://imgur.loukky.com/imgs/2021/02/ee7dc694cf5d54a3.jpg",
+      "name": "Random Forest",
+      "description": "平凡的脚步也可以走出伟大的行程",
+      "url": "https://mletter.cn/technology"
+    },
+    {
+      "avatar": "https://www.zuoyu.top/avatar",
+      "name": "左羽",
+      "description": "Follow your heart, Be yourself.",
+      "url": "https://www.zuoyu.top"
+    },
+
+    {
+      "avatar": "https://wch666.com/head.png",
+      "name": "心月云",
+      "description": "永远年轻，永远热泪盈眶",
+      "url": "https://wch666.com"
+    }
+  ],
+  "lossFriends": [
+    {
+      "avatar": "https://cdn.jsdelivr.net/gh/zard999/zard999-imgs/images/av.jpg",
+      "name": "zhangYHui’s Blog",
+      "description": "听喜欢的歌，做喜欢的事~",
+      "url": "https://zhangyonghui.top"
+    },{
+      "avatar": "https://gitee.com/yafine66/blogimage/raw/master/img/me.jpg",
+      "name": "过客～励む",
+      "description": "你现在的努力，是为了以后有更多的选择!",
+      "url": "https://yafine-blog.cn"
+    }
+  ],
+  "journals": [
+    {
+      "date": "2022-02-27",
+      "title": "更换评论系统及访问量统计",
+      "text": "由于LeanCloud的底层IaaS服务商Ucloud要求国内节点需要备案，个人备案月耗费用太高决定放弃valine评论，使用Discuss评论，以MongoDB作为数据库，速度可能有所下降，有空的话会迁移至国内服务器,顺带解决了原卜蒜子总挂的问题，使用Discuss API来实现访问统计"
+    },{
+      "date": "2021-12-18",
+      "title": "添加文章置顶功能和banner点击阅读按钮",
+      "text": "添加文章置顶功能实现推荐文章，banner点击阅读按钮便于快速阅读"
+    },{
+      "date": "2021-12-11",
+      "title": "修改导航栏、侧边滚动条样式并解决细节bug",
+      "text": "为了配合背景图色彩修改了样式及配色，并修复了日志页面日期不显示等细节bug"
+    },
+    {
+      "date": "2021-11-16",
+      "title": "实现云端写作",
+      "text": "接入语雀，使用vercel + github action作为中间件实现云端写作"
+    },
+    {
+      "date": "2021-09-07",
+      "title": "将所有图片转移至七牛云",
+      "text": "听说七牛云有个图片瘦身，而且价格也不贵，尝试一下，一切都是为了更好的体验。"
+    },
+    {
+      "date": "2021-09-05",
+      "title": "添加评论简易验证",
+      "text": "由于总是收到一些快递代发之类的评论消息，简单的添加一个验证，参考自itsNekoDeng并移除jQuery依赖"
+    },
+    {
+      "date": "2021-07-09",
+      "title": "更换当前主题",
+      "text": "本次换主题也是迫于无奈(听听就好)，Matery主题魔改后开源(现：blog.islu.cn)被多人使用，但未更改我的一些信息，导致百度,Bing,谷歌都有收录，本人未提交Bing收录，但却已被占取，只能更换代码结构"
+    },
+    {
+      "date": "2021-06-07",
+      "title": "全世界都在为高考让路，我也不能闲着",
+      "text": "精简一下留言板页面，移除玩偶信封，修整友链页面部分细节。开始考虑提高lighthouse中的各项跑分(考虑优化结构)"
+    },
+    {
+      "date": "2021-06-01",
+      "title": "加入彩蛋并移除所有控制台报错及报黄",
+      "text": "今天是儿童节，添加彩蛋娱乐一下，看看你能不能发现呢 ~ 顺便将所有缺失map进行补充解决报黄和部分报红。"
+    },
+    {
+      "date": "2021-05-06",
+      "title": "加入超图软件",
+      "text": "从事java开发"
+    },
+    {
+      "date": "2020-11-09",
+      "title": "完成域名备案并接入CDN",
+      "text": "买了此域名后就准备长久使用了(is Lu)自我认为还算比较好吧，据说备案更容易被收录，尝试一下吧 ~(或许会好那么一丢丢[实名更具备信服力容易收录])，此前的网站已经有了接入CDN记录，这个备案完就直接接入又拍云CDN(一个字：真香！)"
+    },
+    {
+      "date": "2019-10-29",
+      "title": "购买了当前域名",
+      "text": "期间在新网也购买了一个.top后缀域名(备案接入了又拍云CDN)，长久不收录便考虑更换cn域名(搜索引擎说比较容易收录一些)，想了好久都不知道买什么前缀的，最后拿我的姓凑了一下(is Lu)"
+    },
+    {
+      "date": "2019-06-30",
+      "title": "完成了Github+Coding双部署",
+      "text": "Github确实香，但是偶尔的拒绝也会让我很无奈:( 既然有了域名，那就要让别人都尝试访问我的网站(基友面前怎么能不装一下？访问不了多尴尬！)，搜索引擎又介绍了Coding给我认识，还好他也比较接地气(中文)，很快就完成了我的加速访问"
+    },
+    {
+      "date": "2018-10-21",
+      "title": "购买了第一个完全属于我的域名",
+      "text": "长久的使用GitHub Gitee的站点还是感觉少点什么，不搓！ 我还是没想起来缺点什么...(腾讯云新用户首年1元购top后缀域名吸引了我:) 我就果断买了)"
+    },
+    {
+      "date": "2016-09-08",
+      "title": "开始转行coding",
+      "text": "正式由产品设计跨入编程"
+    },
+    {
+      "date": "2016-04-08",
+      "title": "回到成都第二份工作",
+      "text": "回到成都"
+    },
+    {
+      "date": "2014-06-27",
+      "title": "第一份工作，产品设计",
+      "text": "第一次走出四川省，来到广东"
+    },
+    {
+      "date": "2014-06-26",
+      "title": "大学毕业",
+      "text": "大学毕业啦"
+    },
+    {
+      "date": "long long ago",
+      "title": "萌生搭建属于自己网站的想法",
+      "text": "搭建一个属于自己的网站并进行维护是一件很cool🆒的事，有了想法就要去尝试实施咯 ~ "
+    }
+  ]
+}

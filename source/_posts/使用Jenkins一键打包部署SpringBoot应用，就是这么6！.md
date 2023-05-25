@@ -1,7 +1,9 @@
 ---
 title: 使用Jenkins一键打包部署SpringBoot应用，就是这么6！
+abbrlink: 6241
 date: 2019-12-25 10:15:17
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 
 

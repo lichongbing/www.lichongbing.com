@@ -2,8 +2,10 @@
 title: >-
   ipmitool使用报错处理  Could not open device at /dev/ipmi0 or /dev/ipmi/0 or
   /dev/ipmidev/0: No such file or directory
+abbrlink: 63319
 date: 2019-12-08 09:52:28
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 解决办法：需要加载相关模块
 

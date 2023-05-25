@@ -1,7 +1,9 @@
 ---
 title: 业余时间写的代码也算公司的？Nginx之父被捕引发争议
+abbrlink: 4899
 date: 2019-12-16 13:34:31
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 据ZDNet报道，近日，俄罗斯的两位开发者突然被捕，其中一人是风靡全球的网页服务器 Nginx之父 Igor Sysoev。警方给出的理由是二人涉嫌项目侵权。这个项目指的是Nginx，是Igor Sysoev 15年前在老东家任职期间利用业余时间开发的。
 

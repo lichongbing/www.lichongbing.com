@@ -1,0 +1,111 @@
+<style>
+    header {
+        height: 0;
+    }
+    aside{
+        display: none;
+    }
+    #body_wrap #main_wrap #islu{
+        z-index: unset;
+    }
+    #body_wrap #main_wrap .container {
+        width: 100%;
+        max-width: none;
+        z-index: unset;
+    }
+
+    #body_wrap #main_wrap .container .card {
+        max-width: none;
+        margin: 0;
+    }
+
+    #body_wrap #main_wrap .container .card-content, #body_wrap .main {
+        padding: 0;
+    }
+
+</style>
+<h1 class="about-message">
+    一名追求技术喜欢安静的程序猿，目前还是带专人。
+</h1>
+<div class="about-body">
+    <div class="windows">
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="window"></div>
+        <div class="window"></div>
+    </div>
+    <div class="fan">
+        <div class="fan_root">
+            <span class="top">
+                <label for="engine" class="red"></label>
+                <label for="engine2" class="green"></label>
+                <label for="jack" class="blue"></label>
+            </span>
+            <span class="bottom"></span></div>
+        <div class="fan_staddle"></div>
+        <input id="jack" type="checkbox" hidden="hidden">
+        <div class="head">
+            <div class="fan_engine">
+                <span class="center"></span>
+            </div>
+            <input id="engine" type="checkbox" hidden="hidden" checked="checked">
+            <div>
+                <span class="fly"></span>
+                <span class="fly"></span>
+                <span class="fly"></span>
+                <div class="fan_blades">
+                    <input id="engine2" type="checkbox" hidden="hidden" checked="checked">
+                    <div class="fan_blades">
+                        <div class="center"></div>
+                        <div class="blade">
+                            <span></span>
+                        </div>
+                        <div class="blade">
+                            <span></span>
+                        </div>
+                        <div class="blade">
+                            <span></span>
+                        </div>
+                        <div class="blade">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relative">
+        <h1 class="islu_fonts">追求优雅的代码,喜欢好看的UI。</h1>
+        <h1 class="islu_fonts">热爱运用各种技术探索某种业务场景的最优解。</h1>
+        <h1 class="islu_fonts">大道至简，尝试复杂问题简单化。</h1>
+        <h1 class="islu_fonts">爱抽象思维，尝试使用设计模式来实际运用解决问题。</h1>
+        <h1 class="islu_fonts">全栈之路，励志成为一名优秀架构师。</h1>
+        <div class="custom-btn" id="readMore"><span>查看更多</span></div>
+    </div>
+</div>
+<div id="about">
+    <script type="text/javascript">
+        // 打开关于
+        show_about()
+        function show_about() {
+            let readMore = $id("readMore")
+            let about = $id("about")
+            if (!about) return
+            readMore.onclick = function () {
+                let is_open = about.classList.contains("open_about")
+                if (!is_open) {
+                    about.classList.add("open_about")
+                    mask.className = "mask";
+                } else about.classList.remove("open_about")
+            }
+        }
+    </script>
+    <%- partial('_partial/about-message') %>
+</div>
+

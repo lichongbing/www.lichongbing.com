@@ -1,0 +1,70 @@
+<style>
+    header {
+        height: 70vh;
+    }
+</style>
+<div class="swbk">
+    <div class="label" style="color: rgb(178, 143, 206);">
+        <span>可以给博主买个馒头吃吗</span>
+    </div>
+    <p>"维护博客不易，憨憨叹气，可以给博主买个馒头吃吗，卟卟 ~ "</p>
+    <p>路人甲：" 哎，博主好可怜，一定支持一下 ~ "</p>
+    <p>路人乙：" 个人博客越来越稀有了，我觉得应该保护一下。"</p>
+
+</div>
+<!-- 二维码模块 -->
+<div class="swbk">
+    <div class="label" style="color: rgb(134, 193, 102);">
+        <span>微信 & 支付宝</span>
+    </div>
+    <div class="xiangjipicss">
+        <img src="https://image.lichongbing.com/reward/wechat.png"
+             class="xiangjipic" title="微信，谢谢支持" alt="微信，谢谢支持">
+        <img src="https://image.lichongbing.com/reward/alipay.png"
+             class="xiangjipic" title="支付宝，谢谢支持" alt="支付宝，谢谢支持">
+    </div>
+</div>
+<div class="swbk">
+    <div class="label" style="color: rgb(251, 150, 110);">
+        <span>打赏支持记录</span></div>
+    <p>"打赏规则：1 软妹币 = 100 糖果🍬（打赏时可在支付页面填写自己的网址，博客名，备注信息哦，再次感谢支持）"</p>
+</div>
+<!-- 打赏表格模块 -->
+<table class="dashang">
+    <thead>
+        <tr class="dashang_title">
+            <th>时间</th>
+            <th>人物</th>
+            <th>糖果数🍬</th>
+            <th>次数</th>
+            <th>方式</th>
+            <th>备注</th>
+        </tr>
+    </thead>
+    <tbody>
+    <!-- 以下每一个tr标签代表一个打赏者信息 -->
+    <% if (site.data && site.data.information) { %>
+        <% var rewards = site.data.information.rewards; %>
+        <% for (var i = 0; i < rewards.length; i++) { %>
+            <% var reward = rewards[i]; %>
+            <tr>
+                <td class="Hotpink">
+                    <%= reward.date %>
+                </td>
+                <td>
+                    <a href="<%- url_for(reward.url) %>" target="_blank" rel="noopener noreferrer"
+                       aria-label="<%= reward.name %>"><%= reward.name %></a>
+                </td>
+                <td><%= reward.money %> x 🍬</td>
+                <td><%= reward.count %></td>
+                <td>
+                    <%= reward.type %>
+                </td>
+                <td class="Hotpink">
+                    📢 <%= reward.contact %>
+                </td>
+            </tr>
+        <% } %>
+    <% } %>
+    </tbody>
+</table>

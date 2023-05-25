@@ -1,7 +1,9 @@
 ---
 title: Hystrix Dashboard：断路器执行监控
+abbrlink: 1848
 date: 2019-12-24 22:35:23
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 Hystrix Dashboard：断路器执行监控
 

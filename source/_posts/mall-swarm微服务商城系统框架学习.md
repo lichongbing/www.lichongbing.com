@@ -1,7 +1,9 @@
 ---
 title: mall-swarm微服务商城系统框架学习
+abbrlink: 61457
 date: 2019-12-25 00:29:47
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 
 # mall-swarm微服务商城系统框架

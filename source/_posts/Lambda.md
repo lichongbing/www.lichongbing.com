@@ -1,7 +1,9 @@
 ---
 title: Lambda
+abbrlink: 40677
 date: 2017-04-10 09:21:37
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 ## 简介
 Lambda 表达式是 Java SE 8 中一个重要的新特性。Lambda 表达式允许你通过表达式来代替功能接口。本节将重点讲解 Lambda 相关知识内容。

@@ -1,7 +1,9 @@
 ---
 title: tomcat开机自启动shell脚本
+abbrlink: 59295
 date: 2019-12-06 22:58:12
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 1.你电脑必须安装成功tomcat
 ①编写tomcat.service文件

@@ -1,7 +1,9 @@
 ---
 title: 惠普proliant服务器raid卡配置过程详解
+abbrlink: 46425
 date: 2019-12-03 16:08:03
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 #惠普ProLiant服务器Raid卡配置过程详解
 Raid(Redundant Array of Independent Disk)独立冗余磁盘阵列，就是将多个硬盘通过Raid控制器整合成虚拟的单个大容量的硬盘。Raid是服务器数据容错模式中采用最普遍的一种，通常都是通过外加Raid卡的方式来实现。Raid的级别有很多种，而各种级别所涉及的原理也不尽相同，在此不再赘述，本文将以惠普642 raid卡为例，详细介绍阵列卡的配置过程。

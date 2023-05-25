@@ -1,7 +1,9 @@
 ---
 title: 人大金仓数据库KingBase+SpringBoot+MyBatis的使用
+abbrlink: 41953
 date: 2021-05-12 16:21:42
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 ### 驱动包下载
 

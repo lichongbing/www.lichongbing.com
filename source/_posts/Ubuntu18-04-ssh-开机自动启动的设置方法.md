@@ -1,7 +1,9 @@
 ---
 title: Ubuntu18.04 ssh 开机自动启动的设置方法
+abbrlink: 41920
 date: 2019-12-06 22:47:39
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 
 Ubuntu18.04 ssh 开机自动启动的设置方法如下：

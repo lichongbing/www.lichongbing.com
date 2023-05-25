@@ -1,7 +1,9 @@
 ---
 title: Spring Cloud Ribbon：负载均衡的服务调用
+abbrlink: 42389
 date: 2019-12-24 20:09:36
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 # Spring Cloud Ribbon：负载均衡的服务调用
 

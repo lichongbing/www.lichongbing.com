@@ -1,7 +1,9 @@
 ---
 title: spring boot面试问题集锦
+abbrlink: 30157
 date: 2019-12-22 09:35:40
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 译文作者：**david**   原文链接：[https://www.javainuse.com/spring/SpringBootInterviewQuestions](https://www.javainuse.com/spring/SpringBootInterviewQuestions)
 <br />A： 多年来，随着新功能的增加，spring变得越来越复杂。只需访问页面<a href="https://spring.io/projects">https://spring.io/projects</a>，我们将看到所有在应用程序中使用的不同功能的spring项目。**如果必须启动一个新的spring项目，我们必须添加构建路径或maven依赖项，配置application server，添加spring配置。因此，启动一个新的spring项目需要大量的工作，因为我们目前必须从头开始做所有事情**。Spring Boot是这个问题的解决方案。Spring boot构建在现有Spring框架之上。使用spring boot，我们可以避免以前必须执行的所有样板代码和配置。因此，Spring boot帮助我们更健壮地使用现有的Spring功能，并且只需最少的工作量。

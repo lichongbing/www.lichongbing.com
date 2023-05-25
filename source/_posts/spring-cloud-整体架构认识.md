@@ -1,7 +1,9 @@
 ---
 title: spring cloud 整体架构认识
+abbrlink: 28941
 date: 2019-12-24 15:07:25
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 ## 什么是SpringCloud
 ### 目标

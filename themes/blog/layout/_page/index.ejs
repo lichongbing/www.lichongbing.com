@@ -1,0 +1,49 @@
+<% var type = page.type; %>
+
+<% if (type === "tags" ) { %>
+    <%# 文笔记号-标签页面 %>
+    <%- partial('pages/tags') %>
+
+<% }else if(type === "categories" ){ %>
+    <%# 物以类聚-分类页面 %>
+    <%- partial('pages/categories') %>
+
+<% }else if(type === "count" ){ %>
+    <%# 文思散发-统计页面 %>
+    <%- partial('pages/count') %>
+
+<% }else if(type === "about" ){ %>
+    <%# 博主资料-关于页面 %>
+    <%- partial('pages/about') %>
+
+<% }else if(type === "contact" ){ %>
+    <%# 流言蜚语-寄语页面 %>
+    <%- partial('pages/contact') %>
+
+<% }else if(type === "link" ){ %>
+    <%# 友情链接-友链页面 %>
+    <%- partial('pages/link') %>
+
+<% }else if(type === "journal" ){ %>
+    <%# 站点日志-日志页面 %>
+    <%- partial('pages/journal') %>
+
+<% }else if(type === "rewardModal" ){ %>
+    <%# 赏金明细-打赏页面 %>
+    <%- partial('pages/rewardModal') %>
+
+<% }else if(type === "gallery" ){ %>
+    <%# 流年影集-相册页面 %>
+    <%- partial('pages/gallery') %>
+
+<% }else if(type === "galleries" ){ %>
+    <%# 相册内页 %>
+    <%- partial('pages/galleries') %>
+
+<% }else if(type === "link" ){ %>
+    <%# 友情链接-友链页面 %>
+    <%- partial('pages/link') %>
+
+<% }else { %>
+    <div class="content"><%- page.content %></div>
+<% } %>

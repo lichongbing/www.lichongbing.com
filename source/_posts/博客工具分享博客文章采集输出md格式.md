@@ -1,7 +1,9 @@
 ---
 title: 博客工具分享博客文章采集输出md格式
+abbrlink: 18134
 date: 2019-12-22 19:05:17
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 # 说明
 

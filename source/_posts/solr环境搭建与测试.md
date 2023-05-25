@@ -1,7 +1,9 @@
 ---
 title: solr环境搭建与测试
+abbrlink: 52434
 date: 2019-12-26 17:27:37
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 ## 配置环境
 > jdk1.8

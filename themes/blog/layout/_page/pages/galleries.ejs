@@ -1,0 +1,42 @@
+<style>
+    .my-gallery .photo{
+        padding: 0;
+    }
+    .my-gallery .photo img {
+        transition: all 0.6s ease-in-out;
+    }
+
+    .my-gallery .photo:hover img {
+        opacity: 0.6;
+        transform: scale(1.05);
+    }
+</style>
+<div class="yy_box">
+    <p id="poem">“ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸 ”</p>
+</div>
+<section class="gallery">
+    <div id="myGallery" class="my-gallery">
+        <% if (site.data && site.data.gallery) { %>
+            <% var galleries = site.data.gallery;
+                var pageTitle = page.title;
+                function getCurrentGallery(galleries, pageTitle) {
+                    for (let i = 0; i < galleries.length; i++) {
+                        if (galleries[i]['name'] === pageTitle) {
+                            return galleries[i];
+                        }
+                    }
+                }
+                var currentGallery = getCurrentGallery(galleries, pageTitle);
+                var photos = currentGallery.album;
+            %>
+            <% for (var i = 0, len = photos.length; i < len; i++) { %>
+                <% var my_album = photos[i]; %>
+                <div class="photo" data-aos="fade-up">
+                    <img class="responsive-img" src="https://image.lichongbing.com/detail/loading.gif" data-img="<%- my_album%>"
+                         alt="<%- currentGallery.description %>"
+                         +<%- i %> >
+                </div>
+            <% } %>
+        <% } %>
+    </div>
+</section>

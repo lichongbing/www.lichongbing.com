@@ -1,0 +1,39 @@
+<style>
+    #body_wrap .container .card-content {
+        padding: 0;
+    }
+</style>
+<img class="friends_welcome" src="https://image.lichongbing.com/detail/friends.png" alt="交个朋友吧">
+<% var friends = site.data.information.friends; %>
+<div class="link-list" id="link-list">
+    <p class="link-title">小伙伴们 《<%= friends.length %>》</p>
+    <% for (var i = 0, len = friends.length; i < len; i++) { %>
+        <% var friend = friends[i]; %>
+        <div class="link-list-item">
+            <a href="<%- url_for(friend.url) %>" title="<%= friend.name %>">
+                <img src="<%- url_for(friend.avatar) %>" alt="<%= friend.name %>">
+                <span class="link-item-name"><%= friend.name %></span>
+                <span class="link-item-desc"><%= friend.description %></span>
+            </a>
+        </div>
+    <% } %>
+</div>
+<div class="center">
+    说明：
+    如果需要交换友链,可以在<a href="/contact" class="hotpink" rel="noopener noreferrer">Friends</a>留下你的信息
+</div>
+<% var lossFriends = site.data.information.lossFriends; %>
+<div class="link-list gray" id="link-list">
+    <p class="link-title">失联 & 故障《<%= lossFriends.length %>》</p>
+    <% for (var i = 0, len = lossFriends.length; i < len; i++) { %>
+        <% var lossFriend = lossFriends[i]; %>
+        <div class="link-list-item">
+            <a href="<%- url_for(lossFriend.url) %>" rel="noreferrer">
+                <img src="https://image.lichongbing.com/detail/loading.gif" data-img="<%- url_for(lossFriend.avatar) %>"
+                     alt="<%= lossFriend.name %>">
+                <span class="link-item-name"><%= lossFriend.name %></span>
+                <span class="link-item-desc"><%= lossFriend.description %></span>
+            </a>
+        </div>
+    <% } %>
+</div>

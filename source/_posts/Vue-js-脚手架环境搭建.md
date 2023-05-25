@@ -1,7 +1,9 @@
 ---
 title: Vue.js 脚手架环境搭建
+abbrlink: 4084
 date: 2021-05-13 10:14:43
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 #### npm镜像源设置
 ```bash

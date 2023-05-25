@@ -1,0 +1,55 @@
+<div class="page_title">
+    <%= '物以类聚' %> - <%= site.categories.length %>
+</div>
+<%
+var colorArr = ['#F9EBEA', '#F5EEF8', '#D5F5E3', '#E8F8F5', '#FEF9E7',
+    '#F8F9F9', '#82E0AA', '#D7BDE2', '#A3E4D7', '#85C1E9', '#F8C471', '#F9E79F', '#FFF'];
+var colorCount = colorArr.length;
+var hashCode = function (str) {
+    if (!str && str.length === 0) {
+        return 0;
+    }
+
+    var hash = 0;
+    for (var i = 0, len = str.length; i < len; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash |= 0;
+    }
+    return hash;
+};
+var i = 0;
+var isCategory = is_category();
+%>
+<div class="yy_box notice">
+    <p id="poem">忘掉生日，忘掉青涩的诗，忘掉他不厌其烦夜夜追逐他影子。</p>
+    <p id="info"> ——邱意 · 《 菱形月亮 》</p>
+</div>
+<div id="category-cloud" class="chip-container">
+    <div class="tag-chips">
+        <% if (site.categories && site.categories.length > 0) { %>
+            <% site.categories.map(function(category) { %>
+                <%
+                    i++;
+                    var color = i >= colorCount
+                            ? colorArr[Math.abs(hashCode(category.name) % colorCount)]
+                            : colorArr[i - 1];
+                %>
+                <a href="<%- url_for(category.path) %>" title="<%- category.name %>: <%- category.length %>">
+                    <div class="moleskine-wrapper">
+                        <div class="moleskine-notebook">
+                            <div class="chip notebook-cover center-align waves-effect waves-light
+                                <% if (isCategory && category.name == page.category) { %> chip-active <% } else { %> chip-default <% } %>"
+                                 style="background-color: <%- color %>;">
+                                <div class="notebook-skin <% if (isCategory && category.name == page.category) { %> chip-active <% } else { %> chip-default <% } %>"><%- category.name %>
+                                </div>
+                            </div>
+                            <div class="notebook-page dotted"></div>
+                        </div>
+                    </div>
+                </a>
+            <% }); %>
+        <% } else { %>
+            <%= __('categoryEmptyTip') %>
+        <% } %>
+    </div>
+</div>

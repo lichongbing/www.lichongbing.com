@@ -1,0 +1,184 @@
+/**
+ * 适配不同设备下的细节样式
+ */
+
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 601px) {
+  html {
+    font-size: 14px;
+  }
+  #navbar_wrap .navbar .menu {
+    display none
+  }
+
+  #navbar_wrap .navbar {
+    margin 0
+  }
+
+  .navbar .open_nav {
+    display inline-block !important
+    if !hexo-config('search.enable') { // 当未开启搜索时设置样式
+      margin-left auto
+    }
+  }
+  .scrollbar {
+    display none
+  }
+
+  .post_reward{ // 手机隐藏文章打赏按钮
+    display none
+  }
+
+  #navbar_wrap ul.side-toolbar li {
+    width 28px
+    height 28px
+    line-height 28px
+  }
+
+  #post_list .post_item {
+    width: 90%
+  }
+
+  #body_wrap .main {
+    padding 0
+  }
+
+  #body_wrap .container .card-content {
+    padding 10px
+  }
+
+  .uk-alert {
+    margin 0 !important
+    padding 5px !important
+  }
+
+  #myGallery .photo {
+    display block !important
+    width: 100% !important;
+  }
+
+  footer {
+    font-size 14.1px !important
+  }
+
+  .footer-fav .site-info {
+    width: 53%;
+  }
+
+  .footer-fav .site-girl {
+    top: 70px
+    left 0
+  }
+
+  .footer-fav .site-girl .girl-info {
+    margin-left 100px !important
+  }
+
+  .footer-fav .site-girl .girl {
+    display none
+  }
+
+  .linkslogo {
+    margin: 0 auto;
+  }
+
+  span#sitetime {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  #vcomments .vcards .vcard {
+    padding 0
+  }
+
+  .camera .zoom {
+    height: 33.4% !important;
+    top: 33.4% !important;
+  }
+
+  .custom-btn {
+    margin-left: 40px;
+  }
+  .link-list .link-list-item {
+    width calc(100% - 15px)
+  }
+}
+
+/*中等屏幕下(平板类)的样式*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  #navbar_wrap .navbar .menu {
+    display none
+  }
+
+  #navbar_wrap .navbar {
+    margin 0
+  }
+
+  .navbar .open_nav {
+    display inline-block !important
+    if !hexo-config('search.enable') { // 当未开启搜索时设置样式
+      margin-left auto
+    }
+  }
+  #body_wrap .main {
+    padding 10px
+    padding-bottom 30px
+    width calc(100% - 20px)
+    margin 0 10px
+    box-sizing border-box
+  }
+
+  html {
+    font-size: 14.5px;
+  }
+
+  #myGallery .photo {
+    width: 45% !important;
+  }
+
+  .footer-fav .site-info {
+    width: 53%;
+  }
+
+  .footer-fav .site-girl {
+    top: 70px
+    left 0
+  }
+
+  .footer-fav .site-girl .girl-info {
+    margin-left 400px
+  }
+
+  .footer-fav .site-girl .girl {
+    display none
+  }
+
+  #post_list .post_item {
+    width: 44.5%
+  }
+}
+
+/*大屏幕下(桌面类)的样式*/
+@media only screen and (min-width: 993px) {
+  html {
+    font-size: 15px;
+  }
+
+  #post_list .post_item {
+    width: 29.5%
+  }
+
+  .footer-fav {
+    overflow: visible;
+    width: auto;
+  }
+
+  .footer-fav .site-info {
+    display: inline-block;
+    width: auto
+  }
+
+  .footer-fav .site-info h2 {
+    font-size: 26px
+  }
+}

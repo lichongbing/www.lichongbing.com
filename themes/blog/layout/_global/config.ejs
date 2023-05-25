@@ -1,0 +1,37 @@
+<%
+var code_block_expand = theme.code_block_expand
+%>
+<script type="application/javascript">
+    var $config = {
+        CDN: {
+            fancybox_js: "<%= theme.CDN.fancybox_js %>",
+            fancybox_css: "<%= theme.CDN.fancybox_css %>"
+        },
+        <% if(theme.search.enable){ %>
+        search_file: "<%= url_for(theme.search.path) %>",
+        <% } %>
+        <% if(code_block_expand.enable){ %>
+        code_block_expand: {
+            enable: <%= code_block_expand.enable %>,
+            height: <%= code_block_expand.height %>,
+            scrollTop: <%= code_block_expand.scrollTop %>
+        },
+        <% } %>
+        <% if(theme.comments == "discuss"){ %>
+        Discuss: {
+            source_js: "<%= theme.discuss.source %>",
+            server_url: "<%- theme.discuss.serverURLs %>",
+            discuss_Data: {
+                el: '#discuss',
+                master: '<%- theme.discuss.master %>',
+                ph: '<%- theme.discuss.placeholder %>',
+                serverURLs: '<%- theme.discuss.serverURLs %>',
+                path: <%- theme.discuss.path %>,
+                emotMaps: <%- JSON.stringify(theme.discuss.emotMaps) %>,
+                stick: '<%- theme.discuss.stick %>',
+                visitStat: <%- theme.discuss.visitStat %>
+            }
+        }
+        <% } %>
+    }
+</script>

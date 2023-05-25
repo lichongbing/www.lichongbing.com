@@ -1,7 +1,9 @@
 ---
 title: Java常用类
+abbrlink: 34875
 date: 2016-12-09 21:15:08
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 ## 简介
 Java 类库提供了不少常用类，可以在编程中直接调用使用。本节讲重点讲解 Arrays、StringBuilder、Calendar、Date、Math、System、Random 类以及类的常用方法。

@@ -1,7 +1,9 @@
 ---
 title: solr参考指南（入门）
+abbrlink: 20340
 date: 2019-12-25 17:20:29
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 关于本指南
 -----

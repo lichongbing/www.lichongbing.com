@@ -1,7 +1,9 @@
 ---
 title: 微服务架构下的自动化部署，使用Jenkins来实现！
+abbrlink: 61987
 date: 2019-12-25 10:40:46
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 
 

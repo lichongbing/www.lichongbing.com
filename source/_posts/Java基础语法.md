@@ -1,7 +1,9 @@
 ---
 title: Java基础语法
+abbrlink: 34708
 date: 2016-10-09 18:23:18
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 **Java 概述及版本**
 

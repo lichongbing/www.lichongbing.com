@@ -1,7 +1,9 @@
 ---
 title: Spring Cloud Zuul：API网关服务
+abbrlink: 26980
 date: 2019-12-25 11:18:59
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 Spring Cloud Zuul：API网关服务
 =========================

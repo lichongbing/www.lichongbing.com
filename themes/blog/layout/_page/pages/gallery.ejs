@@ -1,0 +1,37 @@
+<div class="yy_box">
+    <p id="poem">“ 流年影集 ”</p>
+    <p id="info">“ 这里有光影流年，还有两朵穿衣裳的云，相拥在明天的河岸。”</p>
+</div>
+
+<div class="my-gallery">
+    <li class="grid-sizer"></li>
+    <% if (site.data && site.data.gallery) { %>
+        <% var gallery = site.data.gallery; %>
+        <% for (var i = 0, len = gallery.length; i < len; i++) { %>
+            <% var photo = gallery[i]; %>
+            <% if (photo.cover){ %>
+                <div class="photo">
+                    <div class="img-item">
+                        <a href="/gallery/<%- photo.url_name %>" style="width: 100%;">
+                            <img src="https://image.lichongbing.com/detail/loading.gif" data-img="<%- photo.cover %>" style="width: 100%;" class="responsive-img"
+                                 alt="img" +<%- i %> />
+                            <div class="biaotiss">
+                                <h3 class="animate-text"><%- photo.name %></h3>
+                                <p class="animate-text"><%- photo.description %></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            <% } %>
+        <% } %>
+    <% } %>
+</div>
+<style>
+    .photo:nth-child(odd) {
+        transform: rotateZ(-5deg);
+    }
+
+    .photo:nth-child(even) {
+        transform: rotateZ(5deg);
+    }
+</style>

@@ -1,0 +1,127 @@
+<div class="yy_box">
+    <p id="poem">“ 网站日志 ”</p>
+</div>
+<div class="box">
+    <div class="tit"></div>
+    <div class="min">
+        <div class="journalline"></div>
+        <div class="vas">
+            <% var journals = site.data.information.journals; %>
+            <% for (var i = 0, len = journals.length; i < len; i++) { %>
+                <% var journal = journals[i]; %>
+                <div class="list">
+                    <div class="dian"></div>
+                    <div class="list_box">
+                        <div class="hx"></div>
+                        <div class="list_nr">
+                            <p class="date"><%= journal.date %></p>
+                            <div class="nr_tit">
+                                # <%= journal.title %>
+                            </div>
+                            <div class="nr_nr">
+                                <%= journal.text %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+            <script type="text/javascript">
+                load_journals()
+
+                function load_journals() {
+                    var journalline = $query(".journalline")
+                    let wy = document.body.clientWidth;
+                    let list_box = $queryAll(".list_box");
+                    let hx = $queryAll(".hx");
+                    let list_nr = $queryAll(".list_nr");
+                    let date = $queryAll(".date");
+                    let arr_color = ['#118DF0', '#8bc24c', '#FF5F5F', '#515bd4', '#F7B32D'];
+                    let flag = 0;
+                    let list = $queryAll(".list")
+                    let dian = $queryAll(".dian")
+                    slideDown(journalline, 800)
+                    if (wy <= 700) {
+                        if (wy > 700) {
+                            window.history.go(0);
+                        }
+                        for (let index = 0; index < list_box.length; index++) {
+                            list_nr[index].style.background = arr_color[flag]
+                            if (flag === 4) {
+                                flag = 0;
+                            } else {
+                                flag += 1;
+                            }
+                        }
+                        journalline.style.left = "10%"
+                        for (let index = 0; index < list.length; index++) {
+                            list[index].style.marginTop = "60px"
+                            dian[index].style.left = "10%"
+                            list_box[index].style.width = "100%"
+                            hx[index].style.float = "left"
+                        }
+                        list[0].style.marginTop = "20px"
+                        for (let index = 0; index < list.length; index++) {
+                            slideDown(list[index], 500)
+                        }
+                    } else {
+                        for (let index = 0; index < list_box.length; index++) {
+                            list_nr[index].style.background = arr_color[flag];
+                            if (flag === 4) {
+                                flag = 0;
+                            } else {
+                                flag += 1;
+                            }
+                            if (index % 2 !== 0) {
+                                let a = list_box[index]
+                                let b = hx[index]
+                                let c = list_nr[index]
+                                let d = date[index]
+                                a.style.float = "right"
+                                b.style.float = "left"
+                                c.style.float = "right"
+                                c.style.marginRight = "19%"
+                                d.style.right = "unset"
+                                d.style.left = "12%"
+                            }
+                        }
+                        for (let index = 0; index < list.length; index++) {
+                            slideDown(list[index], 500)
+                        }
+                    }
+
+                    function slideDown(element, time) {
+                        if (element.offsetHeight <= 0) {
+                            element.style.display = "block";
+                            element.style.transition = "height" + time + "ms";
+                            element.style.overflow = "hidden";
+                            var totalHeight = element.offsetHeight;
+                            var currentHeight = 0;
+                            element.style.height = "0px";
+                            var addValue = totalHeight / (time / 10);
+                            var timer = setInterval(function () {
+                                currentHeight += addValue;
+                                element.style.height = currentHeight + "px";
+                                if (currentHeight >= totalHeight) {
+                                    clearInterval(timer);
+                                    element.style.height = totalHeight + "px";
+                                    if (
+                                        element.TimerManage && element.TimerManage.constructor === TimerManager
+                                    ) {
+                                        element.TimerManage.next();
+                                    }
+                                }
+                            }, 10);
+                        } else {
+                            if (
+                                element.TimerManage && element.TimerManage.constructor === TimerManager
+                            ) {
+                                element.TimerManage.next();
+                            }
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</div>
+

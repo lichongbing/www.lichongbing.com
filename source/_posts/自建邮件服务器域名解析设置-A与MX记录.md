@@ -1,7 +1,9 @@
 ---
 title: 自建邮件服务器域名解析设置(A与MX记录)
+abbrlink: 33963
 date: 2019-12-19 11:16:47
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 # 自建邮件服务器域名解析设置(A与MX记录)
 ## 前言

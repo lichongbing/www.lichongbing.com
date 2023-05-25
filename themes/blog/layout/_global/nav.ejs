@@ -1,0 +1,70 @@
+<nav id="nav">
+    <menu id="navbar_wrap">
+        <div class="navbar">
+            <i class="fas fa-bars open_nav"></i>
+            <a href="<%- url_for(config.root) %>" class="blog_name">谦谦君子</a>
+            <ul class="menu">
+                <% for (name in theme.menu) { %>
+                    <% if(!Array.isArray(theme.menu[name])){ %>
+                        <li>
+                            <a href="<%- url_for(theme.menu[name]) %>" rel="noopener noreferrer">
+                                <%= name %>
+                            </a>
+                            <div class="indicator"></div>
+                        </li>
+                    <% }else{ %>
+                        <li>
+                            <a href="#" rel="noopener noreferrer">
+                                <%- name %>
+                                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                            </a>
+                            <div class="indicator"></div>
+                            <ul class="menu_child">
+                                <% for (child in theme.menu[name]) { %>
+                                    <li>
+                                        <a href='<%- url_for(theme.menu[name][child].split("||")[1].trim()) %>'
+                                           rel="noopener noreferrer"><%- theme.menu[name][child].split("||")[0].trim() %></a>
+                                        <div class="indicator"></div>
+                                    </li>
+                                <% } %>
+                            </ul>
+                        </li>
+                    <% } %>
+                <% } %>
+            </ul>
+            <ul class="side-toolbar">
+                <% if(theme.music.enable){ %>
+                    <li id="music" title="<%- __('music') %>">
+                        <i class="fas fa-music"></i>
+                    </li>
+                <% } %>
+                <% if (theme.search.enable) { %>
+                    <li title="搜索...">
+                        <i class="fas fa-search search_btn"></i>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </menu>
+    <menu id="mobile_nav">
+        <ul>
+            <% for (name in theme.menu) { %>
+                <% if(!Array.isArray(theme.menu[name])){ %>
+                    <li>
+                        <a href="<%- url_for(theme.menu[name]) %>" rel="noopener noreferrer">
+                            <%= name %>
+                        </a>
+                    </li>
+                <% }else{ %>
+                    <% for (child in theme.menu[name]) { %>
+                        <li>
+                            <a href='<%- url_for(theme.menu[name][child].split("||")[1].trim()) %>' rel="noopener noreferrer">
+                                <%- theme.menu[name][child].split("||")[0].trim() %>
+                            </a>
+                        </li>
+                    <% } %>
+                <% } %>
+            <% } %>
+        </ul>
+    </menu>
+</nav>

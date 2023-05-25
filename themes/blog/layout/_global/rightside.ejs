@@ -1,0 +1,34 @@
+<aside id="rightside">
+    <%# 右侧功能按钮 %>
+        <%# 是否是文章 %>
+        <% var toc = toc(page.content, {list_number: false}) == "" ? false : true; %>
+        <% if(toc && page.toc){ %>
+            <a id="open_toc" title="<%- __('post.toc') %>" alt="<%- __('post.toc') %>">
+                <i class="fas fa-list-ul"></i>
+            </a>
+        <% } %>
+
+        <%# 快速到达评论区 %>
+        <% if(theme.comments && page.comments){ %>
+            <a id="comment" href="#comment" title="<%- __('rightside.direct_comments') %>" alt="<%- __('rightside.direct_comments') %>">
+                <i class="fas fa-comments"></i>
+            </a>
+        <% } %>
+    <%# 深色模式 %>
+    <% if(theme.darkmode){ %>
+        <span id="darkmode" title="<%- __('rightside.dark') %>">
+            <i class="fas fa-moon"></i>
+        </span>
+    <% } %>
+
+        <a id="backTop" href="#" title="<%- __('rightside.back_to_top') %>" alt="<%- __('rightside.back_to_top') %>">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+
+    <%# 侧边滚动条 %>
+    <% if (theme.scrollbar.aside){ %>
+        <div class="scrollbar j-scrollbar">
+            <div class="scrollbar-current j-scrollbar-current"></div>
+        </div>
+    <% } %>
+</aside>

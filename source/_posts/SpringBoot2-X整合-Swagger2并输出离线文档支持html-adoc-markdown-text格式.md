@@ -1,7 +1,9 @@
 ---
 title: 'SpringBoot2.X整合 Swagger2并输出离线文档支持html,adoc,markdown,text格式'
+abbrlink: 2018
 date: 2020-01-02 11:17:06
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 SpringBoot2.X整合 Swagger2并输出离线文档支持html,adoc,markdown,text格式
 ====================================

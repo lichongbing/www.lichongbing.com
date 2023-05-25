@@ -1,7 +1,9 @@
 ---
 title: solr参考指南（使用Solr管理用户界面）
+abbrlink: 33880
 date: 2019-12-25 21:47:31
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 # 使用Solr管理用户界面
 本章节讨论 Solr 管理用户界面（“管理 UI”）。

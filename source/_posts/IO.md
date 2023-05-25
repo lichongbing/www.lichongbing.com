@@ -1,7 +1,9 @@
 ---
 title: IO
+abbrlink: 25718
 date: 2017-05-10 11:08:34
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 整个 Java.io 包中最重要的就是 5 个类。指的是 File、OutputStream、InputStream、Writer、Reader；本节将重点讲解 Java.io 的相关内容。
 Java 使用 File 类来直接处理文件和文件系统。File 类没有指定信息怎样从文件读取或向文件存储；它描述了文件本身的属性。File 对象用来获取或处理与磁盘文件相关的信息，例如权限，时间，日期和目录路径。此外，File 还浏览子目录层次结构。Java 中的目录当成 File 对待，它具有附加的属性——一个可以被 list( )方法检测的文件名列表。

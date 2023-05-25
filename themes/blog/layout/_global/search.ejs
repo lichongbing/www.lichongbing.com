@@ -1,0 +1,11 @@
+<% if (theme.search.enable) { %>
+    <div id="local_search">
+        <div id="local_search_title"><i class="fas fa-search"></i>站内搜索</div>
+        <input id="local_search_input" autocomplete="off" placeholder="<%- __('search.input') %>"
+            type="text">
+        <hr>
+        <div id="local_search_result"></div>
+        <span class="search_close_button"><i class="fas fa-times"></i></span>
+    </div>
+    <script defer src="<%- theme.search.source %>"></script>
+<% } %>

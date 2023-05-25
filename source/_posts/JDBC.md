@@ -1,7 +1,9 @@
 ---
 title: JDBC
+abbrlink: 23592
 date: 2017-05-22 15:18:55
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 ## JDBC
 JDBC 是连接数据库和 Java 程序的桥梁，通过 JDBC API 可以方便地实现对各种主流数据库的操作。本节将重点讲解 JDBC 的内容。

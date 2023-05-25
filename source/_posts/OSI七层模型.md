@@ -1,7 +1,9 @@
 ---
 title: OSI七层模型
+abbrlink: 60596
 date: 2019-12-11 09:41:44
 tags:
+img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ---
 OSI七层模型
 
