@@ -3,7 +3,7 @@ title: ubuntu程序开机自启动
 abbrlink: 28333
 date: 2019-12-03 21:52:27
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 ## ubuntu程序开机自启动，嵌入到系统启动导引中
 **ubuntu开机自启动思路**

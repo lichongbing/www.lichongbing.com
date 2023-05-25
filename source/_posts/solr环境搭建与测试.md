@@ -3,7 +3,7 @@ title: solr环境搭建与测试
 abbrlink: 52434
 date: 2019-12-26 17:27:37
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 ## 配置环境
 > jdk1.8
@@ -45,7 +45,7 @@ java -jar start.jar
 通过管控台的analysis功能选择‘text_ik’的fieldType进行测试，结果如下：
 
 
-![截屏2019-12-2617.39.33.png](http://image.lichongbing.com/static/7dbf064e9342d9f053f9605db8333307.png)
+![截屏2019-12-2617.39.33.png](http://lcbupayun.test.upcdn.net/static/7dbf064e9342d9f053f9605db8333307.png)
 
 * 6、搭建maven项目，编写测试
   pom.xml 配置参考
@@ -212,9 +212,9 @@ public class SolrUtil {
 }
 
 ```
-![截屏2019-12-2618.17.45.png](http://image.lichongbing.com/static/9e8c369bbd9354df1d8d3d9adb161b47.png)
+![截屏2019-12-2618.17.45.png](http://lcbupayun.test.upcdn.net/static/9e8c369bbd9354df1d8d3d9adb161b47.png)
 搜索“肉”关键词后台检索出来编号id
-![截屏2019-12-2618.23.54.png](http://image.lichongbing.com/static/c7d098861e6fb1df2e03f44c7a5ee221.png)
+![截屏2019-12-2618.23.54.png](http://lcbupayun.test.upcdn.net/static/c7d098861e6fb1df2e03f44c7a5ee221.png)
 至此搭建测试完毕。
 
 

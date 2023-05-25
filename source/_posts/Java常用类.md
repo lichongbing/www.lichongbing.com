@@ -3,7 +3,7 @@ title: Java常用类
 abbrlink: 34875
 date: 2016-12-09 21:15:08
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 ## 简介
 Java 类库提供了不少常用类，可以在编程中直接调用使用。本节讲重点讲解 Arrays、StringBuilder、Calendar、Date、Math、System、Random 类以及类的常用方法。
@@ -105,7 +105,7 @@ Arrays 类包含用于操作数组的各种方法（例如排序和搜索）。�
 StringBuilder 类是可变的。它是 String 的对等类，它可以增加和编写字符的可变序列，并且能够将字符插入到字符串中间或附加到字符串末尾（当然是不用创建其他对象的）
 
 StringBuilder 的构造方法
-![截屏2019-12-0923.51.19.png](http://image.lichongbing.com/static/a064d763ecb0d6a781da3448c490abe7.png)
+![截屏2019-12-0923.51.19.png](http://lcbupayun.test.upcdn.net/static/a064d763ecb0d6a781da3448c490abe7.png)
 上面的方法中我们选择几个，来写写代码吧：
 
 在/home/project/目录下新建StringBuilderTest.java
@@ -131,7 +131,7 @@ StringBuilder 的构造方法
 在这里只介绍了 StringBuilder 类常用的方法，其他方法可参照 JDK 文档。
 ## Calendar
 
-![截屏2019-12-0923.53.42.png](http://image.lichongbing.com/static/9bc74626252c78991fa25b042421121d.png)
+![截屏2019-12-0923.53.42.png](http://lcbupayun.test.upcdn.net/static/9bc74626252c78991fa25b042421121d.png)
 
     //太平洋时区的 ID 为 PST
     TimeZone tz0 = TimeZone.getTimeZone("PST")
@@ -246,7 +246,7 @@ Locale 只是一种机制，它用来标识一个特定的地理、政治或文�
 
 有的同学可能不明白最后一个的输出为什么有时是 0 ，有时是 1，在这里会涉及到 calendarNew 与 calendar 的创建时间点， calendarNew 经过增加和减少时间后恢复到原来的时间点，也就是最终比较的是谁先创建好，时间点靠后的大一些，而 calendarNew 创建的时间点只有可能是大于等于 calendar 的，需要根据实际的创建时间点进行比较。
 ## Date
-![截屏2019-12-0923.58.28.png](http://image.lichongbing.com/static/42f9a0b95304da79906272ff0f75d1ca.png)
+![截屏2019-12-0923.58.28.png](http://lcbupayun.test.upcdn.net/static/42f9a0b95304da79906272ff0f75d1ca.png)
 ## Date 编程实例
 在/home/project/目录下新建一个源代码文件DateDemo.java
 
@@ -284,7 +284,7 @@ Locale 只是一种机制，它用来标识一个特定的地理、政治或文�
 Date 类的很多方法自 JDK 1.1 开始就已经过时了。
 
 ## Math
-![截屏2019-12-1000.00.55.png](http://image.lichongbing.com/static/58ef5f1b5f78fb8e8a5fb81d058a966b.png)
+![截屏2019-12-1000.00.55.png](http://lcbupayun.test.upcdn.net/static/58ef5f1b5f78fb8e8a5fb81d058a966b.png)
 ## Math 编程实例
 在/home/project/下新建一个MathDemo.java
 

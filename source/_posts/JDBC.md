@@ -3,7 +3,7 @@ title: JDBC
 abbrlink: 23592
 date: 2017-05-22 15:18:55
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 ## JDBC
 JDBC 是连接数据库和 Java 程序的桥梁，通过 JDBC API 可以方便地实现对各种主流数据库的操作。本节将重点讲解 JDBC 的内容。
@@ -167,11 +167,11 @@ JDBC 的全称是 Java Database Connectivity，叫做 Java 数据库连接。它
 我们要写涉及到数据库的程序，是通过 C 语言或者 C++ 语言直接访问数据库的接口，如下图所示。
 
 对于不同的数据库，我们需要知道不同数据库对外提供的系统 API，这就影响了我们程序的扩展和跨平台的实现。
-![wm-25.png](http://image.lichongbing.com/static/57c3a7e6831849ff1f701965497be53c.png)
+![wm-25.png](http://lcbupayun.test.upcdn.net/static/57c3a7e6831849ff1f701965497be53c.png)
 那么有没有一种方法来对不同的数据库接口进行统一呢？当然有。我们只需要和最上层接口进行交互，剩下的部分就交给其他各层去处理，我们的任务就变的轻松简单许多。
-![wm-26.png](http://image.lichongbing.com/static/8f0a0c85f18062e3d2e246cbee8b9fa4.png)
+![wm-26.png](http://lcbupayun.test.upcdn.net/static/8f0a0c85f18062e3d2e246cbee8b9fa4.png)
 JDBC 为数据库开发人员提供了一个标准的 API，据此可以构建更高级的工具和接口使数据库开发人员能够用纯 Java API 编写数据库应用程序。
-![wm-27.png](http://image.lichongbing.com/static/5d0d1998e7184f37b930837c271be16e.png)
+![wm-27.png](http://lcbupayun.test.upcdn.net/static/5d0d1998e7184f37b930837c271be16e.png)
 ## JDBC 连接数据库
 涉及到建立一个 JDBC 连接的编程主要有四个步骤：
 
@@ -223,7 +223,7 @@ JDBC 为数据库开发人员提供了一个标准的 API，据此可以构建�
 
 数据库的 URL 是指向数据库地址。下表列出了下来流行的 JDBC 驱动程序名和数据库的 URL。
 
-![截屏2019-12-1015.42.32.png](http://image.lichongbing.com/static/f01cc7be067f48546ae9a5e5a1f83539.png)
+![截屏2019-12-1015.42.32.png](http://lcbupayun.test.upcdn.net/static/f01cc7be067f48546ae9a5e5a1f83539.png)
 创建连接对象
 
 下面三种形式 DriverManager.getConnection() 方法来创建一个连接对象，以 Mysql 为例。getConnection()最常用形式要求传递一个数据库 URL，用户名 username 和密码 password。
@@ -310,11 +310,11 @@ JDBC 为数据库开发人员提供了一个标准的 API，据此可以构建�
     $ javac -cp mysql-connector-java-5.1.47.jar CreateDatabase.java
     $ java -cp .:mysql-connector-java-5.1.47.jar CreateDatabase
 ## 数据库操作
-![wm-28.png](http://image.lichongbing.com/static/e22514256293fad0e11a98eb02058d43.png)
+![wm-28.png](http://lcbupayun.test.upcdn.net/static/e22514256293fad0e11a98eb02058d43.png)
 当连接上了数据库后，就需要通过 sql 语句对数据库进行操作。随着 Java 语言应用面的逐步拓宽,Sun 公司开发了一个标准的 SQL 数据库访问接口———JDBC API。它可以使 Java 编程人员通过一个一致的接口,访问多种关系数据库。而今天我们就来学习一下，如何利用 JDBC 的一些核心 API 与数据库进行交互。
 
 通过使用 JDBC Statement, CallableStatement 和 PreparedStatement 接口定义的方法和属性，使可以使用 SQL 或 PL/SQL 命令和从数据库接收数据。它们还定义了许多方法，帮助消除 Java 和数据库之间数据类型的差异。
-![截屏2019-12-1015.48.13.png](http://image.lichongbing.com/static/f7766f7b45b4d239dd1182f2d29c6417.png)
+![截屏2019-12-1015.48.13.png](http://lcbupayun.test.upcdn.net/static/f7766f7b45b4d239dd1182f2d29c6417.png)
 ## Statement
 
 我们要使用 Statement 接口，第一步肯定是创建一个 Statement 对象了。我们需要使用 Connection 对象的 createStatement() 方法进行创建。
@@ -395,7 +395,7 @@ PreparedStatement 用于使用绑定变量重用执行计划。
     mysql -u root 
     create database EXAMPLE;
     use EXAMPLE
-![wm-6.jpeg](http://image.lichongbing.com/static/49ed9e01c881f6ce0ecc32ab02fe0bb4.jpeg)
+![wm-6.jpeg](http://lcbupayun.test.upcdn.net/static/49ed9e01c881f6ce0ecc32ab02fe0bb4.jpeg)
 
     create table Students
     (
@@ -493,12 +493,12 @@ PreparedStatement 用于使用绑定变量重用执行计划。
     $ javac -cp .:mysql-connector-java-5.1.47.jar JdbcTest.java     
     $ java -cp .:mysql-connector-java-5.1.47.jar JdbcTest 
 运行结果
-![wm-7.jpeg](http://image.lichongbing.com/static/7609cd8460fc7725fae2dc706d7289af.jpeg)
+![wm-7.jpeg](http://lcbupayun.test.upcdn.net/static/7609cd8460fc7725fae2dc706d7289af.jpeg)
 
 ## CallableStatement
 
 CallableStatement 对象为所有的 DBMS 提供了一种以标准形式调用存储过程的方法。存储过程储存在数据库中。对储存过程的调用是 CallableStatement 对象所含的内容。三种类型的参数有：IN，OUT 和 INOUT。PreparedStatement 对象只使用IN参数。 CallableStatement 对象可以使用所有三个
-![截屏2019-12-1015.58.31.png](http://image.lichongbing.com/static/44774b4278fd900888c525bb0f4c0287.png)
+![截屏2019-12-1015.58.31.png](http://lcbupayun.test.upcdn.net/static/44774b4278fd900888c525bb0f4c0287.png)
 在 JDBC 中调用存储过程的语法如下所示。注意，方括号表示其间的内容是可选项；方括号本身并不是语法的组成部份。
 
     {call 存储过程名[(?, ?, ...)]} 
@@ -548,7 +548,7 @@ ResultSet 接口的方法可分为三类：
 RSType 表示 ResultSet 对象的类型，RSConcurrency 是 ResultSet 常量，用于指定一个结果集是否为只读或可更新。
 
 ResultSet 的类型，如果不指定 ResultSet 类型，将自动获得一个是 TYPE_FORWARD_ONLY：
-![截屏2019-12-1016.01.48.png](http://image.lichongbing.com/static/e8258586432a74ebde4f2eeb7b365ec9.png)
+![截屏2019-12-1016.01.48.png](http://lcbupayun.test.upcdn.net/static/e8258586432a74ebde4f2eeb7b365ec9.png)
 如初始化一个 Statement 对象来创建一个双向、可更新的 ResultSet 对象：
 
     try {
@@ -565,7 +565,7 @@ ResultSet 的类型，如果不指定 ResultSet 类型，将自动获得一个�
 ## 导航
 
 我们在上面已经知道了，导航方法是用于移动光标的。我们先来看一看，在 ResultSet 接口中有哪些方法会涉及光标的移动。
-![截屏2019-12-1016.03.52.png](http://image.lichongbing.com/static/83d9a1a4b2d1dea77fa23f011369ed06.png)
+![截屏2019-12-1016.03.52.png](http://lcbupayun.test.upcdn.net/static/83d9a1a4b2d1dea77fa23f011369ed06.png)
 什么也不说了，我们还是看代码吧！
 
 1、先创建数据库和相应的内容：
@@ -574,7 +574,7 @@ ResultSet 的类型，如果不指定 ResultSet 类型，将自动获得一个�
     mysql -u root 
     create database EXAMPLE;
     use EXAMPLE
-![wm-8.jpeg](http://image.lichongbing.com/static/49ed9e01c881f6ce0ecc32ab02fe0bb4.jpeg)
+![wm-8.jpeg](http://lcbupayun.test.upcdn.net/static/49ed9e01c881f6ce0ecc32ab02fe0bb4.jpeg)
 
     create table Students
     (
@@ -585,7 +585,7 @@ ResultSet 的类型，如果不指定 ResultSet 类型，将自动获得一个�
     );
     insert into Students values(1,18,'Tom'),
     (2,20,'Aby'),(4,20,'Tomson');
-![wm-9.jpeg](http://image.lichongbing.com/static/b047f5a977d93e71d9c951a1ee3ab703.jpeg)
+![wm-9.jpeg](http://lcbupayun.test.upcdn.net/static/b047f5a977d93e71d9c951a1ee3ab703.jpeg)
 在/home/project/目录下创建文件JdbcTest.java。
 
     import java.sql.*;
@@ -701,15 +701,15 @@ ResultSet 的类型，如果不指定 ResultSet 类型，将自动获得一个�
     $ java -cp .:mysql-connector-java-5.1.47.jar JdbcTest      
 
 运行结果：
-![wm-10.jpeg](http://image.lichongbing.com/static/728e78e362702a87ee5fc3dc0ae27c95.jpeg)
+![wm-10.jpeg](http://lcbupayun.test.upcdn.net/static/728e78e362702a87ee5fc3dc0ae27c95.jpeg)
 
 ## 获取
-![截屏2019-12-1016.07.39.png](http://image.lichongbing.com/static/e71e02b51945ef6eddca5dfa53ae85db.png)
+![截屏2019-12-1016.07.39.png](http://lcbupayun.test.upcdn.net/static/e71e02b51945ef6eddca5dfa53ae85db.png)
 
 
 ## 更新
 
-![截屏2019-12-1016.08.30.png](http://image.lichongbing.com/static/0e9570386817df706f1136c27ce9f225.png)
+![截屏2019-12-1016.08.30.png](http://lcbupayun.test.upcdn.net/static/0e9570386817df706f1136c27ce9f225.png)
 
      Statement stmt = conn.createStatement(
                            ResultSet.TYPE_SCROLL_INSENSITIVE,

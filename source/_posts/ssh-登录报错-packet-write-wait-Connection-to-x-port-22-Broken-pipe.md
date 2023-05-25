@@ -3,7 +3,7 @@ title: 'ssh 登录报错 packet_write_wait: Connection to x port 22: Broken pipe
 abbrlink: 30212
 date: 2019-12-04 22:12:09
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 
 问题现象：

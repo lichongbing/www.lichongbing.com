@@ -3,7 +3,7 @@ title: 微服务架构下的自动化部署，使用Jenkins来实现！
 abbrlink: 61987
 date: 2019-12-25 10:40:46
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 
 
@@ -33,11 +33,11 @@ Jenkins的基本使用
 
 *   上传脚本前在IDEA中修改所有脚本文件的换行符格式为`LF`，否则脚本会无法执行；
 
-![16f1920aebef6288.png](http://image.lichongbing.com/static/f2de5ac48e7adea3b900f50524874145.png)
+![16f1920aebef6288.png](http://lcbupayun.test.upcdn.net/static/f2de5ac48e7adea3b900f50524874145.png)
 
 *   将所有脚本文件上传到指定目录，这里我们上传到`/mydata/sh`目录下；
 
-![16f1920aebc9e5b3.png](http://image.lichongbing.com/static/231e00faa4dfe5b041eafdeace4fa60c.png)
+![16f1920aebc9e5b3.png](http://lcbupayun.test.upcdn.net/static/231e00faa4dfe5b041eafdeace4fa60c.png)
 
 *   将所有脚本文件都修改为可执行文件:
 
@@ -57,7 +57,7 @@ Jenkins中创建任务
 
 *   首先我们选择`构建一个自由风格的软件项目`，然后输入任务名称为mall-admin，配置其Git仓库地址，这里我直接使用了Gitee上面的地址：
 
-![16f1920aed760b06.png](http://image.lichongbing.com/static/a5bc98e6add43ecebdd2baa3e9aa78cc.png)
+![16f1920aed760b06.png](http://lcbupayun.test.upcdn.net/static/a5bc98e6add43ecebdd2baa3e9aa78cc.png)
 
 *   之后我们创建一个构建，构建`mall-swarm`项目中的依赖模块，否则当构建可运行的服务模块时会因为无法找到这些模块而构建失败；
 
@@ -67,15 +67,15 @@ Jenkins中创建任务
 
 *   依赖项目构建示意图：
 
-![16f1920aef4baa6f.png](http://image.lichongbing.com/static/055d0d39e6063f2a74a7bb77872d88b8.png)
+![16f1920aef4baa6f.png](http://lcbupayun.test.upcdn.net/static/055d0d39e6063f2a74a7bb77872d88b8.png)
 
 *   再创建一个构建，单独构建并打包mall-admin模块：
 
-![16f1920b1bf0c098.png](http://image.lichongbing.com/static/4b66840df67325feadb99ad3b022ed91.png)
+![16f1920b1bf0c098.png](http://lcbupayun.test.upcdn.net/static/4b66840df67325feadb99ad3b022ed91.png)
 
 *   添加一个构建来通过SSH去执行远程任务，用于执行mall-admin的运行脚本：
 
-![16f1920b1d790341.png](http://image.lichongbing.com/static/de69be88a79942d6faec6e3b7a3b7d97.png)
+![16f1920b1d790341.png](http://lcbupayun.test.upcdn.net/static/de69be88a79942d6faec6e3b7a3b7d97.png)
 
 *   点击保存，完成mall-admin的执行任务创建。
 
@@ -85,15 +85,15 @@ Jenkins中创建任务
 
 *   我们可以直接从mall-admin模块的任务复制一个过来创建：
 
-![16f1920b1ef75e56.png](http://image.lichongbing.com/static/33f24c846c97be9d6b6e4941d0e9198f.png)
+![16f1920b1ef75e56.png](http://lcbupayun.test.upcdn.net/static/33f24c846c97be9d6b6e4941d0e9198f.png)
 
 *   修改第二个构建中的pom.xml文件位置，改为：`${WORKSPACE}/mall-registry/pom.xml`
 
-![16f1920b1f3c4339.png](http://image.lichongbing.com/static/8b6d683f4cdf1eb0cbbd9859c2ffa456.png)
+![16f1920b1f3c4339.png](http://lcbupayun.test.upcdn.net/static/8b6d683f4cdf1eb0cbbd9859c2ffa456.png)
 
 *   修改第三个构建中的SSH执行脚本文件位置，改为：`/mydata/sh/mall-registry.sh`
 
-![16f1920b207c1679.png](http://image.lichongbing.com/static/b0f4872ca64105f3d1eea2045b484252.png)
+![16f1920b207c1679.png](http://lcbupayun.test.upcdn.net/static/b0f4872ca64105f3d1eea2045b484252.png)
 
 *   点击保存，完成mall-registry的执行任务创建。
 
@@ -103,7 +103,7 @@ Jenkins中创建任务
 
 ### 任务创建完成
 
-![16f1920b4f0eb041.png](http://image.lichongbing.com/static/e11d87d6c49ebcbc250d75406427f32d.png)
+![16f1920b4f0eb041.png](http://lcbupayun.test.upcdn.net/static/e11d87d6c49ebcbc250d75406427f32d.png)
 
 模块启动顺序问题
 --------

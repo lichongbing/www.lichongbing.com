@@ -3,7 +3,7 @@ title: 【Linux】显示you are in emergency mode解决方法
 abbrlink: 62182
 date: 2019-12-06 22:29:45
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 物理机Ubuntu开机显示有一个fail to mount，然后下面显示you are in emergency mode……
 

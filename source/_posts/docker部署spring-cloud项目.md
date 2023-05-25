@@ -3,7 +3,7 @@ title: docker部署spring cloud项目
 abbrlink: 59580
 date: 2019-12-22 19:42:13
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 <blockquote>
 转载请标明出处：&nbsp;<br /><a href="http://blog.csdn.net/forezp/article/details/70198649" target="_blank">http://blog.csdn.net/forezp/article/details/70198649</a>&nbsp;<br />本文出自<a href="http://blog.csdn.net/forezp" target="_blank">方志朋的博客</a>
@@ -154,7 +154,7 @@ mvn clean
 mvn package docker:build
 ```
 
-![20190601114057480.png](http://image.lichongbing.com/static/e0011f5453a85e87822d4a5606d1e8d9.png)
+![20190601114057480.png](http://lcbupayun.test.upcdn.net/static/e0011f5453a85e87822d4a5606d1e8d9.png)
 构建eureka-server镜像成功。
 #### <a name="t7" target="_blank"></a>同理构建service-hi镜像
 
@@ -192,7 +192,7 @@ mvn package docker:build
 ```
 
 
-![20190601114116418.png](http://image.lichongbing.com/static/5a1c1170ebc3de5fc7ac08ed2bf9edee.png)
+![20190601114116418.png](http://lcbupayun.test.upcdn.net/static/5a1c1170ebc3de5fc7ac08ed2bf9edee.png)
 这时我们运行docke的eureka-server 和service-hi镜像：
 
 ```
@@ -204,7 +204,7 @@ docker run -p 8763: 8763 -t forezp/service-hi
 
 
 访问localhost:8761
-![20190601114134655.png](http://image.lichongbing.com/static/22d6092969e3ab6015e9e69f053c7e89.png)
+![20190601114134655.png](http://lcbupayun.test.upcdn.net/static/22d6092969e3ab6015e9e69f053c7e89.png)
 ## <a name="t8" target="_blank"></a>四、采用docker-compose启动镜像
 Compose 是一个用于定义和运行多容器的Docker应用的工具。使用Compose，你可以在一个配置文件（yaml格式）中配置你应用的服务，然后使用一个命令，即可创建并启动配置中引用的所有服务。下面我们进入Compose的实战吧。
 采用docker-compose的方式编排镜像，启动镜像：
@@ -227,7 +227,7 @@ services:
 
 
 输入命令： docker-compose up
-![201906011142016.png](http://image.lichongbing.com/static/4c4918f7048a10e26754870d7a9af656.png)
+![201906011142016.png](http://lcbupayun.test.upcdn.net/static/4c4918f7048a10e26754870d7a9af656.png)
 发现2个镜像按照指定的顺序启动了。
 源码下载：<a href="https://github.com/forezp/SpringCloudLearning/tree/master/chapter11" target="_blank">https://github.com/forezp/SpringCloudLearning/tree/master/chapter11</a>
 ## <a name="t9" target="_blank"></a>五、采用docker-compose编排并启动镜像
@@ -271,4 +271,4 @@ docker-compose -f docker-compose.yml -f docker-compose-dev.yml up
 
 
 
-![20190601114221265.png](http://image.lichongbing.com/static/e502a55a6edb66b5b8eaec67eaa2652b.png)
+![20190601114221265.png](http://lcbupayun.test.upcdn.net/static/e502a55a6edb66b5b8eaec67eaa2652b.png)

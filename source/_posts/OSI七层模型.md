@@ -3,14 +3,14 @@ title: OSI七层模型
 abbrlink: 60596
 date: 2019-12-11 09:41:44
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 OSI七层模型
 
-![1099668-20170212153338135-125492424.jpg.gif](http://image.lichongbing.com/static/0eb5e548e2321e789db12555b55dcc59.gif)
-![截屏2019-12-1110.31.23.png](http://image.lichongbing.com/static/ccc5d1677299c9d248f896a2831200a8.png)
-![截屏2019-12-1110.31.54.png](http://image.lichongbing.com/static/a2290e0c5da5574b99224baf2b4fec9a.png)
-![截屏2019-12-1110.32.44.png](http://image.lichongbing.com/static/7300a98c6da43d7cea246751b273c61b.png)
+![1099668-20170212153338135-125492424.jpg.gif](http://lcbupayun.test.upcdn.net/static/0eb5e548e2321e789db12555b55dcc59.gif)
+![截屏2019-12-1110.31.23.png](http://lcbupayun.test.upcdn.net/static/ccc5d1677299c9d248f896a2831200a8.png)
+![截屏2019-12-1110.31.54.png](http://lcbupayun.test.upcdn.net/static/a2290e0c5da5574b99224baf2b4fec9a.png)
+![截屏2019-12-1110.32.44.png](http://lcbupayun.test.upcdn.net/static/7300a98c6da43d7cea246751b273c61b.png)
 
     相关协议         缩写
 应用层
@@ -335,9 +335,9 @@ OSI7层模型的小结
 由于OSI是一个理想的模型，因此一般网络系统只涉及其中的几层，很少有系统能够具有所有的7层，并完全遵循它的规定。
 在7层模型中，每一层都提供一个特殊的网络功能。从网络功能的角度观察：下面4层（物理层、数据链路层、网络层和传输层）主要提供数据传输和交换功能，即以节点到节点之间的通信为主；第4层作为上下两部分的桥梁，是整个网络体系结构中最关键的部分；而上3层（会话层、表示层和应用层）则以提供用户与应用程序之间的信息和数据处理功能为主。简言之，下4层主要完成通信子网的功能，上3层主要完成资源子网的功能。
 以下是TCP/IP分层模型
-![20190105165022790.png](http://image.lichongbing.com/static/1fcb2d579a8a6aec8e7b222aa8505474.png)
-![20190105165116628.png](http://image.lichongbing.com/static/2d58d3beaa124ab15d404933b69eb7fd.png)
-![20190105165204409.png](http://image.lichongbing.com/static/cbb3ab66ef3eb22a33b68ae51c70ae0d.png)
+![20190105165022790.png](http://lcbupayun.test.upcdn.net/static/1fcb2d579a8a6aec8e7b222aa8505474.png)
+![20190105165116628.png](http://lcbupayun.test.upcdn.net/static/2d58d3beaa124ab15d404933b69eb7fd.png)
+![20190105165204409.png](http://lcbupayun.test.upcdn.net/static/cbb3ab66ef3eb22a33b68ae51c70ae0d.png)
 TCP/IP协议被组织成四个概念层，其中有三层对应于ISO参考模型中的相应层。ICP/IP协议族并不包含物理层和数据链路层，因此它不能独立完成整个计算机网络系统的功能，必须与许多其他的协议协同工作。
 
 TCP/IP分层模型的四个协议层分别完成以下的功能：

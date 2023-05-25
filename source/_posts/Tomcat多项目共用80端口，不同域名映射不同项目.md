@@ -3,7 +3,7 @@ title: Tomcat多项目共用80端口，不同域名映射不同项目
 abbrlink: 32006
 date: 2019-12-03 15:23:10
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 #tomcat多项目共用80端口，不同域名映射不同项目
 准备工作：
@@ -16,7 +16,7 @@ img: 'http://image.lichongbing.com/IMG_4624.jpg'
 
 index.html只有一个h1标签，里面写了web1、web2和web3用于区分3个项目
 
-![20180509111548344.png](http://image.lichongbing.com/static/2438a33a80233c4984e0e7cb1ff4e830.png)
+![20180509111548344.png](http://lcbupayun.test.upcdn.net/static/2438a33a80233c4984e0e7cb1ff4e830.png)
 
 **index.html**
 `<!DOCTYPE html>
@@ -104,11 +104,11 @@ redirectPort="8443" />
 127.0.0.1 web2.com
 127.0.0.1 web3.com`
 启动项目后测试
-![20180509113611431.png](http://image.lichongbing.com/static/e312a6018dd952237f1e7c4e506b5ca8.png)
+![20180509113611431.png](http://lcbupayun.test.upcdn.net/static/e312a6018dd952237f1e7c4e506b5ca8.png)
 
-![20180509113553425.png](http://image.lichongbing.com/static/88b695c8f2c4ddd9a16b020d3340e0d3.png)
+![20180509113553425.png](http://lcbupayun.test.upcdn.net/static/88b695c8f2c4ddd9a16b020d3340e0d3.png)
 
-![2018050911363035.png](http://image.lichongbing.com/static/7561e3df4c4d65d81a3a70348c7b6428.png)
+![2018050911363035.png](http://lcbupayun.test.upcdn.net/static/7561e3df4c4d65d81a3a70348c7b6428.png)
 ##服务器时配置
 
 `127.0.0.1 xxxx`

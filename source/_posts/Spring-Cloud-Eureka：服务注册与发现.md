@@ -3,7 +3,7 @@ title: Spring Cloud Eureka：服务注册与发现
 abbrlink: 28421
 date: 2019-12-24 19:11:59
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 # Spring Cloud Eureka：服务注册与发现
 

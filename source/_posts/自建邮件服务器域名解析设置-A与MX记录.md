@@ -3,7 +3,7 @@ title: 自建邮件服务器域名解析设置(A与MX记录)
 abbrlink: 33963
 date: 2019-12-19 11:16:47
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 # 自建邮件服务器域名解析设置(A与MX记录)
 ## 前言
@@ -20,28 +20,28 @@ img: 'http://image.lichongbing.com/IMG_4624.jpg'
 
 
 1）登录万网账户进入【控制台】
-![wKioL1kaqZyioiEYAAN9LmC_KW4068.png](http://image.lichongbing.com/static/6476d42875fb8b3838c54f3db06dfded.png)
+![wKioL1kaqZyioiEYAAN9LmC_KW4068.png](http://lcbupayun.test.upcdn.net/static/6476d42875fb8b3838c54f3db06dfded.png)
 2） 在管理后台找到【域名】菜单
-![wKiom1kaqZ3CCxHdAACYsWOAfCA642.png](http://image.lichongbing.com/static/fed524b51b5f011224924728b5890b82.png)
+![wKiom1kaqZ3CCxHdAACYsWOAfCA642.png](http://lcbupayun.test.upcdn.net/static/fed524b51b5f011224924728b5890b82.png)
 3） 在“增加新记录”下增加 MX 记录，类型选择 MX记录，值可以填写主机名，也可以填写你的固定的 IP 地址。我们这里填写主机名：mail.chinaumail.com, 优先级设置为5
-![wKioL1kaqZ3CDLnlAABlH0Ss4yI499.png](http://image.lichongbing.com/static/66b361dd8606bfe72014493f68115a1e.png)
+![wKioL1kaqZ3CDLnlAABlH0Ss4yI499.png](http://lcbupayun.test.upcdn.net/static/66b361dd8606bfe72014493f68115a1e.png)
 说明：值的最后有一个点，代表主机名结束。在有些域名服务商网站设置的时候不会自动帮您加上，如果漏掉的话 DNS 服务器在解析的时候，会自动并上你的域名，这样会引起解析错误。
 4） 如果 MX 记录设置的值为主机名或是域名，则需要增加对应的 A 记录。例如我们MX记录的值设置的是 mail.chinaumail.com 则需要增加一条相应的 A 记录。
-![wKiom1kaqZ2w4vUfAABQPw7os0o166.png](http://image.lichongbing.com/static/885d85fa5bd8b131632b5e9772137c38.png)
+![wKiom1kaqZ2w4vUfAABQPw7os0o166.png](http://lcbupayun.test.upcdn.net/static/885d85fa5bd8b131632b5e9772137c38.png)
 5） 对于某些客户需要用客户端来收发邮件，建议增加pop,smtp,imap记录。增加完毕，可以在记录列表中看到设置的MX记录和A记录。
-![wKioL1kaqZ3TePfBAACHPmjJgM4958.png](http://image.lichongbing.com/static/0bd5b6ae89f43471e15f2c269d8c335b.png)
+![wKioL1kaqZ3TePfBAACHPmjJgM4958.png](http://lcbupayun.test.upcdn.net/static/0bd5b6ae89f43471e15f2c269d8c335b.png)
 ## B. 域名与动态域名的配合
 1） 登录万网账户进入【控制台】
-![wKiom1kaqZ_xBUHSAAN9LmC_KW4547.png](http://image.lichongbing.com/static/6476d42875fb8b3838c54f3db06dfded.png)
+![wKiom1kaqZ_xBUHSAAN9LmC_KW4547.png](http://lcbupayun.test.upcdn.net/static/6476d42875fb8b3838c54f3db06dfded.png)
 2）在管理后台找到【域名】菜单
-![wKioL1kaqZ_Q0ZEYAACYsWOAfCA037.png](http://image.lichongbing.com/static/fed524b51b5f011224924728b5890b82.png)
+![wKioL1kaqZ_Q0ZEYAACYsWOAfCA037.png](http://lcbupayun.test.upcdn.net/static/fed524b51b5f011224924728b5890b82.png)
 3） 在“增加新记录”下增加 MX 记录，类型选择MX记录,值可以填写动态域名 umailtest.vicp.net，优先级一般设置为5。
-![wKiom1kaqaDw6le-AABo15MG_xs120.png](http://image.lichongbing.com/static/ca804bffd9c76d7bd0d0c9557dd5994d.png)
+![wKiom1kaqaDw6le-AABo15MG_xs120.png](http://lcbupayun.test.upcdn.net/static/ca804bffd9c76d7bd0d0c9557dd5994d.png)
 **说明**：值的最后有一个点，代表主机名结束。在有些域名服务商网站设置的时候不会自动帮您加上，如果漏掉的话 DNS 服务器在解析的时候，会自动并上你的域名，这样会引起解析错误。
 4） 万网还提供了主机名可以指向到一个别名（CNAME 记录），这时我们可以设置一个主机名 mail.chinaumail.com ，指向到动态域名umailtest.vicp.net 。
-![wKioL1kaqaCQ2FtxAABYcIRT8lc322.png](http://image.lichongbing.com/static/f19ac02a6036fdf8f5c010ba21e3e2ed.png)
+![wKioL1kaqaCQ2FtxAABYcIRT8lc322.png](http://lcbupayun.test.upcdn.net/static/f19ac02a6036fdf8f5c010ba21e3e2ed.png)
 5）对于某些客户需要用客户端来收发邮件，建议增加pop,smtp,imap记录。增加完毕，可以在记录列表中看到设置的 MX 记录和 CNAME 记录。
-![wKioL1kaqaCSTpfzAACT7IHv4Rw137.png](http://image.lichongbing.com/static/d385691c51f754079a7f52d075fc277b.png)
+![wKioL1kaqaCSTpfzAACT7IHv4Rw137.png](http://lcbupayun.test.upcdn.net/static/d385691c51f754079a7f52d075fc277b.png)
 
 正确安装设置完 U-Mail邮件系统。 并对 Internet 开放 SMTP 25 ， POP3 110 ， Webmail 80 等端口（经过路由的需要做端口映射），您的邮件服务器就可以正常使用了。
 **注意**：

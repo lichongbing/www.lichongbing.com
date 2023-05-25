@@ -3,7 +3,7 @@ title: Tomcat多域名配置(多个项目共用80端口)
 abbrlink: 55085
 date: 2019-12-03 15:45:43
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 #Tomcat多域名配置(多个项目共用80端口)
 

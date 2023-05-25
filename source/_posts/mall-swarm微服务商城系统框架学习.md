@@ -3,7 +3,7 @@ title: mall-swarm微服务商城系统框架学习
 abbrlink: 61457
 date: 2019-12-25 00:29:47
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 
 # mall-swarm微服务商城系统框架
@@ -170,14 +170,14 @@ img: 'http://image.lichongbing.com/IMG_4624.jpg'
 
 ![](https://user-gold-cdn.xitu.io/2019/12/1/16ec1ac5111c02f6?imageView2/0/w/1280/h/960/ignore-error/1)
 
-![16ec1ac5113f9534.png](http://image.lichongbing.com/static/2b45ff5a92e032f239a1713ff77608f4.png)
+![16ec1ac5113f9534.png](http://lcbupayun.test.upcdn.net/static/2b45ff5a92e032f239a1713ff77608f4.png)
 
 *   监控中心单应用详情信息：
 
-![16ec1ac50e4c9c28.png](http://image.lichongbing.com/static/ba8ae3f051adcc045792b4076c03341c.png)
+![16ec1ac50e4c9c28.png](http://lcbupayun.test.upcdn.net/static/ba8ae3f051adcc045792b4076c03341c.png)
 
 
-![16ec1ac5121991a0.png](http://image.lichongbing.com/static/ad370cf79bb91ef0afe102ac747ed589.png)
+![16ec1ac5121991a0.png](http://lcbupayun.test.upcdn.net/static/ad370cf79bb91ef0afe102ac747ed589.png)
 
 扩展解决方案
 ------

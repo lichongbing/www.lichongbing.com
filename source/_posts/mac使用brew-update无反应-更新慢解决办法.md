@@ -3,7 +3,7 @@ title: 'mac使用brew update无反应,更新慢解决办法'
 abbrlink: 27887
 date: 2019-12-05 11:36:43
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 主要是资源访问太慢的原因造成的，替换一下镜像就可以了
 
@@ -28,4 +28,4 @@ img: 'http://image.lichongbing.com/IMG_4624.jpg'
 `  brew update`
 
 进行更新，发现速度变的很快。替换镜像完成。
-![2742735-fa6955d07c555130.png](http://image.lichongbing.com/static/a8c162d939b4e0943f11d02daa9d8f68.png)
+![2742735-fa6955d07c555130.png](http://lcbupayun.test.upcdn.net/static/a8c162d939b4e0943f11d02daa9d8f68.png)

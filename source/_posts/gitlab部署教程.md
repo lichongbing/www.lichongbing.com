@@ -3,7 +3,7 @@ title: gitlab部署教程
 abbrlink: 26447
 date: 2021-03-21 15:19:27
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 #  gitlab 部署
 ```

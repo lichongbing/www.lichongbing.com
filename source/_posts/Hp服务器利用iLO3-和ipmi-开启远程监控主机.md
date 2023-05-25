@@ -3,10 +3,10 @@ title: Hp服务器利用iLO3 和ipmi 开启远程监控主机
 abbrlink: 54151
 date: 2019-12-05 12:22:26
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 1） 首先，需要用一条网线连接iLO 网口和路由器，链接方式有两种：共享和专用，如下图。
-![337661-20160524162913709-411927696.png](http://image.lichongbing.com/static/3dbc81b99c539bfe71dac6a93ef13271.png)
+![337661-20160524162913709-411927696.png](http://lcbupayun.test.upcdn.net/static/3dbc81b99c539bfe71dac6a93ef13271.png)
 2）其次，连好之后网口灯会变亮。然后进入bios配置ip地址，可以配成静态的，也可以配成dhcp动态分配的。配置后查看ip地址方法有：
 (a)如果是用dhcp可以到服务器查看ip   (b)在开机启动窗口看到    (c)进入操作系统使用ipmitool查看
 这里说一下方法(c)的操作步骤：
@@ -39,7 +39,7 @@ img: 'http://image.lichongbing.com/IMG_4624.jpg'
 然后查看ip等信息，使用如下命令即会显示出来。
 `ipmitool lan print`
 
-![截屏2019-12-0513.20.24.png](http://image.lichongbing.com/static/42a3206ad247240537da3fa0e1d9ce32.png)
+![截屏2019-12-0513.20.24.png](http://lcbupayun.test.upcdn.net/static/42a3206ad247240537da3fa0e1d9ce32.png)
 
 
 
@@ -49,19 +49,19 @@ img: 'http://image.lichongbing.com/IMG_4624.jpg'
 
 `password:pxxxx`
 
-![截屏2019-12-0513.17.33.png](http://image.lichongbing.com/static/2d03fbc2d73c34c930fda67af33687b3.png)
+![截屏2019-12-0513.17.33.png](http://lcbupayun.test.upcdn.net/static/2d03fbc2d73c34c930fda67af33687b3.png)
 
 
 
 如果在外网，要在路由器开启DMZ主机
 
-![截屏2019-12-0513.13.57.png](http://image.lichongbing.com/static/153e8febe0c10c2b78ff83f704634cf1.png)
+![截屏2019-12-0513.13.57.png](http://lcbupayun.test.upcdn.net/static/153e8febe0c10c2b78ff83f704634cf1.png)
 
 `ipmitool -I lanplus -U UXxxx -H 182.138.155.139 chassis status`
 
 `password:pxxxx`
 
-![截屏2019-12-0513.15.25.png](http://image.lichongbing.com/static/b5a1e207579ab6b422a8b30a312c361c.png)
+![截屏2019-12-0513.15.25.png](http://lcbupayun.test.upcdn.net/static/b5a1e207579ab6b422a8b30a312c361c.png)
 
 另外，除了用ipmitool命令行的方式外，还有如下远程访问方式：
 

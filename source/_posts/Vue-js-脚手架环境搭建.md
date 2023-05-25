@@ -3,7 +3,7 @@ title: Vue.js 脚手架环境搭建
 abbrlink: 4084
 date: 2021-05-13 10:14:43
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 #### npm镜像源设置
 ```bash
@@ -103,11 +103,11 @@ cnpm run dev
 
 显示如下表示项目脚手架搭建成功
 
-![IMG_2970](http://image.lichongbing.com/IMG_2970.JPG)
+![IMG_2970](http://lcbupayun.test.upcdn.net/IMG_2970.JPG)
 
 #### 依赖包异常问题
 
-![IMG_2991](http://image.lichongbing.com/IMG_2991.JPG)
+![IMG_2991](http://lcbupayun.test.upcdn.net/IMG_2991.JPG)
 
  ```bash
  rm -rf node_modules

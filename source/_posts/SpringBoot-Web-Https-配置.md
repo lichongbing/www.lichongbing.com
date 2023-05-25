@@ -3,7 +3,7 @@ title: SpringBoot Web Https 配置
 abbrlink: 22681
 date: 2019-12-16 14:05:36
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 # 前言
 我最近搭建一个网盘，兴高采烈分享给身边的朋友使用，其中有朋友觉得不安全，于是我把http升级https，以增加安全性。比如目前火热的小程序，要求服务端必须支持https，苹果商店也有说http请求要修改为https。所以https将会是游戏服务器的普遍需求。

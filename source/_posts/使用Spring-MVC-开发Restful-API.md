@@ -3,10 +3,10 @@ title: 使用Spring MVC 开发Restful API
 abbrlink: 11998
 date: 2019-12-31 22:43:27
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 # 使用Spring MVC 开发Restful API
-![timg.gif](http://image.lichongbing.com/static/a62324410188d8a88c1a2a513da23fd3.gif)
+![timg.gif](http://lcbupayun.test.upcdn.net/static/a62324410188d8a88c1a2a513da23fd3.gif)
 
 ## 编写针对RestfulAPI测试用例
 

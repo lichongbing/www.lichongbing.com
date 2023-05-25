@@ -5,7 +5,7 @@ title: >-
 abbrlink: 63319
 date: 2019-12-08 09:52:28
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 解决办法：需要加载相关模块
 

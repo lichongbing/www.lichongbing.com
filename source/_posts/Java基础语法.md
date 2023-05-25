@@ -3,14 +3,14 @@ title: Java基础语法
 abbrlink: 34708
 date: 2016-10-09 18:23:18
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 **Java 概述及版本**
 
 Java 是由 Sun Microsystems 公司于 1995 年 5 月推出的 Java 程序设计语言（以下简称 Java 语言）和 Java 平台的总称。Java 语言是一种面向对象的编程语言。虽然 Java 仅仅只产生了短短 20 年，但是它的发展是非常迅速的。在 2009 年 4 月 20 号，ORACLE 收购了 Sun 公司，也就是说 Java 这门语言现在归属于 ORACLE 这家公司门下。
-![wm.jpeg](http://image.lichongbing.com/static/24e087e1b83a4b4ac205a21c54fc535a.jpeg)
+![wm.jpeg](http://lcbupayun.test.upcdn.net/static/24e087e1b83a4b4ac205a21c54fc535a.jpeg)
 在 Java 这门语言体系当中，最基础的部分就是 Java SE 部分，Java 的标准版本。它包括 Java 最基础的一些结构，包括面向对象的一些特性等等，同时它也是 Java 技术基础和核心。在 Java SE 的基础之上，又分为了 Java EE（Java 的企业版），应用于大型企业级应用的开发。Java ME 主要用于嵌入式开发。初学的时候我们都是从 Java SE 开始的。
-![wm.png](http://image.lichongbing.com/static/22892b8f2d3e7b0ef0a05899bad594d7.png)
+![wm.png](http://lcbupayun.test.upcdn.net/static/22892b8f2d3e7b0ef0a05899bad594d7.png)
 JVM 叫 Java 虚拟机，它也是整个 Java 技术的核心。Java 语言的跨平台就多亏了 JVM。
 
 JDK 叫 Java 开发工具包，没有 JDK 就没有办法进行 Java 程序的开发。
@@ -19,7 +19,7 @@ JRE 叫 Java 运行环境，如果我们需要运行一个 Java 程序，就得�
 
 JDK、JRE 和 JVM 之间的关系：
 
-![wm-2.png](http://image.lichongbing.com/static/045446ff4c0d5114dae9976d03e51b2a.png)
+![wm-2.png](http://lcbupayun.test.upcdn.net/static/045446ff4c0d5114dae9976d03e51b2a.png)
 
 **学习方法**
 推荐同学们在学习的同时可以边看文档边动手写代码，在遇到不懂得问题时可以查看实验楼其他课程或者查看官方文档解决。
@@ -182,7 +182,7 @@ equals() 方法,该方法的作用是判断两个字符串对象的内容是否�
 
 equals() 方法比较是从第一字符开始，一个字符一个字符依次比较。
 
-![wm-3.png](http://image.lichongbing.com/static/11088919cc152bb4ed2446e8b9b1d9eb.png)
+![wm-3.png](http://lcbupayun.test.upcdn.net/static/11088919cc152bb4ed2446e8b9b1d9eb.png)
 
 如果想忽略掉大小写关系，比如：java 和 Java 是一样的，那怎么办呢？可以调用equalsIgnoreCase()方法，其用法与 equals 一致，不过它会忽视大小写。
 
@@ -458,8 +458,8 @@ Java 定义了位运算符，应用于整数类型(int)，长整型(long)，短�
 
 运算符的优先级不需要特别地去记忆它，比较复杂的表达式一般使用圆括号()分开，提高可读性。
 
-![wm-4.png](http://image.lichongbing.com/static/48fc9ba2d85e74d2b35805ead21c7499.png)
-![wm-5.png](http://image.lichongbing.com/static/6d7020feda8f66aa56c54c7bd6276609.png)
+![wm-4.png](http://lcbupayun.test.upcdn.net/static/48fc9ba2d85e74d2b35805ead21c7499.png)
+![wm-5.png](http://lcbupayun.test.upcdn.net/static/6d7020feda8f66aa56c54c7bd6276609.png)
 **练习：计算数字和**
 在/home/project/目录下新建文件Sum.java，你需要实现以下需求：
 
@@ -502,7 +502,7 @@ Java 的关键字对 java 的编译器有特殊的意义，他们用来表示一
 
 Java 关键字有如下表所列，目前共有 50 个 Java 关键字，其中，"const"和"goto"这两个关键字在 Java 语言中并没有具体含义。
 
-![wm-6.png](http://image.lichongbing.com/static/af57bbfecb1eb4f096d07b500148f7ab.png)
+![wm-6.png](http://lcbupayun.test.upcdn.net/static/af57bbfecb1eb4f096d07b500148f7ab.png)
 
 **方法**
 Java 中的方法，可以将其看成一个功能的集合，它们是为了解决特定问题的代码组合。
@@ -585,7 +585,7 @@ if 语句是一种判断语句。
     if(条件){
     条件成立时执行的代码
     }
-![wm-7.png](http://image.lichongbing.com/static/60a62d740f72fdf04f35dd06c82d8db2.png)
+![wm-7.png](http://lcbupayun.test.upcdn.net/static/60a62d740f72fdf04f35dd06c82d8db2.png)
 if...else 语句当条件成立时，则执行 if 部分的代码块； 条件不成立时，则进入 else 部分。例如，如果一个月天数大于 30 天，则为大月，否则为小月。
 
 语法：
@@ -596,7 +596,7 @@ if...else 语句当条件成立时，则执行 if 部分的代码块； 条件�
      else{
      代码块2
      }
-![wm-8.png](http://image.lichongbing.com/static/fd684b1ac10dddf0aad77cf4b2372bcb.png)
+![wm-8.png](http://lcbupayun.test.upcdn.net/static/fd684b1ac10dddf0aad77cf4b2372bcb.png)
 多重 if 语句，在条件 1 不满足的情况下，才会进行条件 2 的判断，以此向下；当前面的条件均不成立时，最终执行 else 块内的代码。
 
 语法：
@@ -611,7 +611,7 @@ if...else 语句当条件成立时，则执行 if 部分的代码块； 条件�
      else {
      代码块n
     }
-![wm-9.png](http://image.lichongbing.com/static/c7074ea6610aa7ed470f0fb89125be9d.png)
+![wm-9.png](http://lcbupayun.test.upcdn.net/static/c7074ea6610aa7ed470f0fb89125be9d.png)
 注意：如果 if(或 else if，或 else)条件成立时的执行语句只有一条，是可以省略大括号的！但如果执行语句有多条，那么大括号就是不可或缺的。
 
 比如：
@@ -636,7 +636,7 @@ if 语句是可以在内层进行嵌套的。嵌套 if 语句，只有当外层 
       else{
       代码块3
      }
-![wm-10.png](http://image.lichongbing.com/static/5e1871dfccfd8c06d54ec2e1286c4984.png)  
+![wm-10.png](http://lcbupayun.test.upcdn.net/static/5e1871dfccfd8c06d54ec2e1286c4984.png)  
 f 语句练习：小明考了 78 分，60 分以上及格，80 分以上为良好，90 分以上为优秀，60 分以下要重考，编写源代码ScoreJudge.java，输出小明的情况。
 参考代码如下：
 
@@ -727,14 +727,14 @@ while 的执行过程是先判断，再执行。
 
 * 判断 while 后面的条件是否成立( true or false )
 * 当条件成立时，执行循环内的代码，然后重复执行1.、2.， 直到循环条件不成立为止
-  ![wm-11.png](http://image.lichongbing.com/static/13b4d199185c3d976c318367a3fde38b.png)
+  ![wm-11.png](http://lcbupayun.test.upcdn.net/static/13b4d199185c3d976c318367a3fde38b.png)
   do-while语法：
 
        do{
          代码块
          }while(条件);
 
-![wm-12.png](http://image.lichongbing.com/static/2f7b2137c8db4d96cc4fc492c40fefd2.png)   
+![wm-12.png](http://lcbupayun.test.upcdn.net/static/2f7b2137c8db4d96cc4fc492c40fefd2.png)   
 如：
 
     int i = 0;
@@ -795,7 +795,7 @@ for 相比 while 和 do-while 语句结构更加简洁易读，它的执行顺�
 * 进行循环条件的判断，如果条件为 true，则执行循环体内代码；如果为 false ，则直接退出循环
 * 执行循环变量变化部分，改变循环变量的值，以便进行下一次条件判断
 * 依次重新执行2.、3.、4.，直到退出循环
-  ![wm-13.png](http://image.lichongbing.com/static/13b4d199185c3d976c318367a3fde38b.png)
+  ![wm-13.png](http://lcbupayun.test.upcdn.net/static/13b4d199185c3d976c318367a3fde38b.png)
   例如，计算 100 以内不能被 3 整除的数之和：
 
   int sum = 0; // 保存不能被3整除的数之和
@@ -995,7 +995,7 @@ continue关键字的作用是跳过循环体中剩余的语句执行下一次循
 所谓数组，是有序的元素序列。若将有限个类型相同的变量的集合命名，那么这个名称为数组名。组成数组的各个变量称为数组的分量，也称为数组的元素，有时也称为下标变量。用于区分数组的各个元素的数字编号称为下标。数组是在程序设计中，为了处理方便，把具有相同类型的若干元素按无序的形式组织起来的一种形式。这些无序排列的同类数据元素的集合称为数组。数组是用于储存多个相同类型数据的集合。--来自百度百科
 **数组**
 数组就是相同数据类型的元素按一定顺序排列的集合。可以把它看成一个大的盒子，里面按顺序存放了多个数据类型相同的数据。
-![wm-14.png](http://image.lichongbing.com/static/4631e9ce8c8c88d3c2181dff61654432.png)
+![wm-14.png](http://lcbupayun.test.upcdn.net/static/4631e9ce8c8c88d3c2181dff61654432.png)
 数组中的元素都可以通过下标来访问，下标从 0 开始，到数组长度-1 结束。例如，可以通过 ages[0] 获取数组中的第一个元素 18 ，ages[3] 就可以取到第四个元素 10。
 
 使用数组前要声明数组。

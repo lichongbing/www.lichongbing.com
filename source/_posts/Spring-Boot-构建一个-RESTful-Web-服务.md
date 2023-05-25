@@ -3,7 +3,7 @@ title: Spring Boot 构建一个 RESTful Web 服务
 abbrlink: 17150
 date: 2020-01-02 09:42:21
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 Spring Boot 构建一个 RESTful Web 服务
 =======================================

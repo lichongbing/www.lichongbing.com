@@ -3,7 +3,7 @@ title: Mock介绍以及代码示例
 abbrlink: 56567
 date: 2020-01-01 21:21:03
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 * * *
 

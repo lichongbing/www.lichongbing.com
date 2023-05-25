@@ -3,7 +3,7 @@ title: spring cloud 整体架构认识
 abbrlink: 28941
 date: 2019-12-24 15:07:25
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 ## 什么是SpringCloud
 ### 目标
@@ -14,7 +14,7 @@ SpringCloud是在SpringBoot的基础上构建的，使开发者可以轻松入�
 SpringCloud为开发人员提供了快速构建分布式系统架构的工具，例如配置管理，服务发现，断路器，智能路由，微代理，控制总线，一次性令牌，全局锁定，领导选举，分布式会话，集群状态等。
 
 ## 整体架构
-![16d1624a59de8e36.png](http://image.lichongbing.com/static/bddac0ec81db2d66f76c84863c95973f.png)
+![16d1624a59de8e36.png](http://lcbupayun.test.upcdn.net/static/bddac0ec81db2d66f76c84863c95973f.png)
 ## SpringCloud的版本关系 SpringCloud是一个由许多子项目组成的综合项目，各子项目有不同的发布节奏。
 为了管理SpringCloud与各子项目的版本依赖关系，发布了一个清单，其中包括了某个SpringCloud版本对应的子项目版本。
 为了避免SpringCloud版本号与子项目版本号混淆，SpringCloud版本采用了名称而非版本号的命名，这些版本的名字采用了伦敦地铁站的名字，根据字母表的顺序来对应版本时间顺序，例如Angel是第一个版本,

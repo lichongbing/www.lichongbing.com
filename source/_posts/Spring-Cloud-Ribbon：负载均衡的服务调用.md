@@ -3,7 +3,7 @@ title: Spring Cloud Ribbon：负载均衡的服务调用
 abbrlink: 42389
 date: 2019-12-24 20:09:36
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 # Spring Cloud Ribbon：负载均衡的服务调用
 
@@ -272,16 +272,16 @@ public class UserRibbonController {
 * 启动eureka-server于8001端口；
 * 启动user-service于8201端口；
 * 启动另一个user-service于8202端口，可以通过修改IDEA中的SpringBoot的启动配置实现：
-  ![16d3a4a8b90b1aa2.png](http://image.lichongbing.com/static/e5688ca13e9855f438722c875d1d67c7.png)
+  ![16d3a4a8b90b1aa2.png](http://lcbupayun.test.upcdn.net/static/e5688ca13e9855f438722c875d1d67c7.png)
 * 此时运行中的服务如下：
-  ![16d3a4a8b9591127.png](http://image.lichongbing.com/static/3901397e1e9f7a2ff103d46ae6fae1e7.png)
+  ![16d3a4a8b9591127.png](http://lcbupayun.test.upcdn.net/static/3901397e1e9f7a2ff103d46ae6fae1e7.png)
 * 调用接口进行测试：[http://localhost:8301/user/1](http://localhost:8301/user/1)
-  ![16d3a4a8badc1d89.png](http://image.lichongbing.com/static/c4f97ec608f4aa711566b414186749ea.png)
+  ![16d3a4a8badc1d89.png](http://lcbupayun.test.upcdn.net/static/c4f97ec608f4aa711566b414186749ea.png)
 * 可以发现运行在8201和8202的user-service控制台交替打印如下信息：
 
-![16d3a4a8ba8e1025.png](http://image.lichongbing.com/static/9fe58b9345e89c7975ef504ef9626276.png)
+![16d3a4a8ba8e1025.png](http://lcbupayun.test.upcdn.net/static/9fe58b9345e89c7975ef504ef9626276.png)
 
-![16d3a4a8bb0d1c02.png](http://image.lichongbing.com/static/0af9180495aa2a3c1d27e2d3b70990bd.png)
+![16d3a4a8bb0d1c02.png](http://lcbupayun.test.upcdn.net/static/0af9180495aa2a3c1d27e2d3b70990bd.png)
 
 ## Ribbon的常用配置
 >与全局配置的区别就是ribbon节点挂在服务名称下面，如下是对ribbon-service调用user-service时的单独配置。

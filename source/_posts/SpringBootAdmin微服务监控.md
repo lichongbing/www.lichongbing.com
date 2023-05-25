@@ -1,7 +1,7 @@
 ---
 title: SpringBootAdmin微服务监控
 author: lichongbing
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 top: false
 toc: true
 mathjax: false

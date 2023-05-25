@@ -3,7 +3,7 @@ title: v
 abbrlink: 59009
 date: 2019-12-23 09:51:48
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 <blockquote>
 转载请标明出处：&nbsp;<br /><a href="https://macrozheng.github.io/mall-learning/#/foreword/mall_foreword_02?id=idea" target="_blank">https://macrozheng.github.io/mall-learning/#/foreword/mall_foreword_02?id=idea</a>&nbsp;<br />本文出自<a href="http://blog.csdn.net/forezp" target="_blank">掘金作者MacroZheng</a>

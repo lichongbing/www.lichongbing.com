@@ -3,7 +3,7 @@ title: '最新ubuntu搭建公网个人邮件服务器(基于postfix，dovecot,my
 abbrlink: 64490
 date: 2019-12-18 13:34:15
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 # 最新ubuntu搭建公网个人邮件服务器(基于postfix，dovecot,mysql)
 ## 前言
@@ -24,11 +24,11 @@ ssl 证书。有不少免费的 ssl 证书提供商，或者使用自签证书�
     apt install postfix postfix-mysql dovecot-core dovecot-pop3d dovecot-imapd dovecot-lmtpd     dovecot-mysql
 安装过程中 postfix 会弹出提示：
 
-![20190425132019.png](http://image.lichongbing.com/static/ff39986df48e20489dfeaa12594d1f0e.png)
+![20190425132019.png](http://lcbupayun.test.upcdn.net/static/ff39986df48e20489dfeaa12594d1f0e.png)
 选择类别
 这里我们选择第二项：Internet Site。
 接着会有如下提示：
-![20190425132348.png](http://image.lichongbing.com/static/fbabe3f64919e05da04afc452a66f454.png)
+![20190425132348.png](http://lcbupayun.test.upcdn.net/static/fbabe3f64919e05da04afc452a66f454.png)
 
 域名
 
@@ -102,7 +102,7 @@ A 记录：smtp.lichongbing.com 指向 服务器IP
     cp /etc/postfix/main.cf /etc/postfix/main.cf.bak
     vim /etc/postfix/main.cf
 注释下面的配置：
-![QQ20191219-0.jpg](http://image.lichongbing.com/static/e8ef7778092d366ee91cb0711ccb00c7.jpg)
+![QQ20191219-0.jpg](http://lcbupayun.test.upcdn.net/static/e8ef7778092d366ee91cb0711ccb00c7.jpg)
 注释
 
 然后加入如下的配置：

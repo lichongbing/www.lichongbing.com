@@ -3,7 +3,7 @@ title: springboot项目独立部署到tomcat
 abbrlink: 20929
 date: 2019-12-03 14:56:41
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 
 springboot内置了tomcat，所以springboot项目在开发环境中一般直接以jar包的形式进行运行，但在生产环境中还是建议使用tomcat来进行部署，独立部署到tomcat中需要注意以下几个事项：

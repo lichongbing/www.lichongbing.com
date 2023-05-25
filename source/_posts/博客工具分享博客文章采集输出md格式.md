@@ -3,7 +3,7 @@ title: 博客工具分享博客文章采集输出md格式
 abbrlink: 18134
 date: 2019-12-22 19:05:17
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 # 说明
 
@@ -41,8 +41,8 @@ img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ## 使用说明
 
 ![o_微信截图_20191029202056.png](http://lcbupayun.test.upcdn.net/static/7e9fc1c8d57f4fc649af82ec5206553a.png)
-![o_微信截图_20191029202157.png](http://image.lichongbing.com/static/e1b0ccf5ba586e1653c0b2ad5bfc9aa4.png)
-![o_微信截图_20191029202245.png](http://image.lichongbing.com/static/42f018e2796ffaf6a798e2c87e7c7323.png)
+![o_微信截图_20191029202157.png](http://lcbupayun.test.upcdn.net/static/e1b0ccf5ba586e1653c0b2ad5bfc9aa4.png)
+![o_微信截图_20191029202245.png](http://lcbupayun.test.upcdn.net/static/42f018e2796ffaf6a798e2c87e7c7323.png)
 
 # 更新日志
 

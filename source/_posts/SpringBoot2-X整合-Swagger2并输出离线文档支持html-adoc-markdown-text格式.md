@@ -3,7 +3,7 @@ title: 'SpringBoot2.X整合 Swagger2并输出离线文档支持html,adoc,markdow
 abbrlink: 2018
 date: 2020-01-02 11:17:06
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 SpringBoot2.X整合 Swagger2并输出离线文档支持html,adoc,markdown,text格式
 ====================================
@@ -644,7 +644,7 @@ public class ApplicationIntfTests {
 ```
 启动项目,拿到json文件的地址,拿到之后关闭项目,不然之后允许测试的时候会报端口被占用
 
-![截屏2020-01-0221.45.05.png](http://image.lichongbing.com/static/d852f42d538a2cfe4f1cf1f4c2745385.png)
+![截屏2020-01-0221.45.05.png](http://lcbupayun.test.upcdn.net/static/d852f42d538a2cfe4f1cf1f4c2745385.png)
 
 
 运行步骤2中的五个Test,如果报docs/markdown文件夹不存在,请自己手动建文件夹;不出意外的话generated会生成.adoc文件

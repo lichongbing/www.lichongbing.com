@@ -3,7 +3,7 @@ title: Spring Cloud OpenFeign：基于Ribbon和Hystrix的声明式服务调用
 abbrlink: 11780
 date: 2019-12-24 23:44:30
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 
 # Spring Cloud OpenFeign：基于Ribbon和Hystrix的声明式服务调用
@@ -141,7 +141,7 @@ Feign是声明式的服务调用工具，我们只需创建一个接口并用注
 
 *   启动eureka-service，两个user-service，feign-service服务，启动后注册中心显示如下：
 
-![16dab6a6c4ab5398.png](http://image.lichongbing.com/static/9a1a81877d428bfcea9b6e0eb8626062.png)
+![16dab6a6c4ab5398.png](http://lcbupayun.test.upcdn.net/static/9a1a81877d428bfcea9b6e0eb8626062.png)
 
 *   多次调用[http://localhost:8701/user/1](http://localhost:8701/user/1)进行测试，可以发现运行在8201和8202的user-service服务交替打印如下信息：
 
@@ -222,7 +222,7 @@ Feign是声明式的服务调用工具，我们只需创建一个接口并用注
 *   调用[http://localhost:8701/user/1](http://localhost:8701/user/1)进行测试，可以发现返回了服务降级信息。
 
 
-![16dab6a6c536b333.png](http://image.lichongbing.com/static/bd25fc24a1761137ee08735528e4e7b2.png)
+![16dab6a6c536b333.png](http://lcbupayun.test.upcdn.net/static/bd25fc24a1761137ee08735528e4e7b2.png)
 日志打印功能
 ------
 

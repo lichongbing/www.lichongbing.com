@@ -3,7 +3,7 @@ title: spring boot面试问题集锦
 abbrlink: 30157
 date: 2019-12-22 09:35:40
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 译文作者：**david**   原文链接：[https://www.javainuse.com/spring/SpringBootInterviewQuestions](https://www.javainuse.com/spring/SpringBootInterviewQuestions)
 <br />A： 多年来，随着新功能的增加，spring变得越来越复杂。只需访问页面<a href="https://spring.io/projects">https://spring.io/projects</a>，我们将看到所有在应用程序中使用的不同功能的spring项目。**如果必须启动一个新的spring项目，我们必须添加构建路径或maven依赖项，配置application server，添加spring配置。因此，启动一个新的spring项目需要大量的工作，因为我们目前必须从头开始做所有事情**。Spring Boot是这个问题的解决方案。Spring boot构建在现有Spring框架之上。使用spring boot，我们可以避免以前必须执行的所有样板代码和配置。因此，Spring boot帮助我们更健壮地使用现有的Spring功能，并且只需最少的工作量。
@@ -98,7 +98,7 @@ Elasticsearch是一个基于Lucene搜索引擎的NoSQL数据库。<br />　　�
 <a href="https://www.javainuse.com/spring/bootcamel" target="_blank">Spring Boot +Apache Camel</a>
 <br />问:什么是Apache Freemarker?什么时候使用它而不是JSP?如何与Spring Boot集成?<br />答:JSP是为网页量身定做的，Freemarker模板是一种更通用的模板语言&mdash;&mdash;它可以用来生成html、纯文本、电子邮件等。<br /><a href="https://www.javainuse.com/spring/spring-boot-freemarker-hello-world" target="_blank">Spring Boot + FreeMarker的例子</a>
 <br />问:你什么时候使用WebSockets?如何使用Spring Boot实现它?<br />答:WebSocket是一种计算机通信协议，通过单个TCP连接提供全双工通信通道。
-![486074-20190212161343669-846418019.png](http://image.lichongbing.com/static/99d9d9b81f23eaf30224e83406028d43.png)
+![486074-20190212161343669-846418019.png](http://lcbupayun.test.upcdn.net/static/99d9d9b81f23eaf30224e83406028d43.png)
 WebSocket是双向的&mdash;&mdash;使用WebSocket客户端或服务器都可以发起发送消息。<br />WebSocket是全双工的&mdash;&mdash;客户端和服务器之间的通信是相互独立的。<br />单个TCP连接&mdash;&mdash;初始连接使用HTTP，然后将此连接升级为基于套接字的连接。然后，这个单一连接将用于未来的所有通信<br />轻- WebSocket消息数据交换比http轻得多。<br /><a href="https://www.javainuse.com/spring/boot-websocket" target="_blank">Spring Boot + WebSockets的例子</a>
 <br />什么是AOP?如何与Spring Boot一起使用?<br />答:在软件开发过程中，跨越应用程序多个点的功能称为横切关注点。这些横切关注点不同于应用程序的主要业务逻辑。因此，将这些横切关注点从业务逻辑中分离出来是面向方面编程(AOP)的切入点。<br /><a href="https://www.javainuse.com/spring/spring-boot-aop" target="_blank">Spring Boot + AOP示例</a>
 <br />问:什么是Apache Kafka?如何与Spring Boot集成?<br />答:apache Kafka是一个分布式发布-订阅消息传递系统。它是一个可伸缩的、容错的、发布-订阅消息传递系统，使我们能够构建分布式应用程序。这是一个Apache顶级项目。Kafka适用于离线和在线的消息消费。<br /><a href="https://www.javainuse.com/spring/spring-boot-apache-kafka-hello-world" target="_blank">Spring Boot + Apache Kafka示例</a>

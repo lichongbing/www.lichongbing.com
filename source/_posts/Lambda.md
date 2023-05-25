@@ -3,7 +3,7 @@ title: Lambda
 abbrlink: 40677
 date: 2017-04-10 09:21:37
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 ## 简介
 Lambda 表达式是 Java SE 8 中一个重要的新特性。Lambda 表达式允许你通过表达式来代替功能接口。本节将重点讲解 Lambda 相关知识内容。
@@ -171,7 +171,7 @@ java.util.function 包中包含了大量的函数式接口，基本可以满足�
 
 ## 相关的接口及描述
 下面是部分函数式接口的列表。
-![截屏2019-12-1009.47.03.png](http://image.lichongbing.com/static/1e7c4cc9a2154806d76c57bae04594f6.png)
+![截屏2019-12-1009.47.03.png](http://lcbupayun.test.upcdn.net/static/1e7c4cc9a2154806d76c57bae04594f6.png)
 更多的接口可以参考 Java 官方 API 手册：java.lang.Annotation Type FunctionalInterface。在实际使用过程中，加有@FunctionalInterface注解的方法均是此类接口，位于java.util.Funtion包中。
 下面我们通过一个例子学习如何使用这些函数式编程的接口。
 在/home/project/目录下新建一个类FunctionTest.java

@@ -3,7 +3,7 @@ title: IPMI之Ipmitool工具
 abbrlink: 31852
 date: 2019-12-05 21:50:26
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 IPMI（Intelligent Platform Management Interface）
 

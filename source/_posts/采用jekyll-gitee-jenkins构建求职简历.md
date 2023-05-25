@@ -3,7 +3,7 @@ title: 采用jekyll +gitee+jenkins构建求职简历
 abbrlink: 530
 date: 2020-03-25 14:22:40
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 # 采用jekyll +gitee+jenkins+jekyll-minimal-resume构建求职简历
 ## 前言

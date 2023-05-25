@@ -3,7 +3,7 @@ title: 自建ngrok服务支持https访问
 abbrlink: 29943
 date: 2020-05-10 19:39:37
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 ## 前言
 最近从事第三方平台代小程序实现业务开发，很多业务交互请求需要https，本地调试开发实现不了，不可能把部署到生产服务器调试，那又很不方便。我参考网上很多教程，很多不完整，不系统。我于是整理出完整教程当备用。
@@ -13,8 +13,8 @@ img: 'http://image.lichongbing.com/IMG_4624.jpg'
 ## 原理
 ngrok 建立一个隧道,将主机A的http请求 传递给 主机B,从而实现内网穿透。
 ngrok分为client端(ngrok)和服务端(ngrokd)，
-![32778-0c1af0a3d5798ba6.png](http://image.lichongbing.com/static/f03da5fde08081c901d42a9f92759517.png)
-实际使用中的部署如下：![32778-428dc58babf925c8.png](http://image.lichongbing.com/static/d0664248923f20d84a8dd4efb3b0296a.png)
+![32778-0c1af0a3d5798ba6.png](http://lcbupayun.test.upcdn.net/static/f03da5fde08081c901d42a9f92759517.png)
+实际使用中的部署如下：![32778-428dc58babf925c8.png](http://lcbupayun.test.upcdn.net/static/d0664248923f20d84a8dd4efb3b0296a.png)
 图中内网主机上安装客户端。
 公网主机 安装服务端。
 client public 则代表 访问你电脑的用户或者朋友。
@@ -52,7 +52,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 
 * ### 配置域名
 增加2条A记录,指向你的服务器。这里我配置的是 ngrok.xxxx.com 和 *.ngrok.xxxx.com
-![32778-2de852c725e147ef.png](http://image.lichongbing.com/static/48f7409e04ecb9e643ec51b0cae524fb.png)
+![32778-2de852c725e147ef.png](http://lcbupayun.test.upcdn.net/static/48f7409e04ecb9e643ec51b0cae524fb.png)
 * ### 添加安全组。
 开放3个端口。这里我选择4443、4444、8081端口。
 其中4443是ngrok自身通信使用。
@@ -60,7 +60,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 8081 则是http请求转发使用。默认是80 但是这里80端口我分配给nginx了。
 截图中少截图了4444的配置。
 
-![32778-c5be55abf8d86869.png](http://image.lichongbing.com/static/de5962091a24f3d03ce23f4986343671.png)
+![32778-c5be55abf8d86869.png](http://lcbupayun.test.upcdn.net/static/de5962091a24f3d03ce23f4986343671.png)
 
 * ### 安装go（阿里云ESC服务器）
 第一次照着其他教程直接apt-get install golang安装go语言环境，结果编译的时候报错，最终使用go 1.8版本顺利通过。
@@ -211,10 +211,10 @@ xxx.com 请根据自己的域名自行更改。如果要.xxx.com xxx.com都可�
 ./certbot-auto certonly  -d "*.ngrok.xxx.com" -d "ngrok.xxx.com" --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory
    ```
 * 执行完这一步之后，就是命令行的输出，请根据提示输入相应内容：
-  ![1534495467849643.png](http://image.lichongbing.com/static/ce2be365e6b1928d1f0e600738017e87.png)
+  ![1534495467849643.png](http://lcbupayun.test.upcdn.net/static/ce2be365e6b1928d1f0e600738017e87.png)
 * 执行到上图最后一步时，先暂时不要回车。申请通配符证书是要经过DNS认证的，接下来需要按照提示在域名后台添加对应的DNS TXT记录。
 * 确认生效后，回车继续执行，最后会输出如下内容：
-  ![1534495645970573.png](http://image.lichongbing.com/static/c2bfd6466e30fdb7752e0608da2dd0b8.png)
+  ![1534495645970573.png](http://lcbupayun.test.upcdn.net/static/c2bfd6466e30fdb7752e0608da2dd0b8.png)
   出现这个就代表成功了
 
 * 3.更换证书，重新编译ngrok客户端和服务端

@@ -3,7 +3,7 @@ title: Spring Cloud Zuul：API网关服务
 abbrlink: 26980
 date: 2019-12-25 11:18:59
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 Spring Cloud Zuul：API网关服务
 =========================
@@ -72,7 +72,7 @@ API网关为微服务架构中的服务提供了统一的访问入口，客户�
 
 这里我们通过启动eureka-server，两个user-service，feign-service和zuul-proxy来演示Zuul的常用功能，启动后注册中心显示如下。
 
-![16db5cb54337d537.png](http://image.lichongbing.com/static/bf9cd375a67b23c03f17046d7ec50735.png)
+![16db5cb54337d537.png](http://lcbupayun.test.upcdn.net/static/bf9cd375a67b23c03f17046d7ec50735.png)
 
 ### 配置路由规则
 
@@ -169,11 +169,11 @@ API网关为微服务架构中的服务提供了统一的访问入口，客户�
 ```
 *   通过访问[http://localhost:8801/actuator/routes](http://localhost:8801/actuator/routes)查看简单路由信息：
 
-![16db5cb5452f5a0c.png](http://image.lichongbing.com/static/49c5cde92d28c70c290b5cdf3d53c827.png)
+![16db5cb5452f5a0c.png](http://lcbupayun.test.upcdn.net/static/49c5cde92d28c70c290b5cdf3d53c827.png)
 
 *   通过访问[http://localhost:8801/actuator/routes/details](http://localhost:8801/actuator/routes)查看详细路由信息：
 
-![16db5cb546e5c339.png](http://image.lichongbing.com/static/76c0ee6d414cd6bbbc0ba85440446733.png)
+![16db5cb546e5c339.png](http://lcbupayun.test.upcdn.net/static/76c0ee6d414cd6bbbc0ba85440446733.png)
 
 过滤器
 ---
@@ -193,7 +193,7 @@ API网关为微服务架构中的服务提供了统一的访问入口，客户�
 
 > 下图描述了一个HTTP请求到达API网关后，如何在各种不同类型的过滤器中流转的过程。
 
-![16db5cb546faed9a.png](http://image.lichongbing.com/static/18f752b4ff7dc28d19a01e37d3216a9d.png)
+![16db5cb546faed9a.png](http://lcbupayun.test.upcdn.net/static/18f752b4ff7dc28d19a01e37d3216a9d.png)
 
 ### 自定义过滤器
 

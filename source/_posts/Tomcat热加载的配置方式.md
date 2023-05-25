@@ -3,7 +3,7 @@ title: Tomcat热加载的配置方式
 abbrlink: 48976
 date: 2019-12-03 09:07:16
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 
 # 一、Tomcat热加载配置

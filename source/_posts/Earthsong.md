@@ -3,7 +3,7 @@ title: Earthsong
 abbrlink: 7863
 date: 2019-11-16 19:32:09
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 
 Earthsong

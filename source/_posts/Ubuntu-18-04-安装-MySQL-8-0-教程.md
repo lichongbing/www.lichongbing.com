@@ -3,7 +3,7 @@ title: Ubuntu 18.04 安装 MySQL 8.0 教程
 abbrlink: 13556
 date: 2021-03-20 12:44:49
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 # Ubuntu 18.04 安装 MySQL 8.0 教程
 下载MySQL配置文件，网址：https://dev.mysql.com/downloads/repo/apt/

@@ -3,7 +3,7 @@ title: Ubuntu添加开机自动启动程序的方法
 abbrlink: 2042
 date: 2019-12-03 19:58:01
 tags:
-img: 'http://image.lichongbing.com/IMG_4624.jpg'
+img: 'http://lcbupayun.test.upcdn.net/IMG_4624.jpg'
 ---
 **1. 开机启动时自动运行程序**
 
