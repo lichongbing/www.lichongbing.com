@@ -34,7 +34,7 @@ HTTPS和HTTP的区别主要如下：
 三、HTTPS的工作原理
 
 我们都知道HTTPS能够加密信息，以免敏感信息被第三方获取，所以很多银行网站或电子邮箱等等安全级别较高的服务都会采用HTTPS协议。
-![1-150H120343I41.jpg](https://image.lichongbing.com/static/75c170ad0732f840c093bcd2fb703f4b.jpg)
+![1-150H120343I41.jpg](http://lcbupayun.test.upcdn.net/static/75c170ad0732f840c093bcd2fb703f4b.jpg)
 
 HTTP与HTTPS的区别-马海祥博客
 
@@ -51,7 +51,7 @@ HTTP与HTTPS的区别-马海祥博客
 （5）Web服务器利用自己的私钥解密出会话密钥。
 
 （6）Web服务器利用会话密钥加密与客户端之间的通信。
-![2012071410212142.gif](https://image.lichongbing.com/static/c874a75de6049c8d3e22ef70dfdbbd9b.gif)
+![2012071410212142.gif](http://lcbupayun.test.upcdn.net/static/c874a75de6049c8d3e22ef70dfdbbd9b.gif)
 
 
 

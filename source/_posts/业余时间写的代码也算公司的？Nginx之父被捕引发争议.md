@@ -15,10 +15,10 @@ Nginx之父突然被捕
 
 最早爆出这个消息的是Nginx的一名员工，他在一条推特中称：公司的两位创始人Konovalov和Sysoev被带走了。同时他表示，情况正在审查中，其他人员目前没有被拘留。
 图源：
-![a099-ikrsess8317893.jpg](https://image.lichongbing.com/static/0b2b7268d1f5b17c2d19ea587f363cdf.jpg)
+![a099-ikrsess8317893.jpg](http://lcbupayun.test.upcdn.net/static/0b2b7268d1f5b17c2d19ea587f363cdf.jpg)
 
 推特用户@AntonNesterov
-![ec4a-ikrsess8317933.jpg](https://image.lichongbing.com/static/37374dfa331ed3cdf91a58fb46f2c9bb.jpg)
+![ec4a-ikrsess8317933.jpg](http://lcbupayun.test.upcdn.net/static/37374dfa331ed3cdf91a58fb46f2c9bb.jpg)
 
 图源：
 
@@ -31,18 +31,18 @@ Nginx是一款轻量级的Web服务器/反向代服务器及电子邮件代理�
 Nginx此番被搜查疑似和此前Rambler集团的起诉有关。Rambler集团是俄罗斯最大的搜索引擎和互联网门户之一“rambler.ru”的母公司。上周，Rambler集团曾对NGINX公司提起版权侵犯诉讼，声称拥有NGINX代码的完全所有权。理由是Igor Sysoev在Rambler集团担任系统管理员时开发了Nginx，因此Rambler集团是Nginx所有代码的合法所有者。
 
 两位联合创始人被带走当日，Nginx的员工@igorippolitov在推特上发出了搜查令的相关图片，随即被要求删除，但原推已被网友截图，引发关注。
-![edf2-ikrsess8317934.jpg](https://image.lichongbing.com/static/b39f62e3eb48c725af2bbaec08367cb9.jpg)
+![edf2-ikrsess8317934.jpg](http://lcbupayun.test.upcdn.net/static/b39f62e3eb48c725af2bbaec08367cb9.jpg)
 
 
 推文内容：“看来是Rambler填写了这份关于Nginx和Sysoev的版权声明，NGINX受到了警方的突击检查（未经证实）。NGINX员工@igorippolitov是原始发布者，但有人要求他删帖。”
 
-![9bf5-ikrsess8317991.jpg](https://image.lichongbing.com/static/8e4d75a714137b772e926f6e597a53dc.jpg)
+![9bf5-ikrsess8317991.jpg](http://lcbupayun.test.upcdn.net/static/8e4d75a714137b772e926f6e597a53dc.jpg)
 
 Rambler集团方面的版权声明。
 
 后来，Rambler集团也向媒体方面作出了俄文版正式回复：
 
-![5189-ikrsess8317999.jpg](https://image.lichongbing.com/static/042915890f597c537fb8ec8ea4b538dd.jpg)
+![5189-ikrsess8317999.jpg](http://lcbupayun.test.upcdn.net/static/042915890f597c537fb8ec8ea4b538dd.jpg)
 
 图源：
 
@@ -53,7 +53,7 @@ Rambler集团方面的版权声明。
 Rambler集团表示，自2000年初以来，Igor Sysoev所完成的开发工作均属于其与Rambler的劳资关系框架内，因此未经Rambler集团同意，其他主体对本程序的任何使用均侵犯了专有权。
 
 据接近NGINX的媒体人士了解，两位联合创始人在被询问后已获释，不过他们的个人手机已被没收。
-![a52c-ikrsess8318044.jpg](https://image.lichongbing.com/static/17cb7f0e971eec09a5c5925e0180c842.jpg)
+![a52c-ikrsess8318044.jpg](http://lcbupayun.test.upcdn.net/static/17cb7f0e971eec09a5c5925e0180c842.jpg)
 
 图源：俄罗斯媒体TheBell
 
@@ -63,7 +63,7 @@ Igor Sysoev：Nginx确系任职Rambler期间开发，但利用的是业余时间
 
 Igor Sysoev在领英上的自我介绍是“Nginx的作者”。他毕业于莫斯科国立鲍曼技术大学（Bauman Moscow State Technical University），2000年-2011年就职于俄罗斯Rambler公司，担任该公司的系统管理员，任职时间接近11年。
 
-![6776-ikrsess8318093.jpg](https://image.lichongbing.com/static/cc9de1ebc1836670f991b8b6ed36a6bc.jpg)
+![6776-ikrsess8318093.jpg](http://lcbupayun.test.upcdn.net/static/cc9de1ebc1836670f991b8b6ed36a6bc.jpg)
 
 Sysoev从来没有否认Nginx是他在前东家Rambler任职期间开发的。但在2012年的一次访谈中，他表示自己开发Nginx用的是业余时间，最初Rambler甚至都不知道。
 

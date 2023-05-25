@@ -5,8 +5,8 @@
 </div>
 <script type="text/javascript">
     function LoadValine() {
-        getScript("https://image.lichongbing.com/Valine.min.js", function () {
-            getScript("https://image.lichongbing.com/js/activate-input.js", function () {
+        getScript("http://lcbupayun.test.upcdn.net/Valine.min.js", function () {
+            getScript("http://lcbupayun.test.upcdn.net/js/activate-input.js", function () {
                 let metaPlaceholder = <%- JSON.stringify(theme.valine.metaPlaceholder) %> ;
                 let initData = {
                     el: '#vcomments',
@@ -40,7 +40,7 @@
                     let robot_check_text = $id("robot-check-text")
                     robot_check_text.innerHTML = '·&nbsp;&nbsp;&nbsp;&nbsp;验证成功'
                     $id("robotxian").style.backgroundColor = "#26a69a"
-                    $id("robotimg").src = 'https://image.lichongbing.com/detail/robot.png'
+                    $id("robotimg").src = 'http://lcbupayun.test.upcdn.net/detail/robot.png'
                     robot_check_text.style.color = "#26a69a"
                 })
                 let robot_check = $query(".robot-check")

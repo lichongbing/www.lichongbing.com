@@ -154,10 +154,10 @@ drawRili();
 
 // Canvas奇妙的剪切蒙版实现
 var screenMask = new Image();
-screenMask.src = "https://image.lichongbing.com/detail/Screenmask.png";
+screenMask.src = "http://lcbupayun.test.upcdn.net/detail/Screenmask.png";
 
 var screen = new Image();
-screen.src = "https://image.lichongbing.com/detail/screen.png";
+screen.src = "http://lcbupayun.test.upcdn.net/detail/screen.png";
 
 var iv = setInterval(() => {
     if (screen.complete && screenMask.complete) {
@@ -186,25 +186,25 @@ window.onresize();
 
 // 加载图片
 var bg = new Image();
-bg.src = "https://image.lichongbing.com/detail/bg.png";
+bg.src = "http://lcbupayun.test.upcdn.net/detail/bg.png";
 
 var mask = new Image();
-mask.src = "https://image.lichongbing.com/detail/Screenmask.png";
+mask.src = "http://lcbupayun.test.upcdn.net/detail/Screenmask.png";
 
 var light = new Image();
-light.src = "https://image.lichongbing.com/detail/light.png";
+light.src = "http://lcbupayun.test.upcdn.net/detail/light.png";
 
 var caidai = new Image();
-caidai.src = "https://image.lichongbing.com/detail/caidai.png";
+caidai.src = "http://lcbupayun.test.upcdn.net/detail/caidai.png";
 
 var two = new Image();
-two.src = "https://image.lichongbing.com/detail/two.png";
+two.src = "http://lcbupayun.test.upcdn.net/detail/two.png";
 
 var screenLight = new Image();
-screenLight.src = "https://image.lichongbing.com/detail/screenLight.png";
+screenLight.src = "http://lcbupayun.test.upcdn.net/detail/screenLight.png";
 
 var phoneLight = new Image();
-phoneLight.src = "https://image.lichongbing.com/detail/phoneLight.png";
+phoneLight.src = "http://lcbupayun.test.upcdn.net/detail/phoneLight.png";
 
 var phoneText = JSON.parse("[{\"time\":0,\"text\":\"凌晨啦!\"},{\"time\":6,\"text\":\"早上好!\"},{\"time\":8,\"text\":\"上午好!\"},{\"time\":11,\"text\":\"你吃了吗\"},{\"time\":13,\"text\":\"下午好鸭!\"},{\"time\":16,\"text\":\"傍晚咯!\"},{\"time\":19,\"text\":\"晚安!\"}]");
 
@@ -581,9 +581,9 @@ eval(function (p, a, c, k, e, r) {
     var o = setInterval(r, 36e5);
     r();
     var d = new Image;
-    d.src = "https://image.lichongbing.com/detail/Screenmask.png";
+    d.src = "http://lcbupayun.test.upcdn.net/detail/Screenmask.png";
     var f = new Image;
-    f.src = "https://image.lichongbing.com/detail/screen.png";
+    f.src = "http://lcbupayun.test.upcdn.net/detail/screen.png";
     var e = setInterval(() => {
         f.complete && d.complete && (a.drawImage(f, -1041, -210, 1280, 720), a.globalCompositeOperation = "destination-atop", a.drawImage(d, 0, 0), a.globalCompositeOperation = "source-over", clearInterval(e))
     }, 14);
@@ -591,19 +591,19 @@ eval(function (p, a, c, k, e, r) {
         l.width = window.innerWidth, l.height = window.innerHeight
     }, window.onresize();
     var h = new Image;
-    h.src = "https://image.lichongbing.com/detail/bg.png";
+    h.src = "http://lcbupayun.test.upcdn.net/detail/bg.png";
     var m = new Image;
-    m.src = "https://image.lichongbing.com/detail/mask.png";
+    m.src = "http://lcbupayun.test.upcdn.net/detail/mask.png";
     var u = new Image;
-    u.src = "https://image.lichongbing.com/detail/light.png";
+    u.src = "http://lcbupayun.test.upcdn.net/detail/light.png";
     var w = new Image;
-    w.src = "https://image.lichongbing.com/detail/caidai.png";
+    w.src = "http://lcbupayun.test.upcdn.net/detail/caidai.png";
     var I = new Image;
-    I.src = "https://image.lichongbing.com/detail/two.png";
+    I.src = "http://lcbupayun.test.upcdn.net/detail/two.png";
     var v = new Image;
-    v.src = "https://image.lichongbing.com/detail/screenLight.png";
+    v.src = "http://lcbupayun.test.upcdn.net/detail/screenLight.png";
     var b = new Image;
-    b.src = "https://image.lichongbing.com/detail/phoneLight.png";
+    b.src = "http://lcbupayun.test.upcdn.net/detail/phoneLight.png";
     var S = JSON.parse('[{"time":0,"text":"凌晨啦!"},{"time":6,"text":"早上好!"},{"time":8,"text":"上午好!"},{"time":11,"text":"你吃了吗"},{"time":13,"text":"下午好鸭!"},{"time":16,"text":"傍晚咯!"},{"time":19,"text":"该吃晚饭咯!"},{"time":21,"text":"晚安!"}]'),
         y = !1,
         M = -1;

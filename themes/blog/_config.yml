@@ -72,7 +72,7 @@ music:
 # 图片懒加载
 lazyload:
   enable: true
-  loadimg: https://image.lichongbing.com/static/js/load.gif
+  loadimg: http://lcbupayun.test.upcdn.net/static/js/load.gif
 
 # Whether to display the title of the recommended posts
 # 是否显示推荐文章的标题
@@ -86,7 +86,7 @@ search:
   enable: false # 是否启用搜索
   path: /search.xml
   field: post
-  source: https://image.lichongbing.com/js/search.js
+  source: http://lcbupayun.test.upcdn.net/js/search.js
 
 # 代码块高亮主题
 highlight_theme: mac # default / darker / pale night / light / ocean / mac / mac light
@@ -121,10 +121,10 @@ reward:
   name: 软妹币丢置处
   left:
     name: wechat
-    img: https://image.lichongbing.com/reward/wechat.png
+    img: http://lcbupayun.test.upcdn.net/reward/wechat.png
   right:
     name: alipay
-    img: https://image.lichongbing.com/reward/alipay.png
+    img: http://lcbupayun.test.upcdn.net/reward/alipay.png
 
 
 # 评论
@@ -296,7 +296,7 @@ footer:
   icp:
     enable: true
     text: 蜀ICP备18037498号
-    icon: https://image.lichongbing.com/static/js/icp.png
+    icon: http://lcbupayun.test.upcdn.net/static/js/icp.png
     url: https://beian.miit.gov.cn/
   socialLink:
     enable: true
@@ -341,16 +341,16 @@ CDN:
   other_css: /css/other.css
   main_js: /js/main.js
   utlis: /js/utlis.js
-  pjax: https://image.lichongbing.com/static/js/pjax.min.js
+  pjax: http://lcbupayun.test.upcdn.net/static/js/pjax.min.js
   # fancybox
-  fancybox_js: https://image.lichongbing.com/static/js/fancybox.umd.js
-  fancybox_css: https://image.lichongbing.com/static/js/fancybox.css
+  fancybox_js: http://lcbupayun.test.upcdn.net/static/js/fancybox.umd.js
+  fancybox_css: http://lcbupayun.test.upcdn.net/static/js/fancybox.css
   # 分享
-  share_css: https://image.lichongbing.com/static/js/share.min.css
-  share_js: https://image.lichongbing.com/static/js/share.min.js
+  share_css: http://lcbupayun.test.upcdn.net/static/js/share.min.css
+  share_js: http://lcbupayun.test.upcdn.net/static/js/share.min.js
   # fontawesome
-  fontawesome: https://image.lichongbing.com/static/fontawesome/css/all.min.css
+  fontawesome: http://lcbupayun.test.upcdn.net/static/fontawesome/css/all.min.css
   # yml转json
-  js_yaml: https://image.lichongbing.com/static/js/js-yaml.min.js
+  js_yaml: http://lcbupayun.test.upcdn.net/static/js/js-yaml.min.js
   # math
-  mathjax: https://image.lichongbing.com/static/js/mathjax.js
+  mathjax: http://lcbupayun.test.upcdn.net/static/js/mathjax.js

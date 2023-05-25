@@ -3,7 +3,7 @@
         padding: 0;
     }
 </style>
-<img class="friends_welcome" src="https://image.lichongbing.com/detail/friends.png" alt="交个朋友吧">
+<img class="friends_welcome" src="http://lcbupayun.test.upcdn.net/detail/friends.png" alt="交个朋友吧">
 <% var friends = site.data.information.friends; %>
 <div class="link-list" id="link-list">
     <p class="link-title">小伙伴们 《<%= friends.length %>》</p>
@@ -29,7 +29,7 @@
         <% var lossFriend = lossFriends[i]; %>
         <div class="link-list-item">
             <a href="<%- url_for(lossFriend.url) %>" rel="noreferrer">
-                <img src="https://image.lichongbing.com/detail/loading.gif" data-img="<%- url_for(lossFriend.avatar) %>"
+                <img src="http://lcbupayun.test.upcdn.net/detail/loading.gif" data-img="<%- url_for(lossFriend.avatar) %>"
                      alt="<%= lossFriend.name %>">
                 <span class="link-item-name"><%= lossFriend.name %></span>
                 <span class="link-item-desc"><%= lossFriend.description %></span>
