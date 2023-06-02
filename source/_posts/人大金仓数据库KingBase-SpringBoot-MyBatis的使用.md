@@ -7,24 +7,24 @@ tags:
 
 访问人大金仓[官网](https://www.kingbase.com.cn)
 
-![IMG_2963](https://image.lichongbing.com/IMG_2963.JPG)
+![IMG_2963](http://lcbupayun.test.upcdn.net/IMG_2963.JPG)
 
 找到下载与服务中软件下载
-![IMG_2964](https://image.lichongbing.com/IMG_2964.JPG)
+![IMG_2964](http://lcbupayun.test.upcdn.net/IMG_2964.JPG)
 
 选择金仓数据库管理系统
-![IMG_2965](https://image.lichongbing.com/IMG_2965.JPG)
+![IMG_2965](http://lcbupayun.test.upcdn.net/IMG_2965.JPG)
 
 选择v8R3
 
-![IMG_2966](https://image.lichongbing.com/IMG_2966.JPG)
+![IMG_2966](http://lcbupayun.test.upcdn.net/IMG_2966.JPG)
 
 下载驱动
 
-![IMG_2967](https://image.lichongbing.com/IMG_2967.JPG)
+![IMG_2967](http://lcbupayun.test.upcdn.net/IMG_2967.JPG)
 
 ## 通过IDEA导入外库依赖jar包
-![IMG_2968](https://image.lichongbing.com/IMG_2968.JPG)
+![IMG_2968](http://lcbupayun.test.upcdn.net/IMG_2968.JPG)
 
 POM配置
 ```

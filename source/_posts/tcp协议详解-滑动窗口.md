@@ -22,12 +22,12 @@ TCP发送窗口由slide_window（滑动窗口）、congestion_window（拥塞窗
 2.1 滑动窗口
 
 上面的snd_wnd、snd_una、snd_nxt三个字段组成了滑动窗口。 如下图所示：
-![140518_Jgf4_990211.png.jpeg](https://image.lichongbing.com/static/26649e5da9909107782cb15cc3bab96b.jpeg)
+![140518_Jgf4_990211.png.jpeg](http://lcbupayun.test.upcdn.net/static/26649e5da9909107782cb15cc3bab96b.jpeg)
 
 2.2 发送端滑动窗口
 
 发送端窗口随时间滑动图（不考虑重传）例如下所示：
-![140708_XDkc_990211.png](https://image.lichongbing.com/static/9ba38aca6ff33aa21f54a86172904598.png)
+![140708_XDkc_990211.png](http://lcbupayun.test.upcdn.net/static/9ba38aca6ff33aa21f54a86172904598.png)
 
 
 (1）我们一共需要发送900字节数据。可发送数据为1-500字节，尚未发送数据。假设首先发送400字节的数据。
@@ -38,7 +38,7 @@ TCP发送窗口由slide_window（滑动窗口）、congestion_window（拥塞窗
 2.3 接收端窗口通告
 
 snd_wnd此字段主要由接收端的窗口通告决定，接收端窗口通告由当前接收端剩余多少空闲的剩余缓存决定。如下图所示：
-![140751_xWZF_990211.png](https://image.lichongbing.com/static/1dac3526be629241def321289f06530b.png)
+![140751_xWZF_990211.png](http://lcbupayun.test.upcdn.net/static/1dac3526be629241def321289f06530b.png)
 （1）发送端：写入2KB的数据[seq=0]。
 （2）接收端：收到数据,初始化接收端缓冲区4K,写入后还剩2K,于是通告ack[seq=2048,win=2048]。
 （3）发送端：接收到窗口通告为2048,于是最多只能写入2K的数据，将2K数据写入[seq=2048]。
@@ -88,7 +88,7 @@ TCP用拥塞窗口（cwnd）来进行拥塞控制，主要利用了慢启动、�
         }
 慢启动图例
 
-![140900_h1Ea_990211.png](https://image.lichongbing.com/static/0c868f962bfca16830631f55f4087462.png)
+![140900_h1Ea_990211.png](http://lcbupayun.test.upcdn.net/static/0c868f962bfca16830631f55f4087462.png)
 图中Cwnd指数增长的阶段,即从1到ssthresh时间段是过程是慢启动。
 图中Cwnd线性增长的阶段,即从ssthresh到max的时间段是拥塞避免的过程。
 值得注意的是，TCP连接刚建立时刻也会有慢启动的过程。如果用的是短连接(即发送一个请求之后即抛弃此连接)且发送数据较少的话，大部分时间都耗在了慢启动上面，并没有充分的利用带宽。再加上建立连接所需要三次握手的消耗,导致短连接的效率要远低于长连接。
@@ -101,7 +101,7 @@ TCP用拥塞窗口（cwnd）来进行拥塞控制，主要利用了慢启动、�
 快速恢复：在快速重传的基础上，如果发生了快速重传，则执行拥塞避免算法而非慢启动。
 快速重传和快速恢复图例：
 
-![140929_VRch_990211.png.jpeg](https://image.lichongbing.com/static/b9958c4a3b1495a3134fb9c649f5b2f6.jpeg)
+![140929_VRch_990211.png.jpeg](http://lcbupayun.test.upcdn.net/static/b9958c4a3b1495a3134fb9c649f5b2f6.jpeg)
 从上图中我们可以看到，快速恢复的时候tcp窗口仅仅降低到ssthresh而后线性增加，即只进行了拥塞避免算法。
 
 2.5 TCP粘包
