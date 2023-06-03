@@ -4,7 +4,7 @@ date: 2019-12-11 10:07:43
 tags:
 ---
 摘要：计算机网络基础
-![1105508-20190322093746970-682324622.jpg](http://lcbupayun.test.upcdn.net/static/dde44b3adf2705384be3c854c3e02a13.jpg)
+![1105508-20190322093746970-682324622.jpg](https://image.yuelingnet.cn/static/dde44b3adf2705384be3c854c3e02a13.jpg)
 
 引言
 
@@ -22,7 +22,7 @@ TCP/IP模型是互联网的基础，它是一系列网络协议的总称。这�
 网络层：负责路由以及把分组报文发送给目标网络或主机。
 传输层：负责对报文进行分组和重组，并以TCP或UDP协议格式封装报文。
 应用层：负责向用户提供应用程序，比如HTTP、FTP、Telnet、DNS、SMTP等。
-![2019-03-21-01.png](http://lcbupayun.test.upcdn.net/static/3f5d995ceef7bd19796d5b3b5c746643.png)
+![2019-03-21-01.png](https://image.yuelingnet.cn/static/3f5d995ceef7bd19796d5b3b5c746643.png)
 
 在网络体系结构中网络通信的建立必须是在通信双方的对等层进行，不能交错。 在整个数据传输过程中，数据在发送端时经过各层时都要附加上相应层的协议头和协议尾（仅数据链路层需要封装协议尾）部分，也就是要对数据进行协议封装，以标识对应层所用的通信协议。接下去介绍TCP/IP 中有两个具有代表性的传输层协议----TCP 和 UDP。
 
@@ -55,13 +55,13 @@ UDP 不止支持一对一的传输方式，同样支持一对多，多对多，�
 并且收到什么数据就传递什么数据，并且也不会备份数据，发送数据也不会关心对方是否已经正确接收到数据了。
 
 再者网络环境时好时坏，但是 UDP 因为没有拥塞控制，一直会以恒定的速度发送数据。即使网络条件不好，也不会对发送速率进行调整。这样实现的弊端就是在网络条件不好的情况下可能会导致丢包，但是优点也很明显，在某些实时性要求高的场景（比如电话会议）就需要使用 UDP 而不是 TCP。
-![截屏2019-12-1111.00.49.png](http://lcbupayun.test.upcdn.net/static/8bb7a0bb387ea1408ae01deeb3fcdd7f.png)
+![截屏2019-12-1111.00.49.png](https://image.yuelingnet.cn/static/8bb7a0bb387ea1408ae01deeb3fcdd7f.png)
 
 
 从上面的动态图可以得知，UDP只会把想发的数据报文一股脑的丢给对方，并不在意数据有无安全完整到达。
 
 5. 头部开销小，传输数据报文时是很高效的。
-   ![2019-03-21-03.png](http://lcbupayun.test.upcdn.net/static/dab04ae9fdd2512583e89a45333935ec.png)
+   ![2019-03-21-03.png](https://image.yuelingnet.cn/static/dab04ae9fdd2512583e89a45333935ec.png)
 
 
 UDP 头部包含了以下几个数据：
@@ -81,7 +81,7 @@ TCP协议全称是传输控制协议是一种面向连接的、可靠的、基�
 
 如下图所示，可以看到建立一个TCP连接的过程为（三次握手的过程）:
 
-![2019-03-21-04.png](http://lcbupayun.test.upcdn.net/static/413b2097337a2ec95e7cc210dadfcc80.png)
+![2019-03-21-04.png](https://image.yuelingnet.cn/static/413b2097337a2ec95e7cc210dadfcc80.png)
 
 第一次握手
 
@@ -96,12 +96,12 @@ TCP协议全称是传输控制协议是一种面向连接的、可靠的、基�
 当客户端收到连接同意的应答后，还要向服务端发送一个确认报文。客户端发完这个报文段后便进入 ESTABLISHED 状态，服务端收到这个应答后也进入 ESTABLISHED 状态，此时连接建立成功。
 
 这里可能大家会有个疑惑：为什么 TCP 建立连接需要三次握手，而不是两次？这是因为这是为了防止出现失效的连接请求报文段被服务端接收的情况，从而产生错误。
-![截屏2019-12-1111.02.50.png](http://lcbupayun.test.upcdn.net/static/0bcc9a7b4e52fd690da756b173d576a1.png)
+![截屏2019-12-1111.02.50.png](https://image.yuelingnet.cn/static/0bcc9a7b4e52fd690da756b173d576a1.png)
 
 
 2. TCP断开链接
 
-![2019-03-21-06.png](http://lcbupayun.test.upcdn.net/static/feb927113def1b587a45bddb34641cc9.png)
+![2019-03-21-06.png](https://image.yuelingnet.cn/static/feb927113def1b587a45bddb34641cc9.png)
 
 TCP 是全双工的，在断开连接时两端都需要发送 FIN 和 ACK。
 

@@ -23,42 +23,42 @@ date: 2022-04-25 13:33:28
    - 目标添加
    > 添加目标任务名称，预计花费多少时间
 
-   ![IMG_4494](http://lcbupayun.test.upcdn.net/IMG_4494.PNG)
+   ![IMG_4494](https://image.yuelingnet.cn/IMG_4494.PNG)
    
    - 目标修改
    > 修改目标是否完成
 
-   ![IMG_4496](http://lcbupayun.test.upcdn.net/IMG_4496.PNG)
+   ![IMG_4496](https://image.yuelingnet.cn/IMG_4496.PNG)
 
    - 目标删除显示
    > 短期目标，临时目标，错误目标可以删除显示，后期在目标历史查看
 
-   ![IMG_4495](http://lcbupayun.test.upcdn.net/IMG_4495.PNG)
+   ![IMG_4495](https://image.yuelingnet.cn/IMG_4495.PNG)
 
  * 任务执行
      > 有了目标就要去落地执行，具体到可执行的事上。  
 
-     ![IMG_4497](http://lcbupayun.test.upcdn.net/IMG_4497.PNG)
+     ![IMG_4497](https://image.yuelingnet.cn/IMG_4497.PNG)
 
-     ![IMG_4498](http://lcbupayun.test.upcdn.net/IMG_4498.PNG)
+     ![IMG_4498](https://image.yuelingnet.cn/IMG_4498.PNG)
 
    - 任务添加
    > 添加任务名称
    - 任务修改
    > 修改任务信息
 
-   ![IMG_4499](http://lcbupayun.test.upcdn.net/IMG_4499.PNG)
+   ![IMG_4499](https://image.yuelingnet.cn/IMG_4499.PNG)
    - 删除任务
    > 有错误的，需要删除。
 
  * 标签分类
      > 标签分类方便目标管理统计，后期复盘分析。  
 
-     ![IMG_4500](http://lcbupayun.test.upcdn.net/IMG_4500.PNG)
+     ![IMG_4500](https://image.yuelingnet.cn/IMG_4500.PNG)
    - 标签添加
    > 添加名称，颜色参数
 
-   ![IMG_4501](http://lcbupayun.test.upcdn.net/IMG_4501.PNG)
+   ![IMG_4501](https://image.yuelingnet.cn/IMG_4501.PNG)
 
    - 标签修改
    > 修改名称，颜色参数
@@ -68,39 +68,39 @@ date: 2022-04-25 13:33:28
  * 时间轴 
     > 自动记录每天每件事花费时间，形成时间轴，数据实时刷新更新。从周日到下周六，方便复盘整理。
 
-    ![IMG_4503](http://lcbupayun.test.upcdn.net/IMG_4503.PNG)
+    ![IMG_4503](https://image.yuelingnet.cn/IMG_4503.PNG)
 
  * 目标进度
     > 自动计算目标的进度和预期，方便以后做新的计划参考，做到对自己能力掂量预估。展示的是未完成的目标进度
     
-    ![IMG_4504](http://lcbupayun.test.upcdn.net/IMG_4504.PNG)
+    ![IMG_4504](https://image.yuelingnet.cn/IMG_4504.PNG)
 
  * 快捷指令创建
      >快捷指令是苹果手机工作流，自动化执行，不用打开app，自动执行
    
    - 目前实现添加自动记录时间功能，支持下拉框选择自动记录的目标和任务，和标签。
 
-   ![IMG_4505](http://lcbupayun.test.upcdn.net/IMG_4505.PNG)
+   ![IMG_4505](https://image.yuelingnet.cn/IMG_4505.PNG)
    下拉框任务名称选择，这是来源App里的任务创建
-   ![IMG_4506](http://lcbupayun.test.upcdn.net/IMG_4506.PNG)
+   ![IMG_4506](https://image.yuelingnet.cn/IMG_4506.PNG)
    下拉框选择标签 这是来源App里的标签创建
-   ![IMG_4507](http://lcbupayun.test.upcdn.net/IMG_4507.PNG)
+   ![IMG_4507](https://image.yuelingnet.cn/IMG_4507.PNG)
    下拉框选择目标 这是来源App里的目标创建，这里是展示未完成的目标
-   ![IMG_4507](http://lcbupayun.test.upcdn.net/IMG_4508.PNG)
+   ![IMG_4507](https://image.yuelingnet.cn/IMG_4508.PNG)
    时间选择当前时间 格式为 RFC2822
-   ![IMG_4507](http://lcbupayun.test.upcdn.net/IMG_4509.PNG)
+   ![IMG_4507](https://image.yuelingnet.cn/IMG_4509.PNG)
    - 快捷指令支持多场景触法事件，网络请求事件，Wi-Fi连接事件，地点到达触法事件，NFC感应触碰事件等
    >下面是场景情况，根据自己情况去选择。
 
-   ![IMG_4512](http://lcbupayun.test.upcdn.net/IMG_4512.PNG)
+   ![IMG_4512](https://image.yuelingnet.cn/IMG_4512.PNG)
 
-   ![IMG_4512](http://lcbupayun.test.upcdn.net/IMG_4513.PNG)
+   ![IMG_4512](https://image.yuelingnet.cn/IMG_4513.PNG)
    >下面是手动触法的快捷指令
 
-   ![IMG_4510](http://lcbupayun.test.upcdn.net/IMG_4510.PNG)
+   ![IMG_4510](https://image.yuelingnet.cn/IMG_4510.PNG)
    >下面是自动化触法快捷指令 
 
-   ![IMG_4511](http://lcbupayun.test.upcdn.net/IMG_4511.PNG)
+   ![IMG_4511](https://image.yuelingnet.cn/IMG_4511.PNG)
 
    > 还支持Siri语音交互。
 
@@ -109,11 +109,11 @@ date: 2022-04-25 13:33:28
 
  >下面是我使用的拍照
 
- ![IMG_4490](http://lcbupayun.test.upcdn.net/IMG_4490.JPG)
+ ![IMG_4490](https://image.yuelingnet.cn/IMG_4490.JPG)
  
- ![IMG_4489](http://lcbupayun.test.upcdn.net/IMG_4489.JPG)
+ ![IMG_4489](https://image.yuelingnet.cn/IMG_4489.JPG)
 
- ![IMG_4488](http://lcbupayun.test.upcdn.net/IMG_4488.JPG)
+ ![IMG_4488](https://image.yuelingnet.cn/IMG_4488.JPG)
  >特别说明，照片中我用到nfc贴纸，用亚克力透明盒相框，我一天做事分四类学习，总结，工作，休息，用到沙漏计时休息5分钟，工作学习的时长根据自身精力来决定，累了就打卡休息。期间可以喝水，上厕所。
 
  >[公测地址](https://testflight.apple.com/join/F8hVrLzs),系统版本ios14以上。有什么好的意见给我发电子邮件，我会改进软件，提升用户体验。
